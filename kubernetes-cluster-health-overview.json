@@ -1,34 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_PROMETHEUS",
-      "label": "Prometheus",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "prometheus",
-      "pluginName": "Prometheus"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "5.0.4"
-    },
-    {
-      "type": "datasource",
-      "id": "prometheus",
-      "name": "Prometheus",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": "5.0.0"
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -46,7 +16,6 @@
   "editable": true,
   "gnetId": 5312,
   "graphTooltip": 0,
-  "id": null,
   "links": [],
   "panels": [
     {
@@ -69,7 +38,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "format": "none",
       "gauge": {
@@ -92,10 +61,12 @@
       "mappingType": 1,
       "mappingTypes": [
         {
+          "$$hashKey": "object:1477",
           "name": "value to text",
           "value": 1
         },
         {
+          "$$hashKey": "object:1478",
           "name": "range to text",
           "value": 2
         }
@@ -123,6 +94,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:1857",
           "expr": "min(up{job=\"kubernetes-apiservers\"}==1)",
           "format": "time_series",
           "intervalFactor": 2,
@@ -138,11 +110,13 @@
       "valueFontSize": "80%",
       "valueMaps": [
         {
+          "$$hashKey": "object:1480",
           "op": "=",
           "text": "Everything UP and healthy",
           "value": "1"
         },
         {
+          "$$hashKey": "object:1481",
           "op": "=",
           "text": "Something is a miss",
           "value": "0"
@@ -159,7 +133,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "format": "short",
       "gauge": {
@@ -182,10 +156,12 @@
       "mappingType": 1,
       "mappingTypes": [
         {
+          "$$hashKey": "object:1662",
           "name": "value to text",
           "value": 1
         },
         {
+          "$$hashKey": "object:1663",
           "name": "range to text",
           "value": 2
         }
@@ -213,6 +189,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:1934",
           "expr": "sum(ALERTS{alertstate=\"firing\",alertname!=\"DeadMansSwitch\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -228,6 +205,7 @@
       "valueFontSize": "80%",
       "valueMaps": [
         {
+          "$$hashKey": "object:1665",
           "op": "=",
           "text": "0",
           "value": "null"
@@ -244,7 +222,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "format": "none",
       "gauge": {
@@ -298,6 +276,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:2016",
           "expr": "sum(ALERTS{alertstate=\"pending\",alertname!=\"DeadMansSwitch\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -329,7 +308,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "format": "none",
       "gauge": {
@@ -383,6 +362,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:2064",
           "expr": "sum(increase(kube_pod_container_status_restarts_total[1h])> bool 5)",
           "format": "time_series",
           "intervalFactor": 2,
@@ -419,7 +399,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "format": "none",
       "gauge": {
@@ -473,6 +453,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:2256",
           "expr": "sum(kube_node_status_condition{condition=\"Ready\",status=\"false\"})",
           "format": "time_series",
           "intervalFactor": 1,
@@ -507,7 +488,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "format": "none",
       "gauge": {
@@ -561,6 +542,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:2208",
           "expr": "sum(kube_node_status_condition{condition=\"DiskPressure\",status=\"true\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -597,7 +579,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "format": "none",
       "gauge": {
@@ -651,6 +633,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:2160",
           "expr": "sum(kube_node_status_condition{condition=\"MemoryPressure\",status=\"true\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -687,7 +670,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "format": "none",
       "gauge": {
@@ -741,6 +724,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:2112",
           "expr": "sum(kube_node_spec_unschedulable)",
           "format": "time_series",
           "intervalFactor": 2,
@@ -777,7 +761,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "format": "none",
       "gauge": {
@@ -830,6 +814,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:2304",
           "expr": "sum(increase(kube_pod_container_status_restarts_total{namespace=~\"kube-system\"}[1h]) > bool 5)",
           "format": "time_series",
           "intervalFactor": 2,
@@ -853,7 +838,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "format": "none",
       "gauge": {
@@ -907,6 +892,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:2386",
           "expr": "sum(kube_node_status_condition{condition=\"MemoryPressure\",status=\"true\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -938,7 +924,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "format": "none",
       "gauge": {
@@ -992,6 +978,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:2434",
           "expr": "sum(kube_node_status_condition{condition=\"DiskPressure\",status=\"true\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -1023,7 +1010,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "format": "none",
       "gauge": {
@@ -1077,6 +1064,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:2482",
           "expr": "sum(kube_node_status_condition{condition=\"Ready\",status!=\"true\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -1108,7 +1096,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "format": "none",
       "gauge": {
@@ -1162,6 +1150,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:2530",
           "expr": "sum(kube_node_spec_unschedulable)",
           "format": "time_series",
           "intervalFactor": 2,
@@ -1193,7 +1182,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -1245,6 +1234,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:2578",
           "expr": "sum(((kubelet_volume_stats_used_bytes / kubelet_volume_stats_capacity_bytes)*100)>bool 90)",
           "format": "time_series",
           "intervalFactor": 1,
@@ -1267,7 +1257,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -1319,6 +1309,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:1753",
           "expr": "sum(kube_persistentvolumeclaim_status_phase{phase=\"Bound\"}!=bool 1)",
           "format": "time_series",
           "intervalFactor": 1,
@@ -1994,5 +1985,5 @@
   "timezone": "browser",
   "title": "Kubernetes Cluster Health Overview",
   "uid": "NEYiLUzik",
-  "version": 20
+  "version": 1
 }

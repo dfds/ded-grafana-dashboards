@@ -1,43 +1,8 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_PROMETHEUS",
-      "label": "Prometheus",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "prometheus",
-      "pluginName": "Prometheus"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "5.0.4"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": "5.0.0"
-    },
-    {
-      "type": "datasource",
-      "id": "prometheus",
-      "name": "Prometheus",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": "5.0.0"
-    }
-  ],
   "annotations": {
     "list": [
       {
+        "$$hashKey": "object:2747",
         "builtIn": 1,
         "datasource": "-- Grafana --",
         "enable": true,
@@ -52,8 +17,7 @@
   "editable": true,
   "gnetId": 741,
   "graphTooltip": 0,
-  "id": null,
-  "iteration": 1528098021463,
+  "iteration": 1528879780474,
   "links": [],
   "panels": [
     {
@@ -78,7 +42,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "percent",
@@ -134,6 +98,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:3835",
           "expr": "sum (container_memory_usage_bytes{namespace=~\"$namespace\",pod_name=~\"^$deployment.*$\"}) / sum (machine_memory_bytes) * 100",
           "format": "time_series",
           "interval": "10s",
@@ -166,7 +131,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "decimals": 2,
       "editable": true,
       "error": false,
@@ -223,6 +188,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:3691",
           "expr": "sum (rate (container_cpu_usage_seconds_total{namespace=~\"$namespace\",pod_name=~\"^$deployment.*$\"}[5m])) / sum (machine_cpu_cores) * 100",
           "format": "time_series",
           "interval": "10s",
@@ -253,7 +219,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "Bps",
@@ -308,6 +274,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:3547",
           "expr": "sum(rate(container_network_transmit_bytes_total{namespace=~\"$namespace\",pod_name=~\"^$deployment.*\"}[5m])) + sum(rate(container_network_receive_bytes_total{namespace=~\"$namespace\",pod_name=~\"^$deployment.*\"}[5m])) ",
           "format": "time_series",
           "intervalFactor": 2,
@@ -337,7 +304,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "percent",
@@ -393,6 +360,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:3499",
           "expr": "sum(kube_deployment_status_replicas_available{namespace=~\"$namespace\",deployment=~\"^$deployment$\"}) / sum(kube_deployment_status_replicas{namespace=~\"$namespace\",deployment=~\"^$deployment$\"}) * 100",
           "format": "time_series",
           "intervalFactor": 2,
@@ -422,7 +390,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "bytes",
@@ -478,6 +446,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:3787",
           "expr": "sum (container_memory_working_set_bytes{namespace=~\"$namespace\",pod_name=~\"^$deployment.*$\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -507,7 +476,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "bytes",
@@ -563,6 +532,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:3739",
           "expr": "sum (container_memory_working_set_bytes)",
           "format": "time_series",
           "intervalFactor": 2,
@@ -592,7 +562,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "none",
@@ -648,6 +618,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:3643",
           "expr": "sum (rate (container_cpu_usage_seconds_total{namespace=~\"$namespace\",pod_name=~\"^$deployment.*$\"}[5m]))",
           "format": "time_series",
           "intervalFactor": 2,
@@ -677,7 +648,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "none",
@@ -733,6 +704,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:3595",
           "expr": "sum (machine_cpu_cores{kubernetes_io_role=~\"node\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -762,7 +734,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "none",
@@ -818,6 +790,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:3451",
           "expr": "sum(kube_deployment_status_replicas_available{namespace=~\"$namespace\",deployment=~\"^$deployment$\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -847,7 +820,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "none",
@@ -903,6 +876,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:3403",
           "expr": "sum(kube_deployment_status_replicas{namespace=~\"$namespace\",deployment=~\"^$deployment$\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -932,7 +906,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "none",
@@ -987,6 +961,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:3354",
           "expr": "max(kube_deployment_status_observed_generation{namespace=~\"$namespace\",deployment=~\"^$deployment.*\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -1017,7 +992,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "none",
@@ -1072,6 +1047,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:3306",
           "expr": "max(kube_deployment_metadata_generation{namespace=~\"$namespace\",deployment=~\"^$deployment.*\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -1111,7 +1087,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "decimals": 3,
       "editable": true,
       "error": false,
@@ -1153,6 +1129,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:3256",
           "expr": "sum(rate(container_cpu_usage_seconds_total{namespace=~\"$namespace\",image!=\"\",name=~\"^k8s_.*\",container_name!=\"POD\",pod_name=~\"^$deployment.*$\"}[5m])) by (pod_name)",
           "format": "time_series",
           "interval": "10s",
@@ -1199,14 +1176,18 @@
           "min": null,
           "show": false
         }
-      ]
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "decimals": 3,
       "editable": true,
       "error": false,
@@ -1251,6 +1232,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:3180",
           "expr": "sum (rate (container_cpu_usage_seconds_total{namespace=~\"$namespace\",image!=\"\",name=~\"^k8s_.*\",container_name!=\"POD\",pod_name=~\"^$deployment.*$\"}[5m])) by (container_name, pod_name)",
           "format": "time_series",
           "hide": false,
@@ -1262,6 +1244,7 @@
           "step": 10
         },
         {
+          "$$hashKey": "object:3181",
           "expr": "sum (rate (container_cpu_usage_seconds_total{namespace=~\"$namespace\",image!=\"\",name!~\"^k8s_.*\",pod_name=~\"^$deployment.*$\"}[5m])) by (pod_name, name, image)",
           "format": "time_series",
           "hide": false,
@@ -1308,14 +1291,18 @@
           "min": null,
           "show": false
         }
-      ]
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "decimals": 3,
       "editable": true,
       "error": false,
@@ -1356,6 +1343,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:3126",
           "expr": "sum (rate (container_cpu_usage_seconds_total{id!=\"/\",namespace=~\"$namespace\",pod_name=~\"^$deployment.*$\"}[5m])) by (id)",
           "format": "time_series",
           "hide": false,
@@ -1402,14 +1390,18 @@
           "min": null,
           "show": false
         }
-      ]
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "decimals": 2,
       "editable": true,
       "error": false,
@@ -1451,6 +1443,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:3072",
           "expr": "sum (container_memory_working_set_bytes{image!=\"\",name=~\"^k8s_.*\",namespace=~\"$namespace\",pod_name=~\"^$deployment.*$\"}) by (pod_name)",
           "format": "time_series",
           "interval": "10s",
@@ -1496,14 +1489,18 @@
           "min": null,
           "show": false
         }
-      ]
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "decimals": 2,
       "editable": true,
       "error": false,
@@ -1545,6 +1542,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:3017",
           "expr": "sum (container_memory_working_set_bytes{id!=\"/\",namespace=~\"$namespace\",pod_name=~\"^$deployment.*$\"}) by (id)",
           "format": "time_series",
           "interval": "10s",
@@ -1590,14 +1588,18 @@
           "min": null,
           "show": false
         }
-      ]
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "decimals": 2,
       "editable": true,
       "error": false,
@@ -1639,6 +1641,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:2941",
           "expr": "sum (rate (container_network_receive_bytes_total{image!=\"\",name=~\"^k8s_.*\",namespace=~\"$namespace\",pod_name=~\"^$deployment.*$\"}[5m])) by (pod_name)",
           "format": "time_series",
           "interval": "10s",
@@ -1649,6 +1652,7 @@
           "step": 10
         },
         {
+          "$$hashKey": "object:2942",
           "expr": "- sum (rate (container_network_transmit_bytes_total{image!=\"\",name=~\"^k8s_.*\",namespace=~\"$namespace\",pod_name=~\"^$deployment.*$\"}[5m])) by (pod_name)",
           "format": "time_series",
           "interval": "10s",
@@ -1694,14 +1698,18 @@
           "min": null,
           "show": false
         }
-      ]
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "decimals": 2,
       "editable": true,
       "error": false,
@@ -1743,6 +1751,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:2865",
           "expr": "sum (rate (container_network_receive_bytes_total{id!=\"/\",namespace=~\"$namespace\",pod_name=~\"^$deployment.*$\"}[5m])) by (id)",
           "format": "time_series",
           "interval": "10s",
@@ -1753,6 +1762,7 @@
           "step": 10
         },
         {
+          "$$hashKey": "object:2866",
           "expr": "- sum (rate (container_network_transmit_bytes_total{id!=\"/\",namespace=~\"$namespace\",pod_name=~\"^$deployment.*$\"}[5m])) by (id)",
           "format": "time_series",
           "interval": "10s",
@@ -1798,7 +1808,11 @@
           "min": null,
           "show": false
         }
-      ]
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     }
   ],
   "refresh": false,
@@ -1884,5 +1898,5 @@
   "timezone": "browser",
   "title": "Kubernetes Deployment",
   "uid": "Bq8cPFViz",
-  "version": 14
+  "version": 1
 }

@@ -1,40 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_PROMETHEUS",
-      "label": "Prometheus",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "prometheus",
-      "pluginName": "Prometheus"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "5.0.4"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": "5.0.0"
-    },
-    {
-      "type": "datasource",
-      "id": "prometheus",
-      "name": "Prometheus",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": "5.0.0"
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -52,7 +16,6 @@
   "editable": true,
   "gnetId": 5499,
   "graphTooltip": 0,
-  "id": null,
   "links": [],
   "panels": [
     {
@@ -60,7 +23,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "fill": 1,
@@ -103,6 +66,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:578",
           "expr": "sum(rate(node_cpu_seconds_total{mode=\"idle\"}[2m]))*100",
           "format": "time_series",
           "hide": false,
@@ -143,14 +107,18 @@
           "logBase": 1,
           "show": true
         }
-      ]
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "fill": 1,
@@ -193,6 +161,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:639",
           "expr": "sum(node_load1)",
           "format": "time_series",
           "intervalFactor": 4,
@@ -202,6 +171,7 @@
           "target": ""
         },
         {
+          "$$hashKey": "object:640",
           "expr": "sum(node_load5)",
           "format": "time_series",
           "intervalFactor": 4,
@@ -211,6 +181,7 @@
           "target": ""
         },
         {
+          "$$hashKey": "object:641",
           "expr": "sum(node_load15)",
           "format": "time_series",
           "intervalFactor": 4,
@@ -249,14 +220,18 @@
           "logBase": 1,
           "show": true
         }
-      ]
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "fill": 2,
@@ -304,6 +279,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:737",
           "expr": "sum(node_memory_MemTotal_bytes) - sum(node_memory_MemFree_bytes) - sum(node_memory_Buffers_bytes) - sum(node_memory_Cached_bytes)",
           "format": "time_series",
           "intervalFactor": 2,
@@ -314,6 +290,7 @@
           "target": ""
         },
         {
+          "$$hashKey": "object:738",
           "expr": "sum(node_memory_Buffers_bytes)",
           "format": "time_series",
           "interval": "",
@@ -325,6 +302,7 @@
           "target": ""
         },
         {
+          "$$hashKey": "object:739",
           "expr": "sum(node_memory_Cached_bytes)",
           "format": "time_series",
           "interval": "",
@@ -336,6 +314,7 @@
           "target": ""
         },
         {
+          "$$hashKey": "object:740",
           "expr": "sum(node_memory_MemFree_bytes)",
           "format": "time_series",
           "interval": "",
@@ -377,7 +356,11 @@
           "logBase": 1,
           "show": true
         }
-      ]
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "cacheTimeout": null,
@@ -388,7 +371,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "format": "percent",
       "gauge": {
@@ -442,6 +425,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:786",
           "expr": "((sum(node_memory_MemTotal_bytes) - sum(node_memory_MemFree_bytes) - sum(node_memory_Buffers_bytes) - sum(node_memory_Cached_bytes)) / sum(node_memory_MemTotal_bytes)) * 100",
           "format": "time_series",
           "intervalFactor": 2,
@@ -470,7 +454,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "fill": 1,
@@ -526,6 +510,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:906",
           "expr": "sum(rate(node_nfsd_disk_bytes_read_total[5m]))",
           "format": "time_series",
           "hide": false,
@@ -536,6 +521,7 @@
           "target": ""
         },
         {
+          "$$hashKey": "object:907",
           "expr": "sum(rate(node_nfsd_disk_bytes_written_total[5m]))",
           "format": "time_series",
           "intervalFactor": 4,
@@ -544,6 +530,7 @@
           "step": 20
         },
         {
+          "$$hashKey": "object:908",
           "expr": "sum(rate(node_disk_io_time_seconds_total[5m]))",
           "format": "time_series",
           "intervalFactor": 4,
@@ -581,7 +568,11 @@
           "logBase": 1,
           "show": true
         }
-      ]
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "cacheTimeout": null,
@@ -592,7 +583,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "format": "percentunit",
       "gauge": {
@@ -646,6 +637,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:852",
           "expr": "(sum(node_filesystem_size_bytes{device!=\"rootfs\"}) - sum(node_filesystem_free_bytes{device!=\"rootfs\"})) / sum(node_filesystem_size_bytes{device!=\"rootfs\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -673,7 +665,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "fill": 1,
@@ -721,6 +713,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:1004",
           "expr": "sum(rate(node_network_receive_bytes_total{device!~\"lo\"}[5m]))",
           "format": "time_series",
           "hide": false,
@@ -760,14 +753,18 @@
           "logBase": 1,
           "show": true
         }
-      ]
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "fill": 1,
@@ -815,6 +812,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:1058",
           "expr": "sum(rate(node_network_transmit_bytes_total{device!~\"lo\"}[5m]))",
           "format": "time_series",
           "hide": false,
@@ -854,14 +852,18 @@
           "logBase": 1,
           "show": true
         }
-      ]
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "fill": 1,
@@ -904,6 +906,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:1112",
           "expr": "sum(kube_pod_info)",
           "format": "time_series",
           "intervalFactor": 2,
@@ -912,6 +915,7 @@
           "step": 10
         },
         {
+          "$$hashKey": "object:1113",
           "expr": "sum(kube_node_status_capacity_pods)",
           "format": "time_series",
           "intervalFactor": 2,
@@ -949,7 +953,11 @@
           "logBase": 1,
           "show": true
         }
-      ]
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "cacheTimeout": null,
@@ -960,7 +968,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "format": "percent",
       "gauge": {
@@ -1014,6 +1022,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:1182",
           "expr": "100 - (sum(kube_node_status_capacity_pods) - sum(kube_pod_info)) / sum(kube_node_status_capacity_pods) * 100",
           "format": "time_series",
           "intervalFactor": 2,
@@ -1080,5 +1089,5 @@
   "timezone": "browser",
   "title": "Kubernetes Capacity Planning",
   "uid": "DO_ey2Viz",
-  "version": 5
+  "version": 1
 }
