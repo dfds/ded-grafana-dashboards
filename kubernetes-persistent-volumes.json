@@ -1,49 +1,8 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_PROMETHEUS",
-      "label": "Prometheus",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "prometheus",
-      "pluginName": "Prometheus"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "5.0.4"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": "5.0.0"
-    },
-    {
-      "type": "datasource",
-      "id": "prometheus",
-      "name": "Prometheus",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "table",
-      "name": "Table",
-      "version": "5.0.0"
-    }
-  ],
   "annotations": {
     "list": [
       {
+        "$$hashKey": "object:93",
         "builtIn": 1,
         "datasource": "-- Grafana --",
         "enable": true,
@@ -58,8 +17,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": null,
-  "iteration": 1528098021467,
+  "iteration": 1528880131712,
   "links": [],
   "panels": [
     {
@@ -71,7 +29,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -123,6 +81,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:371",
           "expr": "sum(((kubelet_volume_stats_used_bytes / kubelet_volume_stats_capacity_bytes)*100)>bool $capacity)",
           "format": "time_series",
           "intervalFactor": 1,
@@ -144,7 +103,7 @@
     },
     {
       "columns": [],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "fontSize": "100%",
       "gridPos": {
         "h": 6,
@@ -218,6 +177,7 @@
       ],
       "targets": [
         {
+          "$$hashKey": "object:417",
           "expr": "(kubelet_volume_stats_used_bytes / kubelet_volume_stats_capacity_bytes * 100)>$capacity",
           "format": "table",
           "instant": true,
@@ -238,7 +198,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -290,6 +250,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:463",
           "expr": "sum(kube_persistentvolumeclaim_status_phase{phase=\"Bound\"}!=bool 1)",
           "format": "time_series",
           "intervalFactor": 1,
@@ -311,7 +272,7 @@
     },
     {
       "columns": [],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "fontSize": "100%",
       "gridPos": {
         "h": 6,
@@ -382,6 +343,7 @@
       ],
       "targets": [
         {
+          "$$hashKey": "object:509",
           "expr": "kube_persistentvolumeclaim_status_phase{phase=\"Bound\", namespace=\"elasticsearch\"}!=1",
           "format": "table",
           "instant": true,
@@ -398,7 +360,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "decimals": 0,
       "fill": 1,
       "gridPos": {
@@ -433,6 +395,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:561",
           "expr": "kubelet_volume_stats_available_bytes{namespace=\"$namespace\", persistentvolumeclaim=\"$pvcname\"}",
           "format": "time_series",
           "intervalFactor": 1,
@@ -440,6 +403,7 @@
           "refId": "A"
         },
         {
+          "$$hashKey": "object:562",
           "expr": "kubelet_volume_stats_used_bytes{namespace=\"$namespace\", persistentvolumeclaim=\"$pvcname\"}",
           "format": "time_series",
           "hide": false,
@@ -482,7 +446,11 @@
           "min": null,
           "show": true
         }
-      ]
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "cacheTimeout": null,
@@ -493,7 +461,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "format": "percent",
       "gauge": {
         "maxValue": 100,
@@ -545,6 +513,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:629",
           "expr": "kubelet_volume_stats_used_bytes{namespace=\"$namespace\",persistentvolumeclaim=\"$pvcname\"} / kubelet_volume_stats_capacity_bytes{namespace=\"$namespace\",persistentvolumeclaim=\"$pvcname\"}*100",
           "format": "time_series",
           "instant": false,
@@ -577,8 +546,12 @@
     "list": [
       {
         "allValue": null,
-        "current": {},
-        "datasource": "${DS_PROMETHEUS}",
+        "current": {
+          "tags": [],
+          "text": "elasticsearch",
+          "value": "elasticsearch"
+        },
+        "datasource": "Prometheus",
         "hide": 0,
         "includeAll": false,
         "label": "Namespace",
@@ -597,8 +570,12 @@
       },
       {
         "allValue": null,
-        "current": {},
-        "datasource": "${DS_PROMETHEUS}",
+        "current": {
+          "tags": [],
+          "text": "data-elasticsearch-elasticsearch-data-0",
+          "value": "data-elasticsearch-elasticsearch-data-0"
+        },
+        "datasource": "Prometheus",
         "hide": 0,
         "includeAll": false,
         "label": "PVC",
@@ -629,31 +606,37 @@
         "name": "capacity",
         "options": [
           {
+            "$$hashKey": "object:652",
             "selected": true,
             "text": "50",
             "value": "50"
           },
           {
+            "$$hashKey": "object:653",
             "selected": false,
             "text": "60",
             "value": "60"
           },
           {
+            "$$hashKey": "object:654",
             "selected": false,
             "text": "70",
             "value": "70"
           },
           {
+            "$$hashKey": "object:655",
             "selected": false,
             "text": "80",
             "value": "80"
           },
           {
+            "$$hashKey": "object:656",
             "selected": false,
             "text": "90",
             "value": "90"
           },
           {
+            "$$hashKey": "object:657",
             "selected": false,
             "text": "95",
             "value": "95"
@@ -696,5 +679,5 @@
   "timezone": "",
   "title": "Kubernetes Persistent Volumes",
   "uid": "KweC0j4mz",
-  "version": 19
+  "version": 2
 }

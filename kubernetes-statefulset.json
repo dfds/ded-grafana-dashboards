@@ -1,37 +1,8 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_PROMETHEUS",
-      "label": "Prometheus",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "prometheus",
-      "pluginName": "Prometheus"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "5.0.4"
-    },
-    {
-      "type": "datasource",
-      "id": "prometheus",
-      "name": "Prometheus",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": "5.0.0"
-    }
-  ],
   "annotations": {
     "list": [
       {
+        "$$hashKey": "object:90",
         "builtIn": 1,
         "datasource": "-- Grafana --",
         "enable": true,
@@ -46,8 +17,7 @@
   "editable": true,
   "gnetId": 5526,
   "graphTooltip": 1,
-  "id": null,
-  "iteration": 1528098024463,
+  "iteration": 1528879832752,
   "links": [],
   "panels": [
     {
@@ -59,7 +29,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "decimals": 2,
       "editable": true,
       "error": false,
@@ -116,6 +86,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:286",
           "expr": "sum (rate (container_cpu_usage_seconds_total{namespace=~\"$namespace\",pod_name=~\"^$statefulset.*$\"}[5m])) / sum (machine_cpu_cores) * 100",
           "format": "time_series",
           "interval": "10s",
@@ -146,7 +117,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "percent",
@@ -202,6 +173,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:332",
           "expr": "sum (container_memory_usage_bytes{namespace=~\"$namespace\",pod_name=~\"^$statefulset.*$\"}) / sum (machine_memory_bytes) * 100",
           "format": "time_series",
           "interval": "10s",
@@ -234,7 +206,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "format": "Bps",
       "gauge": {
@@ -287,6 +259,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:378",
           "expr": "sum(rate(container_network_transmit_bytes_total{namespace=~\"$namespace\",pod_name=~\"^$statefulset.*\"}[5m])) + sum(rate(container_network_receive_bytes_total{namespace=~\"$namespace\",pod_name=~\"^$statefulset.*\"}[5m])) ",
           "format": "time_series",
           "intervalFactor": 2,
@@ -316,7 +289,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "percent",
@@ -372,6 +345,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:424",
           "expr": "sum(kube_deployment_status_replicas_available{namespace=~\"$namespace\",deployment=~\"^$statefulset.*\"}) / sum(kube_deployment_status_replicas{namespace=~\"$namespace\",deployment=~\"^$statefulset.*\"}) * 100",
           "format": "time_series",
           "intervalFactor": 2,
@@ -401,7 +375,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "bytes",
@@ -457,6 +431,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:470",
           "expr": "sum (container_memory_working_set_bytes{namespace=~\"$namespace\",pod_name=~\"^$statefulset.*$\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -486,7 +461,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "bytes",
@@ -542,6 +517,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:516",
           "expr": "sum (container_memory_working_set_bytes)",
           "format": "time_series",
           "intervalFactor": 2,
@@ -571,7 +547,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "none",
@@ -627,6 +603,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:562",
           "expr": "sum (rate (container_cpu_usage_seconds_total{namespace=~\"$namespace\",pod_name=~\"^$statefulset.*$\"}[5m]))",
           "format": "time_series",
           "intervalFactor": 2,
@@ -656,7 +633,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "none",
@@ -712,6 +689,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:608",
           "expr": "sum (machine_cpu_cores{kubernetes_io_role=~\"node\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -741,7 +719,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "none",
@@ -797,6 +775,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:654",
           "expr": "sum(kube_deployment_status_replicas_available{namespace=~\"$namespace\",deployment=~\"^$statefulset.*$\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -826,7 +805,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "none",
@@ -882,6 +861,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:700",
           "expr": "sum(kube_deployment_status_replicas{namespace=~\"$namespace\",deployment=~\"^$statefulset.*$\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -911,7 +891,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "none",
@@ -966,6 +946,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:746",
           "expr": "max(kube_deployment_status_observed_generation{namespace=~\"$namespace\",deployment=~\"^$statefulset.*\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -996,7 +977,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "format": "none",
@@ -1051,6 +1032,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:792",
           "expr": "max(kube_deployment_metadata_generation{namespace=~\"$namespace\",deployment=~\"^$statefulset.*\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -1083,8 +1065,11 @@
     "list": [
       {
         "allValue": ".*",
-        "current": {},
-        "datasource": "${DS_PROMETHEUS}",
+        "current": {
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": "Prometheus",
         "hide": 0,
         "includeAll": true,
         "label": "Namespace",
@@ -1103,8 +1088,11 @@
       },
       {
         "allValue": ".*",
-        "current": {},
-        "datasource": "${DS_PROMETHEUS}",
+        "current": {
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": "Prometheus",
         "hide": 0,
         "includeAll": true,
         "label": "StatefulSet",
@@ -1155,5 +1143,5 @@
   "timezone": "browser",
   "title": "Kubernetes StatefulSet",
   "uid": "18MPyh4mz",
-  "version": 6
+  "version": 2
 }
