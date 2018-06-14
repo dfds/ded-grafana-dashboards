@@ -17,7 +17,7 @@
   "editable": true,
   "gnetId": 3131,
   "graphTooltip": 0,
-  "iteration": 1528880244173,
+  "iteration": 1528959167254,
   "links": [],
   "panels": [
     {
@@ -1154,12 +1154,143 @@
       "valueName": "current"
     },
     {
+      "columns": [],
+      "datasource": "Prometheus",
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 12
+      },
+      "hideTimeOverride": false,
+      "id": 130,
+      "links": [],
+      "pageSize": null,
+      "repeat": null,
+      "repeatDirection": "h",
+      "scroll": true,
+      "showHeader": true,
+      "sort": {
+        "col": 9,
+        "desc": true
+      },
+      "styles": [
+        {
+          "$$hashKey": "object:2627",
+          "alias": "Time",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "pattern": "Time",
+          "type": "hidden"
+        },
+        {
+          "$$hashKey": "object:2769",
+          "alias": "Node",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "node",
+          "preserveFormat": false,
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "$$hashKey": "object:2786",
+          "alias": "Key",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "key",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "$$hashKey": "object:2799",
+          "alias": "Effect",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "effect",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "$$hashKey": "object:2812",
+          "alias": "Value",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "value",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "$$hashKey": "object:4623",
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "/.*/",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        }
+      ],
+      "targets": [
+        {
+          "$$hashKey": "object:2539",
+          "expr": "kube_node_spec_taint{key !=\"node-role.kubernetes.io/master\"}",
+          "format": "table",
+          "instant": true,
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "title": "Taints",
+      "transform": "table",
+      "type": "table"
+    },
+    {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 12
+        "y": 21
       },
       "id": 12,
       "panels": [],
@@ -1177,7 +1308,7 @@
         "h": 15,
         "w": 12,
         "x": 0,
-        "y": 13
+        "y": 22
       },
       "id": 62,
       "legend": {
@@ -1290,7 +1421,7 @@
         "h": 15,
         "w": 12,
         "x": 12,
-        "y": 13
+        "y": 22
       },
       "id": 78,
       "legend": {
@@ -1446,7 +1577,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 28
+        "y": 37
       },
       "id": 14,
       "panels": [],
@@ -1486,7 +1617,7 @@
         "h": 12,
         "w": 24,
         "x": 0,
-        "y": 29
+        "y": 38
       },
       "id": 80,
       "legend": {
@@ -1632,7 +1763,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 41
+        "y": 50
       },
       "id": 16,
       "panels": [],
@@ -1654,7 +1785,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 42
+        "y": 51
       },
       "id": 6,
       "legend": {
@@ -1793,7 +1924,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 42
+        "y": 51
       },
       "height": "410",
       "id": 48,
@@ -1912,7 +2043,7 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 49
+        "y": 58
       },
       "id": 98,
       "legend": {
@@ -2091,7 +2222,7 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 49
+        "y": 58
       },
       "id": 128,
       "legend": {
@@ -2281,7 +2412,7 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 60
+        "y": 69
       },
       "height": "410",
       "id": 46,
@@ -2376,7 +2507,7 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 60
+        "y": 69
       },
       "id": 102,
       "legend": {
@@ -2554,7 +2685,7 @@
         "h": 9,
         "w": 24,
         "x": 0,
-        "y": 71
+        "y": 80
       },
       "id": 94,
       "legend": {
@@ -2641,7 +2772,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 80
+        "y": 89
       },
       "id": 18,
       "panels": [],
@@ -2664,7 +2795,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 81
+        "y": 90
       },
       "id": 10,
       "legend": {
@@ -2763,7 +2894,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 81
+        "y": 90
       },
       "id": 8,
       "legend": {
@@ -2859,7 +2990,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 88
+        "y": 97
       },
       "id": 120,
       "legend": {
@@ -2994,7 +3125,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 88
+        "y": 97
       },
       "id": 122,
       "legend": {
@@ -3133,8 +3264,8 @@
         "current": {
           "selected": true,
           "tags": [],
-          "text": "node",
-          "value": "node"
+          "text": "master",
+          "value": "master"
         },
         "hide": 0,
         "includeAll": true,
@@ -3143,17 +3274,20 @@
         "name": "role",
         "options": [
           {
+            "$$hashKey": "object:2258",
             "selected": false,
             "text": "All",
             "value": "$__all"
           },
           {
-            "selected": false,
+            "$$hashKey": "object:2259",
+            "selected": true,
             "text": "master",
             "value": "master"
           },
           {
-            "selected": true,
+            "$$hashKey": "object:2260",
+            "selected": false,
             "text": "node",
             "value": "node"
           }
@@ -3195,5 +3329,5 @@
   "timezone": "browser",
   "title": "Kubernetes Nodes",
   "uid": "zw6IEF4mz",
-  "version": 2
+  "version": 79
 }

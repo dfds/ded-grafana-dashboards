@@ -693,10 +693,12 @@
       "mappingType": 1,
       "mappingTypes": [
         {
+          "$$hashKey": "object:1776",
           "name": "value to text",
           "value": 1
         },
         {
+          "$$hashKey": "object:1777",
           "name": "range to text",
           "value": 2
         }
@@ -725,7 +727,7 @@
       "targets": [
         {
           "$$hashKey": "object:2112",
-          "expr": "sum(kube_node_spec_unschedulable)",
+          "expr": "sum(kube_node_spec_unschedulable) + count(kube_node_spec_taint{key != \"node-role.kubernetes.io/master\"})",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "",
@@ -733,18 +735,20 @@
           "step": 600
         }
       ],
-      "thresholds": "1, 3",
+      "thresholds": "1, 1",
       "title": "Nodes Unschedulable",
       "transparent": false,
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
         {
+          "$$hashKey": "object:1779",
           "op": "=",
           "text": "N/A",
           "value": "null"
         },
         {
+          "$$hashKey": "object:1780",
           "op": "=",
           "text": "Everything is fine",
           "value": "0"
@@ -1943,7 +1947,7 @@
       "type": "row"
     }
   ],
-  "refresh": "10s",
+  "refresh": false,
   "schemaVersion": 16,
   "style": "dark",
   "tags": [
@@ -1954,8 +1958,8 @@
     "list": []
   },
   "time": {
-    "from": "now-6h",
-    "to": "now"
+    "from": "2018-06-13T18:48:38.187Z",
+    "to": "2018-06-14T06:48:38.187Z"
   },
   "timepicker": {
     "refresh_intervals": [
@@ -1985,5 +1989,5 @@
   "timezone": "browser",
   "title": "Kubernetes Cluster Health Overview",
   "uid": "NEYiLUzik",
-  "version": 1
+  "version": 79
 }
