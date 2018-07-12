@@ -648,8 +648,8 @@
     ]
   },
   "time": {
-    "from": "2018-05-31T07:38:17.639Z",
-    "to": "2018-05-31T11:38:17.643Z"
+    "from": "now-24h",
+    "to": "now"
   },
   "timepicker": {
     "refresh_intervals": [

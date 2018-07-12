@@ -1958,8 +1958,8 @@
     "list": []
   },
   "time": {
-    "from": "2018-06-13T18:48:38.187Z",
-    "to": "2018-06-14T06:48:38.187Z"
+    "from": "now-6h",
+    "to": "now"
   },
   "timepicker": {
     "refresh_intervals": [
