@@ -17,7 +17,7 @@
   "editable": true,
   "gnetId": 747,
   "graphTooltip": 0,
-  "iteration": 1528879834756,
+  "iteration": 1531742111812,
   "links": [],
   "panels": [
     {
@@ -175,7 +175,7 @@
       "targets": [
         {
           "$$hashKey": "object:581",
-          "expr": "sum (rate (container_cpu_usage_seconds_total{pod_name=~\"^$Pod$\"}[1m])) / sum (machine_cpu_cores{kubernetes_io_hostname=~\"^$Node$\"}) * 100",
+          "expr": "sum (rate (container_cpu_usage_seconds_total{pod_name=~\"^$Pod$\"}[5m])) / sum (machine_cpu_cores{kubernetes_io_hostname=~\"^$Node$\"}) * 100",
           "format": "time_series",
           "interval": "10s",
           "intervalFactor": 1,
@@ -950,6 +950,7 @@
       {
         "allValue": ".*",
         "current": {
+          "selected": true,
           "text": "All",
           "value": "$__all"
         },
@@ -973,6 +974,7 @@
       {
         "allValue": ".*",
         "current": {
+          "selected": false,
           "tags": [],
           "text": "All",
           "value": "$__all"
@@ -1028,5 +1030,5 @@
   "timezone": "browser",
   "title": "Kubernetes Pods",
   "uid": "njRxEFVmk",
-  "version": 2
+  "version": 3380
 }
