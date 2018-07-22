@@ -319,7 +319,7 @@
       "tableColumn": "app",
       "targets": [
         {
-          "expr": "kube_daemonset_status_number_unavailable{daemonset=~\"fluentd-.*\"} % kube_daemonset_status_number_ready{daemonset=~\"fluentd-.*\"} ",
+          "expr": "kube_daemonset_status_number_unavailable{daemonset=~\"fluentd-.*\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
