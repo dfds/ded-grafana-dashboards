@@ -1,66 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "PROMETHEUS",
-      "label": "Prometheus",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "prometheus",
-      "pluginName": "Prometheus"
-    },
-    {
-      "name": "ELASTICSEARCH",
-      "label": "Elasticsearch",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "elasticsearch",
-      "pluginName": "Elasticsearch"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "datasource",
-      "id": "elasticsearch",
-      "name": "Elasticsearch",
-      "version": "5.0.0"
-    },
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "5.1.3"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": "5.0.0"
-    },
-    {
-      "type": "datasource",
-      "id": "prometheus",
-      "name": "Prometheus",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "table",
-      "name": "Table",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "text",
-      "name": "Text",
-      "version": "5.0.0"
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -78,8 +16,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": null,
-  "iteration": 1532005947678,
+  "iteration": 1532283000339,
   "links": [],
   "panels": [
     {
@@ -2648,19 +2585,6 @@
       "title": "Basic Pod Info",
       "transform": "table",
       "type": "table"
-    },
-    {
-      "collapsed": true,
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 33
-      },
-      "id": 36,
-      "panels": [],
-      "title": "cc",
-      "type": "row"
     }
   ],
   "refresh": "30s",
@@ -2673,7 +2597,10 @@
     "list": [
       {
         "allValue": null,
-        "current": {},
+        "current": {
+          "text": "v2.0.0",
+          "value": "v2.0.0"
+        },
         "datasource": "Prometheus",
         "hide": 2,
         "includeAll": false,
@@ -2725,5 +2652,5 @@
   "timezone": "",
   "title": "Kubernetes FluentD Pods",
   "uid": "y5ByREOmk",
-  "version": 57
+  "version": 298
 }
