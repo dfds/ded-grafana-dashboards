@@ -1173,7 +1173,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum (rate (container_cpu_usage_seconds_total{pod_name=~\"tiller-deploy-.*\", kubernetes_io_hostname=\"$tillerhost\"}[5m]))",
+          "expr": "sum (rate (container_cpu_usage_seconds_total{pod_name=~\"mongodbdeployment-.*\", kubernetes_io_hostname=\"$mongodbdeploymenthost\"}[5m]))",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1345,7 +1345,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum (machine_cpu_cores{kubernetes_io_hostname=\"$tillerhost\"})",
+          "expr": "sum (machine_cpu_cores{kubernetes_io_hostname=\"$mongodbdeploymenthost\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "",
@@ -2379,7 +2379,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum (rate (container_cpu_usage_seconds_total{pod_name=~\"tiller-deploy-.*\", kubernetes_io_hostname=\"$tillerhost\"}[5m]))",
+          "expr": "sum (rate (container_cpu_usage_seconds_total{pod_name=~\"mongodbdeployment-.*\", kubernetes_io_hostname=\"$mongodbdeploymenthost\"}[5m]))",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -2551,7 +2551,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum (machine_cpu_cores{kubernetes_io_hostname=\"$tillerhost\"})",
+          "expr": "sum (machine_cpu_cores{kubernetes_io_hostname=\"$mongodbdeploymenthost\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "",
