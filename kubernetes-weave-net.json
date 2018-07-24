@@ -36,12 +36,6 @@
     },
     {
       "type": "panel",
-      "id": "table",
-      "name": "Table",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
       "id": "text",
       "name": "Text",
       "version": "5.0.0"
@@ -1320,7 +1314,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum (rate (container_cpu_usage_seconds_total{pod_name=~\"fluentd-.*\", kubernetes_io_role=\"master\"}[5m]))",
+          "expr": "sum (rate (container_cpu_usage_seconds_total{pod_name=~\"weave-net-.*\", kubernetes_io_role=\"master\"}[5m]))",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "",
@@ -1484,8 +1478,9 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum (rate (container_cpu_usage_seconds_total{pod_name=~\"weave-net-.*\", kubernetes_io_role=\"master\"}[5m]))",
+          "expr": "sum (rate (container_cpu_usage_seconds_total{pod_name=~\"weave-net-.*\", kubernetes_io_role=\"node\"}[5m]))",
           "format": "time_series",
+          "interval": "",
           "intervalFactor": 1,
           "legendFormat": "",
           "refId": "A"
@@ -1756,215 +1751,6 @@
         }
       ],
       "valueName": "avg"
-    },
-    {
-      "collapsed": true,
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 18
-      },
-      "id": 6,
-      "panels": [
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "#299c46",
-            "rgba(237, 129, 40, 0.89)",
-            "#d44a3a"
-          ],
-          "datasource": "Prometheus",
-          "decimals": null,
-          "format": "Bps",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "gridPos": {
-            "h": 4,
-            "w": 3,
-            "x": 0,
-            "y": 19
-          },
-          "id": 49,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": true,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": true
-          },
-          "tableColumn": "",
-          "targets": [
-            {
-              "expr": "sum (rate (container_network_receive_bytes_total{image!=\"\",name=~\"^k8s_.*\",pod_name=~\"weave-net-.*\", kubernetes_io_role=~\"master\"}[5m]))",
-              "format": "time_series",
-              "intervalFactor": 1,
-              "legendFormat": "",
-              "refId": "A"
-            }
-          ],
-          "thresholds": "",
-          "title": "Network Receive",
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "current"
-        }
-      ],
-      "title": "Network Traffic",
-      "type": "row"
-    },
-    {
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 19
-      },
-      "id": 4,
-      "title": "Row title",
-      "type": "row"
-    },
-    {
-      "columns": [],
-      "datasource": "Prometheus",
-      "fontSize": "100%",
-      "gridPos": {
-        "h": 7,
-        "w": 5,
-        "x": 13,
-        "y": 20
-      },
-      "id": 47,
-      "links": [],
-      "pageSize": 6,
-      "scroll": true,
-      "showHeader": true,
-      "sort": {
-        "col": 0,
-        "desc": true
-      },
-      "styles": [
-        {
-          "alias": "Pod Name",
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "pattern": "pod",
-          "type": "string"
-        },
-        {
-          "alias": "Start Time",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 0,
-          "mappingType": 1,
-          "pattern": "Value",
-          "thresholds": [],
-          "type": "number",
-          "unit": "dateTimeFromNow"
-        },
-        {
-          "alias": "",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Time",
-          "thresholds": [],
-          "type": "hidden",
-          "unit": "short"
-        },
-        {
-          "alias": "Pod version",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "label_version",
-          "thresholds": [],
-          "type": "string",
-          "unit": "short"
-        },
-        {
-          "alias": "",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "decimals": 2,
-          "pattern": "/.*/",
-          "thresholds": [],
-          "type": "hidden",
-          "unit": "short"
-        }
-      ],
-      "targets": [
-        {
-          "expr": " (kube_pod_labels)* on(pod) group_left(version) (kube_pod_start_time{pod=~\"weave-net-.*?\"}) * 1000",
-          "format": "table",
-          "intervalFactor": 1,
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "title": "Basic Pod Info",
-      "transform": "table",
-      "type": "table"
     }
   ],
   "refresh": "30s",
@@ -2008,5 +1794,5 @@
   "timezone": "",
   "title": "Kubernetes Weave Net",
   "uid": "zYHnhGFik",
-  "version": 22
-}
+  "version": 137
+}v
