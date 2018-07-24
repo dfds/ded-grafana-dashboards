@@ -2418,7 +2418,7 @@
           "value": "log"
         }
       ],
-      "datasource": "${ELASTICSEARCH}",
+      "datasource": "Elasticsearch",
       "fontSize": "100%",
       "gridPos": {
         "h": 6,
