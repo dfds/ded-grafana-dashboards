@@ -64,7 +64,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1532346830374,
+  "iteration": 1532417106579,
   "links": [],
   "panels": [
     {
@@ -416,7 +416,7 @@
       "valueName": "avg"
     },
     {
-      "content": "<center><h1>N/A<h1></center>",
+      "content": "<center><h1>$wikiversion<h1></center>",
       "gridPos": {
         "h": 2,
         "w": 2,
@@ -2902,6 +2902,26 @@
         "tagsQuery": "",
         "type": "query",
         "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {},
+        "datasource": "Prometheus",
+        "hide": 2,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "wikiversion",
+        "options": [],
+        "query": "label_values(kube_deployment_labels{deployment=\"wikijsdeployment\"}, label_version)",
+        "refresh": 1,
+        "regex": "",
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
       }
     ]
   },
@@ -2937,5 +2957,5 @@
   "timezone": "",
   "title": "Wikijs",
   "uid": "-c2DfnKik",
-  "version": 45
+  "version": 121
 }
