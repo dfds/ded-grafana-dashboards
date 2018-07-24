@@ -64,7 +64,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1532270658487,
+  "iteration": 1532430708428,
   "links": [],
   "panels": [
     {
@@ -2277,7 +2277,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum (container_memory_working_set_bytes{container_name!=\"POD\", pod_name=~\"prometheus-server-.*\"})",
+          "expr": "sum (container_memory_working_set_bytes{container_name!=\"POD\", pod_name=~\"prometheus-alertmanager-.*\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "",
@@ -2451,7 +2451,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum (machine_memory_bytes{kubernetes_io_hostname=\"$promserverhost\"})",
+          "expr": "sum (machine_memory_bytes{kubernetes_io_hostname=\"$promalertmanagerhost\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "",
@@ -5677,5 +5677,5 @@
   "timezone": "",
   "title": "Kubernetes Monitoring Setup",
   "uid": "O9jO_qdiz",
-  "version": 21
+  "version": 198
 }
