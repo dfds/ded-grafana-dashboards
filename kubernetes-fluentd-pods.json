@@ -611,7 +611,7 @@
         }
       ],
       "thresholds": "",
-      "title": "Use",
+      "title": "Used",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
