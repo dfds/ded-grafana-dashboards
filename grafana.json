@@ -64,15 +64,97 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1532956932156,
+  "iteration": 1533037935450,
   "links": [],
   "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 8,
+        "x": 16,
+        "y": 0
+      },
+      "id": 46,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "topk(1, node_boot_time_seconds{cluster_name=~\".+\"})",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "{{cluster_name}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Environment",
+      "type": "singlestat",
+      "valueFontSize": "150%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
     {
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 0
+        "y": 4
       },
       "id": 44,
       "title": "Deployment Info",
@@ -84,7 +166,7 @@
         "h": 2,
         "w": 2,
         "x": 0,
-        "y": 1
+        "y": 5
       },
       "id": 5,
       "links": [],
@@ -98,7 +180,7 @@
         "h": 2,
         "w": 3,
         "x": 2,
-        "y": 1
+        "y": 5
       },
       "id": 6,
       "links": [],
@@ -128,7 +210,7 @@
         "h": 2,
         "w": 3,
         "x": 5,
-        "y": 1
+        "y": 5
       },
       "id": 16,
       "interval": null,
@@ -209,7 +291,7 @@
         "h": 2,
         "w": 2,
         "x": 8,
-        "y": 1
+        "y": 5
       },
       "id": 10,
       "interval": null,
@@ -291,7 +373,7 @@
         "h": 2,
         "w": 2,
         "x": 10,
-        "y": 1
+        "y": 5
       },
       "id": 12,
       "interval": null,
@@ -373,7 +455,7 @@
         "h": 2,
         "w": 2,
         "x": 12,
-        "y": 1
+        "y": 5
       },
       "id": 14,
       "interval": null,
@@ -455,7 +537,7 @@
         "h": 2,
         "w": 2,
         "x": 14,
-        "y": 1
+        "y": 5
       },
       "id": 18,
       "interval": null,
@@ -536,7 +618,7 @@
         "h": 2,
         "w": 2,
         "x": 16,
-        "y": 1
+        "y": 5
       },
       "id": 20,
       "interval": null,
@@ -604,7 +686,7 @@
         "h": 3,
         "w": 6,
         "x": 18,
-        "y": 1
+        "y": 5
       },
       "id": 22,
       "links": [],
@@ -703,7 +785,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 4
+        "y": 8
       },
       "id": 42,
       "title": "General Statistics",
@@ -731,7 +813,7 @@
         "h": 2,
         "w": 2,
         "x": 0,
-        "y": 5
+        "y": 9
       },
       "id": 2,
       "interval": null,
@@ -812,7 +894,7 @@
         "h": 2,
         "w": 2,
         "x": 2,
-        "y": 5
+        "y": 9
       },
       "id": 3,
       "interval": null,
@@ -893,7 +975,7 @@
         "h": 2,
         "w": 2,
         "x": 4,
-        "y": 5
+        "y": 9
       },
       "id": 7,
       "interval": null,
@@ -974,7 +1056,7 @@
         "h": 2,
         "w": 2,
         "x": 6,
-        "y": 5
+        "y": 9
       },
       "id": 8,
       "interval": null,
@@ -1038,7 +1120,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 7
+        "y": 11
       },
       "id": 40,
       "title": "Resource Consumption",
@@ -1066,7 +1148,7 @@
         "h": 6,
         "w": 4,
         "x": 0,
-        "y": 8
+        "y": 12
       },
       "id": 24,
       "interval": null,
@@ -1147,7 +1229,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 8
+        "y": 12
       },
       "id": 26,
       "interval": null,
@@ -1217,7 +1299,7 @@
         "h": 6,
         "w": 13,
         "x": 6,
-        "y": 8
+        "y": 12
       },
       "id": 30,
       "legend": {
@@ -1322,7 +1404,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 11
+        "y": 15
       },
       "id": 28,
       "interval": null,
@@ -1404,7 +1486,7 @@
         "h": 6,
         "w": 4,
         "x": 0,
-        "y": 14
+        "y": 18
       },
       "id": 32,
       "interval": null,
@@ -1487,7 +1569,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 14
+        "y": 18
       },
       "id": 34,
       "interval": null,
@@ -1557,7 +1639,7 @@
         "h": 6,
         "w": 13,
         "x": 6,
-        "y": 14
+        "y": 18
       },
       "id": 38,
       "legend": {
@@ -1662,7 +1744,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 17
+        "y": 21
       },
       "id": 36,
       "interval": null,
@@ -1822,5 +1904,5 @@
   "timezone": "",
   "title": "Grafana",
   "uid": "ZFkYKUKiz",
-  "version": 33
+  "version": 92
 }
