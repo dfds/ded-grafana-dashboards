@@ -17,16 +17,100 @@
   "editable": true,
   "gnetId": 4475,
   "graphTooltip": 0,
-  "iteration": 1528879577746,
+  "id": 11,
+  "iteration": 1533028885825,
   "links": [],
   "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 8,
+        "x": 16,
+        "y": 0
+      },
+      "id": 93,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "$$hashKey": "object:2053",
+          "expr": "topk(1, node_boot_time_seconds{cluster_name=~\".+\"})",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "{{cluster_name}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Environment",
+      "type": "singlestat",
+      "valueFontSize": "150%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
     {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 0
+        "y": 4
       },
       "id": 10,
       "panels": [],
@@ -56,7 +140,7 @@
         "h": 8,
         "w": 4,
         "x": 0,
-        "y": 1
+        "y": 5
       },
       "id": 44,
       "interval": null,
@@ -138,7 +222,7 @@
         "h": 8,
         "w": 4,
         "x": 4,
-        "y": 1
+        "y": 5
       },
       "id": 54,
       "interval": null,
@@ -219,7 +303,7 @@
         "h": 8,
         "w": 4,
         "x": 8,
-        "y": 1
+        "y": 5
       },
       "id": 85,
       "interval": null,
@@ -300,7 +384,7 @@
         "h": 8,
         "w": 4,
         "x": 12,
-        "y": 1
+        "y": 5
       },
       "id": 18,
       "interval": null,
@@ -373,7 +457,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 1
+        "y": 5
       },
       "id": 20,
       "legend": {
@@ -471,7 +555,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 9
+        "y": 13
       },
       "id": 80,
       "legend": {
@@ -582,7 +666,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 9
+        "y": 13
       },
       "id": 78,
       "legend": {
@@ -680,7 +764,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 18
+        "y": 22
       },
       "id": 87,
       "panels": [
@@ -968,7 +1052,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 19
+        "y": 23
       },
       "id": 89,
       "panels": [
@@ -984,7 +1068,7 @@
             "h": 9,
             "w": 24,
             "x": 0,
-            "y": 3
+            "y": 20
           },
           "id": 68,
           "legend": {
@@ -1071,7 +1155,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 20
+        "y": 24
       },
       "id": 82,
       "panels": [
@@ -1614,7 +1698,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 21
+        "y": 25
       },
       "id": 84,
       "panels": [
@@ -1918,5 +2002,5 @@
   "timezone": "",
   "title": "Traefik",
   "uid": "tBFn9knmk",
-  "version": 1
+  "version": 82
 }
