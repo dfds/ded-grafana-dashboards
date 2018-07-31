@@ -17,16 +17,98 @@
   "editable": true,
   "gnetId": 741,
   "graphTooltip": 0,
-  "iteration": 1528888464389,
+  "iteration": 1533040383144,
   "links": [],
   "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 55,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "topk(1, node_boot_time_seconds{cluster_name=~\".+\"})",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "{{cluster_name}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Environment",
+      "type": "singlestat",
+      "valueFontSize": "150%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
     {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 0
+        "y": 3
       },
       "id": 51,
       "panels": [],
@@ -57,7 +139,7 @@
         "h": 5,
         "w": 6,
         "x": 0,
-        "y": 1
+        "y": 4
       },
       "height": "180px",
       "id": 4,
@@ -147,7 +229,7 @@
         "h": 5,
         "w": 6,
         "x": 6,
-        "y": 1
+        "y": 4
       },
       "height": "180px",
       "id": 6,
@@ -234,7 +316,7 @@
         "h": 8,
         "w": 4,
         "x": 12,
-        "y": 1
+        "y": 4
       },
       "id": 45,
       "interval": null,
@@ -319,7 +401,7 @@
         "h": 5,
         "w": 8,
         "x": 16,
-        "y": 1
+        "y": 4
       },
       "height": "180px",
       "id": 37,
@@ -405,7 +487,7 @@
         "h": 3,
         "w": 3,
         "x": 0,
-        "y": 6
+        "y": 9
       },
       "height": "100px",
       "id": 38,
@@ -491,7 +573,7 @@
         "h": 3,
         "w": 3,
         "x": 3,
-        "y": 6
+        "y": 9
       },
       "height": "100px",
       "id": 39,
@@ -577,7 +659,7 @@
         "h": 3,
         "w": 3,
         "x": 6,
-        "y": 6
+        "y": 9
       },
       "height": "100px",
       "id": 40,
@@ -663,7 +745,7 @@
         "h": 3,
         "w": 3,
         "x": 9,
-        "y": 6
+        "y": 9
       },
       "height": "100px",
       "id": 41,
@@ -749,7 +831,7 @@
         "h": 3,
         "w": 2,
         "x": 16,
-        "y": 6
+        "y": 9
       },
       "height": "100px",
       "id": 42,
@@ -835,7 +917,7 @@
         "h": 3,
         "w": 2,
         "x": 18,
-        "y": 6
+        "y": 9
       },
       "height": "100px",
       "id": 43,
@@ -921,7 +1003,7 @@
         "h": 3,
         "w": 2,
         "x": 20,
-        "y": 6
+        "y": 9
       },
       "id": 47,
       "interval": null,
@@ -1007,7 +1089,7 @@
         "h": 3,
         "w": 2,
         "x": 22,
-        "y": 6
+        "y": 9
       },
       "id": 49,
       "interval": null,
@@ -1075,7 +1157,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 9
+        "y": 12
       },
       "id": 53,
       "panels": [],
@@ -1097,7 +1179,7 @@
         "h": 10,
         "w": 8,
         "x": 0,
-        "y": 10
+        "y": 13
       },
       "height": "",
       "id": 17,
@@ -1197,7 +1279,7 @@
         "h": 10,
         "w": 8,
         "x": 8,
-        "y": 10
+        "y": 13
       },
       "height": "",
       "id": 24,
@@ -1312,7 +1394,7 @@
         "h": 10,
         "w": 8,
         "x": 16,
-        "y": 10
+        "y": 13
       },
       "id": 20,
       "isNew": true,
@@ -1411,7 +1493,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 20
+        "y": 23
       },
       "id": 25,
       "isNew": true,
@@ -1510,7 +1592,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 20
+        "y": 23
       },
       "id": 28,
       "isNew": true,
@@ -1609,7 +1691,7 @@
         "h": 12,
         "w": 12,
         "x": 0,
-        "y": 30
+        "y": 33
       },
       "id": 16,
       "isNew": true,
@@ -1719,7 +1801,7 @@
         "h": 12,
         "w": 12,
         "x": 12,
-        "y": 30
+        "y": 33
       },
       "id": 29,
       "isNew": true,
@@ -1904,5 +1986,5 @@
   "timezone": "browser",
   "title": "Kubernetes Deployment",
   "uid": "Bq8cPFViz",
-  "version": 1
+  "version": 95
 }
