@@ -19,11 +19,93 @@
   "links": [],
   "panels": [
     {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 8,
+        "x": 16,
+        "y": 0
+      },
+      "id": 50,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "topk(1, node_boot_time_seconds{cluster_name=~\".+\"})",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "{{cluster_name}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Environment",
+      "type": "singlestat",
+      "valueFontSize": "150%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
+    {
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 0
+        "y": 4
       },
       "id": 46,
       "title": "Storage",
@@ -52,7 +134,7 @@
         "h": 7,
         "w": 6,
         "x": 0,
-        "y": 1
+        "y": 5
       },
       "hideTimeOverride": false,
       "id": 1,
@@ -147,7 +229,7 @@
         "h": 7,
         "w": 6,
         "x": 6,
-        "y": 1
+        "y": 5
       },
       "hideTimeOverride": false,
       "id": 2,
@@ -236,7 +318,7 @@
         "h": 7,
         "w": 6,
         "x": 12,
-        "y": 1
+        "y": 5
       },
       "hideTimeOverride": false,
       "id": 3,
@@ -322,7 +404,7 @@
         "h": 7,
         "w": 6,
         "x": 18,
-        "y": 1
+        "y": 5
       },
       "hideTimeOverride": false,
       "id": 4,
@@ -413,7 +495,7 @@
         "h": 7,
         "w": 6,
         "x": 0,
-        "y": 8
+        "y": 12
       },
       "hideTimeOverride": false,
       "id": 5,
@@ -502,7 +584,7 @@
         "h": 7,
         "w": 6,
         "x": 6,
-        "y": 8
+        "y": 12
       },
       "hideTimeOverride": false,
       "id": 6,
@@ -593,7 +675,7 @@
         "h": 7,
         "w": 6,
         "x": 12,
-        "y": 8
+        "y": 12
       },
       "hideTimeOverride": false,
       "id": 7,
@@ -684,7 +766,7 @@
         "h": 7,
         "w": 6,
         "x": 18,
-        "y": 8
+        "y": 12
       },
       "hideTimeOverride": false,
       "id": 8,
@@ -779,7 +861,7 @@
         "h": 4,
         "w": 6,
         "x": 0,
-        "y": 15
+        "y": 19
       },
       "id": 26,
       "interval": null,
@@ -856,7 +938,7 @@
         "h": 4,
         "w": 3,
         "x": 6,
-        "y": 15
+        "y": 19
       },
       "hideTimeOverride": false,
       "id": 30,
@@ -942,7 +1024,7 @@
         "h": 4,
         "w": 3,
         "x": 9,
-        "y": 15
+        "y": 19
       },
       "hideTimeOverride": false,
       "id": 28,
@@ -1028,7 +1110,7 @@
         "h": 4,
         "w": 3,
         "x": 12,
-        "y": 15
+        "y": 19
       },
       "hideTimeOverride": false,
       "id": 32,
@@ -1114,7 +1196,7 @@
         "h": 4,
         "w": 3,
         "x": 15,
-        "y": 15
+        "y": 19
       },
       "hideTimeOverride": false,
       "id": 34,
@@ -1199,7 +1281,7 @@
         "h": 4,
         "w": 3,
         "x": 18,
-        "y": 15
+        "y": 19
       },
       "id": 42,
       "interval": null,
@@ -1274,7 +1356,7 @@
         "h": 4,
         "w": 3,
         "x": 21,
-        "y": 15
+        "y": 19
       },
       "id": 44,
       "interval": null,
@@ -1333,7 +1415,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 19
+        "y": 23
       },
       "id": 48,
       "panels": [
@@ -1989,5 +2071,5 @@
   "timezone": "browser",
   "title": "Kubernetes Cluster Health Overview",
   "uid": "NEYiLUzik",
-  "version": 79
+  "version": 93
 }
