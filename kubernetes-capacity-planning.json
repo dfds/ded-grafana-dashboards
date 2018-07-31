@@ -19,6 +19,89 @@
   "links": [],
   "panels": [
     {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 14,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "$$hashKey": "object:2053",
+          "expr": "topk(1, node_boot_time_seconds{cluster_name=~\".+\"})",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "{{cluster_name}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Environment",
+      "type": "singlestat",
+      "valueFontSize": "150%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
@@ -35,7 +118,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 0
+        "y": 3
       },
       "id": 3,
       "isNew": false,
@@ -130,7 +213,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 0
+        "y": 3
       },
       "id": 9,
       "isNew": false,
@@ -243,7 +326,7 @@
         "h": 7,
         "w": 18,
         "x": 0,
-        "y": 7
+        "y": 10
       },
       "id": 4,
       "isNew": false,
@@ -385,7 +468,7 @@
         "h": 7,
         "w": 6,
         "x": 18,
-        "y": 7
+        "y": 10
       },
       "hideTimeOverride": false,
       "id": 5,
@@ -466,7 +549,7 @@
         "h": 7,
         "w": 18,
         "x": 0,
-        "y": 14
+        "y": 17
       },
       "id": 6,
       "isNew": false,
@@ -597,7 +680,7 @@
         "h": 7,
         "w": 6,
         "x": 18,
-        "y": 14
+        "y": 17
       },
       "hideTimeOverride": false,
       "id": 12,
@@ -677,7 +760,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 21
+        "y": 24
       },
       "id": 8,
       "isNew": false,
@@ -776,7 +859,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 21
+        "y": 24
       },
       "id": 10,
       "isNew": false,
@@ -875,7 +958,7 @@
         "h": 7,
         "w": 18,
         "x": 0,
-        "y": 28
+        "y": 31
       },
       "id": 11,
       "isNew": true,
@@ -982,7 +1065,7 @@
         "h": 7,
         "w": 6,
         "x": 18,
-        "y": 28
+        "y": 31
       },
       "hideTimeOverride": false,
       "id": 7,
@@ -1089,5 +1172,5 @@
   "timezone": "browser",
   "title": "Kubernetes Capacity Planning",
   "uid": "DO_ey2Viz",
-  "version": 1
+  "version": 92
 }
