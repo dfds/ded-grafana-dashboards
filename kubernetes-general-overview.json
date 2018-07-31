@@ -15,16 +15,97 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": null,
   "links": [],
   "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 8,
+        "x": 16,
+        "y": 0
+      },
+      "id": 61,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "topk(1, node_boot_time_seconds{cluster_name=~\".+\"})",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "{{cluster_name}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Environment",
+      "type": "singlestat",
+      "valueFontSize": "150%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
     {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 0
+        "y": 4
       },
       "id": 6,
       "panels": [],
@@ -53,7 +134,7 @@
         "h": 3,
         "w": 2,
         "x": 0,
-        "y": 1
+        "y": 5
       },
       "id": 19,
       "interval": null,
@@ -133,7 +214,7 @@
         "h": 3,
         "w": 3,
         "x": 2,
-        "y": 1
+        "y": 5
       },
       "id": 32,
       "interval": null,
@@ -213,7 +294,7 @@
         "h": 3,
         "w": 3,
         "x": 5,
-        "y": 1
+        "y": 5
       },
       "id": 17,
       "interval": null,
@@ -296,7 +377,7 @@
         "h": 3,
         "w": 3,
         "x": 8,
-        "y": 1
+        "y": 5
       },
       "id": 4,
       "interval": null,
@@ -379,7 +460,7 @@
         "h": 3,
         "w": 3,
         "x": 11,
-        "y": 1
+        "y": 5
       },
       "id": 10,
       "interval": null,
@@ -460,7 +541,7 @@
         "h": 3,
         "w": 3,
         "x": 14,
-        "y": 1
+        "y": 5
       },
       "id": 14,
       "interval": null,
@@ -525,7 +606,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 4
+        "y": 8
       },
       "id": 8,
       "panels": [],
@@ -554,7 +635,7 @@
         "h": 3,
         "w": 2,
         "x": 0,
-        "y": 5
+        "y": 9
       },
       "id": 20,
       "interval": null,
@@ -634,7 +715,7 @@
         "h": 3,
         "w": 3,
         "x": 2,
-        "y": 5
+        "y": 9
       },
       "id": 33,
       "interval": null,
@@ -714,7 +795,7 @@
         "h": 3,
         "w": 3,
         "x": 5,
-        "y": 5
+        "y": 9
       },
       "id": 16,
       "interval": null,
@@ -797,7 +878,7 @@
         "h": 3,
         "w": 3,
         "x": 8,
-        "y": 5
+        "y": 9
       },
       "hideTimeOverride": false,
       "id": 2,
@@ -886,7 +967,7 @@
         "h": 3,
         "w": 3,
         "x": 11,
-        "y": 5
+        "y": 9
       },
       "id": 11,
       "interval": null,
@@ -968,7 +1049,7 @@
         "h": 3,
         "w": 3,
         "x": 14,
-        "y": 5
+        "y": 9
       },
       "id": 13,
       "interval": null,
@@ -1049,7 +1130,7 @@
         "h": 3,
         "w": 3,
         "x": 17,
-        "y": 5
+        "y": 9
       },
       "id": 55,
       "interval": null,
@@ -1129,7 +1210,7 @@
         "h": 3,
         "w": 3,
         "x": 20,
-        "y": 5
+        "y": 9
       },
       "id": 56,
       "interval": null,
@@ -1193,7 +1274,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 8
+        "y": 12
       },
       "id": 24,
       "panels": [],
@@ -1222,7 +1303,7 @@
         "h": 3,
         "w": 2,
         "x": 0,
-        "y": 9
+        "y": 13
       },
       "id": 29,
       "interval": null,
@@ -1302,7 +1383,7 @@
         "h": 3,
         "w": 2,
         "x": 2,
-        "y": 9
+        "y": 13
       },
       "id": 30,
       "interval": null,
@@ -1366,7 +1447,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 12
+        "y": 16
       },
       "id": 22,
       "panels": [],
@@ -1395,7 +1476,7 @@
         "h": 3,
         "w": 2,
         "x": 0,
-        "y": 13
+        "y": 17
       },
       "id": 26,
       "interval": null,
@@ -1475,7 +1556,7 @@
         "h": 3,
         "w": 2,
         "x": 2,
-        "y": 13
+        "y": 17
       },
       "id": 27,
       "interval": null,
@@ -1539,7 +1620,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 16
+        "y": 20
       },
       "id": 35,
       "panels": [],
@@ -1570,7 +1651,7 @@
         "h": 2,
         "w": 2,
         "x": 0,
-        "y": 17
+        "y": 21
       },
       "id": 57,
       "interval": null,
@@ -1652,7 +1733,7 @@
         "h": 2,
         "w": 2,
         "x": 2,
-        "y": 17
+        "y": 21
       },
       "id": 58,
       "interval": null,
@@ -1735,7 +1816,7 @@
         "h": 2,
         "w": 2,
         "x": 4,
-        "y": 17
+        "y": 21
       },
       "id": 59,
       "interval": null,
@@ -1834,5 +1915,5 @@
   "timezone": "",
   "title": "Cluster Health Overview",
   "uid": "NYRT-Mdiz",
-  "version": 23
+  "version": 93
 }
