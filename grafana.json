@@ -64,7 +64,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1533037935450,
+  "iteration": 1533125519071,
   "links": [],
   "panels": [
     {
@@ -1807,7 +1807,10 @@
   "refresh": "30s",
   "schemaVersion": 16,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "Grafana",
+    "Monitoring"
+  ],
   "templating": {
     "list": [
       {
@@ -1904,5 +1907,5 @@
   "timezone": "",
   "title": "Grafana",
   "uid": "ZFkYKUKiz",
-  "version": 92
+  "version": 189
 }
