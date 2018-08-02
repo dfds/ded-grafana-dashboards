@@ -17,9 +17,93 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1528880131712,
+  "id": 10,
+  "iteration": 1533213184361,
   "links": [],
   "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 19,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "$$hashKey": "object:29296",
+          "expr": "topk(1, node_boot_time_seconds{cluster_name=~\".+\"})",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "{{cluster_name}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Environment",
+      "type": "singlestat",
+      "valueFontSize": "100%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
     {
       "cacheTimeout": null,
       "colorBackground": true,
@@ -42,7 +126,7 @@
         "h": 6,
         "w": 6,
         "x": 0,
-        "y": 0
+        "y": 3
       },
       "id": 6,
       "interval": null,
@@ -109,7 +193,7 @@
         "h": 6,
         "w": 6,
         "x": 6,
-        "y": 0
+        "y": 3
       },
       "hideTimeOverride": false,
       "id": 15,
@@ -211,7 +295,7 @@
         "h": 6,
         "w": 6,
         "x": 12,
-        "y": 0
+        "y": 3
       },
       "id": 13,
       "interval": null,
@@ -278,7 +362,7 @@
         "h": 6,
         "w": 6,
         "x": 18,
-        "y": 0
+        "y": 3
       },
       "id": 17,
       "links": [],
@@ -367,7 +451,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 6
+        "y": 9
       },
       "id": 12,
       "legend": {
@@ -474,7 +558,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 6
+        "y": 9
       },
       "id": 2,
       "interval": null,
@@ -547,7 +631,6 @@
       {
         "allValue": null,
         "current": {
-          "tags": [],
           "text": "elasticsearch",
           "value": "elasticsearch"
         },
@@ -571,7 +654,6 @@
       {
         "allValue": null,
         "current": {
-          "tags": [],
           "text": "data-elasticsearch-elasticsearch-data-0",
           "value": "data-elasticsearch-elasticsearch-data-0"
         },
@@ -679,5 +761,5 @@
   "timezone": "",
   "title": "Kubernetes Persistent Volumes",
   "uid": "KweC0j4mz",
-  "version": 2
+  "version": 1898
 }
