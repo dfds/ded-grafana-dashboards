@@ -17,9 +17,93 @@
   "editable": true,
   "gnetId": 5526,
   "graphTooltip": 1,
-  "iteration": 1528879832752,
+  "id": 5,
+  "iteration": 1533213360261,
   "links": [],
   "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 33,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "$$hashKey": "object:29296",
+          "expr": "topk(1, node_boot_time_seconds{cluster_name=~\".+\"})",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "{{cluster_name}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Environment",
+      "type": "singlestat",
+      "valueFontSize": "100%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
     {
       "cacheTimeout": null,
       "colorBackground": false,
@@ -45,7 +129,7 @@
         "h": 5,
         "w": 6,
         "x": 0,
-        "y": 0
+        "y": 3
       },
       "height": "180px",
       "id": 13,
@@ -132,7 +216,7 @@
         "h": 5,
         "w": 6,
         "x": 6,
-        "y": 0
+        "y": 3
       },
       "height": "180px",
       "id": 11,
@@ -220,7 +304,7 @@
         "h": 8,
         "w": 4,
         "x": 12,
-        "y": 0
+        "y": 3
       },
       "id": 7,
       "interval": null,
@@ -304,7 +388,7 @@
         "h": 5,
         "w": 8,
         "x": 16,
-        "y": 0
+        "y": 3
       },
       "height": "180px",
       "id": 15,
@@ -390,7 +474,7 @@
         "h": 3,
         "w": 3,
         "x": 0,
-        "y": 5
+        "y": 8
       },
       "height": "100px",
       "id": 17,
@@ -476,7 +560,7 @@
         "h": 3,
         "w": 3,
         "x": 3,
-        "y": 5
+        "y": 8
       },
       "height": "100px",
       "id": 19,
@@ -562,7 +646,7 @@
         "h": 3,
         "w": 3,
         "x": 6,
-        "y": 5
+        "y": 8
       },
       "height": "100px",
       "id": 21,
@@ -648,7 +732,7 @@
         "h": 3,
         "w": 3,
         "x": 9,
-        "y": 5
+        "y": 8
       },
       "height": "100px",
       "id": 23,
@@ -734,7 +818,7 @@
         "h": 3,
         "w": 2,
         "x": 16,
-        "y": 5
+        "y": 8
       },
       "height": "100px",
       "id": 25,
@@ -820,7 +904,7 @@
         "h": 3,
         "w": 2,
         "x": 18,
-        "y": 5
+        "y": 8
       },
       "height": "100px",
       "id": 27,
@@ -906,7 +990,7 @@
         "h": 3,
         "w": 2,
         "x": 20,
-        "y": 5
+        "y": 8
       },
       "id": 29,
       "interval": null,
@@ -992,7 +1076,7 @@
         "h": 3,
         "w": 2,
         "x": 22,
-        "y": 5
+        "y": 8
       },
       "id": 31,
       "interval": null,
@@ -1143,5 +1227,5 @@
   "timezone": "browser",
   "title": "Kubernetes StatefulSet",
   "uid": "18MPyh4mz",
-  "version": 2
+  "version": 1902
 }
