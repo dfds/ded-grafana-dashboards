@@ -671,6 +671,8 @@
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 2,
           "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "https://${__cell}",
           "linkUrl": "https://${__cell:raw}",
           "mappingType": 1,
           "pattern": "service",
