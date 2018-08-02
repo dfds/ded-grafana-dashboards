@@ -61,12 +61,95 @@
   "links": [],
   "panels": [
     {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 47,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "topk(1, node_boot_time_seconds{cluster_name=~\".+\"})",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{cluster_name}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Environment",
+      "type": "singlestat",
+      "valueFontSize": "100%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
+    {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 0
+        "y": 3
       },
       "id": 12,
       "panels": [],
@@ -95,7 +178,7 @@
         "h": 3,
         "w": 2,
         "x": 0,
-        "y": 1
+        "y": 4
       },
       "id": 2,
       "interval": null,
@@ -153,7 +236,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -177,7 +260,7 @@
         "h": 3,
         "w": 2,
         "x": 2,
-        "y": 1
+        "y": 4
       },
       "id": 14,
       "interval": null,
@@ -216,7 +299,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(kube_pod_status_phase{phase=\"Running\",pod=~\"fluentd-.*\"} == 1)",
+          "expr": "count(kube_pod_status_phase{phase=\"Running\",pod=~\"weav-.*\"} == 1)",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -233,7 +316,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -257,7 +340,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 1
+        "y": 4
       },
       "id": 16,
       "interval": null,
@@ -296,9 +379,11 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "kube_daemonset_status_number_unavailable{daemonset=~\"fluentd-.*\"}",
+          "expr": "kube_daemonset_status_number_unavailable{daemonset=~\"weave-net-.*\"}",
           "format": "time_series",
+          "interval": "",
           "intervalFactor": 1,
+          "legendFormat": "",
           "refId": "A"
         }
       ],
@@ -337,7 +422,7 @@
         "h": 3,
         "w": 2,
         "x": 6,
-        "y": 1
+        "y": 4
       },
       "id": 18,
       "interval": null,
@@ -394,7 +479,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -418,7 +503,7 @@
         "h": 3,
         "w": 3,
         "x": 8,
-        "y": 1
+        "y": 4
       },
       "id": 20,
       "interval": null,
@@ -483,7 +568,7 @@
         "h": 3,
         "w": 3,
         "x": 11,
-        "y": 1
+        "y": 4
       },
       "id": 24,
       "links": [],
@@ -492,91 +577,16 @@
       "type": "text"
     },
     {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorValue": false,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
-      "datasource": "Prometheus",
-      "format": "none",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 2,
-        "x": 14,
-        "y": 1
-      },
-      "id": 22,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false
-      },
-      "tableColumn": "",
-      "targets": [
-        {}
-      ],
-      "thresholds": "",
-      "title": "Panel Title",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "avg"
-    },
-    {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 4
+        "y": 7
       },
       "id": 10,
       "panels": [],
-      "title": "Memory Usage",
+      "title": "Resource Consumption",
       "type": "row"
     },
     {
@@ -601,7 +611,7 @@
         "h": 6,
         "w": 4,
         "x": 0,
-        "y": 5
+        "y": 8
       },
       "id": 26,
       "interval": null,
@@ -658,7 +668,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -682,7 +692,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 5
+        "y": 8
       },
       "id": 31,
       "interval": null,
@@ -729,7 +739,7 @@
         }
       ],
       "thresholds": "",
-      "title": "Use",
+      "title": "Used",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -739,7 +749,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -763,7 +773,7 @@
         "h": 6,
         "w": 4,
         "x": 6,
-        "y": 5
+        "y": 8
       },
       "id": 27,
       "interval": null,
@@ -845,7 +855,7 @@
         "h": 3,
         "w": 2,
         "x": 10,
-        "y": 5
+        "y": 8
       },
       "id": 33,
       "interval": null,
@@ -893,7 +903,7 @@
         }
       ],
       "thresholds": "",
-      "title": "Use",
+      "title": "Used",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -903,7 +913,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "aliasColors": {},
@@ -917,7 +927,7 @@
         "h": 6,
         "w": 12,
         "x": 12,
-        "y": 5
+        "y": 8
       },
       "id": 36,
       "legend": {
@@ -1016,7 +1026,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 8
+        "y": 11
       },
       "id": 32,
       "interval": null,
@@ -1097,7 +1107,7 @@
         "h": 3,
         "w": 2,
         "x": 10,
-        "y": 8
+        "y": 11
       },
       "id": 34,
       "interval": null,
@@ -1163,7 +1173,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 11
+        "y": 14
       },
       "id": 8,
       "panels": [],
@@ -1192,7 +1202,7 @@
         "h": 6,
         "w": 4,
         "x": 0,
-        "y": 12
+        "y": 15
       },
       "id": 28,
       "interval": null,
@@ -1250,7 +1260,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -1275,7 +1285,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 12
+        "y": 15
       },
       "id": 38,
       "interval": null,
@@ -1356,7 +1366,7 @@
         "h": 6,
         "w": 4,
         "x": 6,
-        "y": 12
+        "y": 15
       },
       "id": 29,
       "interval": null,
@@ -1414,7 +1424,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -1439,7 +1449,7 @@
         "h": 3,
         "w": 2,
         "x": 10,
-        "y": 12
+        "y": 15
       },
       "id": 42,
       "interval": null,
@@ -1511,7 +1521,7 @@
         "h": 6,
         "w": 12,
         "x": 12,
-        "y": 12
+        "y": 15
       },
       "id": 45,
       "legend": {
@@ -1611,7 +1621,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 15
+        "y": 18
       },
       "id": 40,
       "interval": null,
@@ -1693,7 +1703,7 @@
         "h": 3,
         "w": 2,
         "x": 10,
-        "y": 15
+        "y": 18
       },
       "id": 43,
       "interval": null,
@@ -1750,7 +1760,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     }
   ],
   "refresh": "30s",
@@ -1794,5 +1804,5 @@
   "timezone": "",
   "title": "Kubernetes Weave Net",
   "uid": "zYHnhGFik",
-  "version": 137
-}v
+  "version": 1559
+}
