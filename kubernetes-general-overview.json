@@ -15,6 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
+  "id": 8,
   "links": [],
   "panels": [
     {
@@ -36,9 +37,9 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 4,
-        "w": 8,
-        "x": 16,
+        "h": 3,
+        "w": 24,
+        "x": 0,
         "y": 0
       },
       "id": 61,
@@ -78,6 +79,7 @@
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:28437",
           "expr": "topk(1, node_boot_time_seconds{cluster_name=~\".+\"})",
           "format": "time_series",
           "instant": true,
@@ -89,7 +91,7 @@
       "thresholds": "",
       "title": "Environment",
       "type": "singlestat",
-      "valueFontSize": "150%",
+      "valueFontSize": "100%",
       "valueMaps": [
         {
           "op": "=",
@@ -105,7 +107,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 4
+        "y": 3
       },
       "id": 6,
       "panels": [],
@@ -134,7 +136,7 @@
         "h": 3,
         "w": 2,
         "x": 0,
-        "y": 5
+        "y": 4
       },
       "id": 19,
       "interval": null,
@@ -214,7 +216,7 @@
         "h": 3,
         "w": 3,
         "x": 2,
-        "y": 5
+        "y": 4
       },
       "id": 32,
       "interval": null,
@@ -294,7 +296,7 @@
         "h": 3,
         "w": 3,
         "x": 5,
-        "y": 5
+        "y": 4
       },
       "id": 17,
       "interval": null,
@@ -377,7 +379,7 @@
         "h": 3,
         "w": 3,
         "x": 8,
-        "y": 5
+        "y": 4
       },
       "id": 4,
       "interval": null,
@@ -460,7 +462,7 @@
         "h": 3,
         "w": 3,
         "x": 11,
-        "y": 5
+        "y": 4
       },
       "id": 10,
       "interval": null,
@@ -541,7 +543,7 @@
         "h": 3,
         "w": 3,
         "x": 14,
-        "y": 5
+        "y": 4
       },
       "id": 14,
       "interval": null,
@@ -606,7 +608,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 8
+        "y": 7
       },
       "id": 8,
       "panels": [],
@@ -635,7 +637,7 @@
         "h": 3,
         "w": 2,
         "x": 0,
-        "y": 9
+        "y": 8
       },
       "id": 20,
       "interval": null,
@@ -715,7 +717,7 @@
         "h": 3,
         "w": 3,
         "x": 2,
-        "y": 9
+        "y": 8
       },
       "id": 33,
       "interval": null,
@@ -795,7 +797,7 @@
         "h": 3,
         "w": 3,
         "x": 5,
-        "y": 9
+        "y": 8
       },
       "id": 16,
       "interval": null,
@@ -878,7 +880,7 @@
         "h": 3,
         "w": 3,
         "x": 8,
-        "y": 9
+        "y": 8
       },
       "hideTimeOverride": false,
       "id": 2,
@@ -967,7 +969,7 @@
         "h": 3,
         "w": 3,
         "x": 11,
-        "y": 9
+        "y": 8
       },
       "id": 11,
       "interval": null,
@@ -1049,7 +1051,7 @@
         "h": 3,
         "w": 3,
         "x": 14,
-        "y": 9
+        "y": 8
       },
       "id": 13,
       "interval": null,
@@ -1130,7 +1132,7 @@
         "h": 3,
         "w": 3,
         "x": 17,
-        "y": 9
+        "y": 8
       },
       "id": 55,
       "interval": null,
@@ -1210,7 +1212,7 @@
         "h": 3,
         "w": 3,
         "x": 20,
-        "y": 9
+        "y": 8
       },
       "id": 56,
       "interval": null,
@@ -1274,7 +1276,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 12
+        "y": 11
       },
       "id": 24,
       "panels": [],
@@ -1303,7 +1305,7 @@
         "h": 3,
         "w": 2,
         "x": 0,
-        "y": 13
+        "y": 12
       },
       "id": 29,
       "interval": null,
@@ -1383,7 +1385,7 @@
         "h": 3,
         "w": 2,
         "x": 2,
-        "y": 13
+        "y": 12
       },
       "id": 30,
       "interval": null,
@@ -1447,7 +1449,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 16
+        "y": 15
       },
       "id": 22,
       "panels": [],
@@ -1476,7 +1478,7 @@
         "h": 3,
         "w": 2,
         "x": 0,
-        "y": 17
+        "y": 16
       },
       "id": 26,
       "interval": null,
@@ -1556,7 +1558,7 @@
         "h": 3,
         "w": 2,
         "x": 2,
-        "y": 17
+        "y": 16
       },
       "id": 27,
       "interval": null,
@@ -1620,7 +1622,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 20
+        "y": 19
       },
       "id": 35,
       "panels": [],
@@ -1651,7 +1653,7 @@
         "h": 2,
         "w": 2,
         "x": 0,
-        "y": 21
+        "y": 20
       },
       "id": 57,
       "interval": null,
@@ -1733,7 +1735,7 @@
         "h": 2,
         "w": 2,
         "x": 2,
-        "y": 21
+        "y": 20
       },
       "id": 58,
       "interval": null,
@@ -1816,7 +1818,7 @@
         "h": 2,
         "w": 2,
         "x": 4,
-        "y": 21
+        "y": 20
       },
       "id": 59,
       "interval": null,
@@ -1915,5 +1917,5 @@
   "timezone": "",
   "title": "Cluster Health Overview",
   "uid": "NYRT-Mdiz",
-  "version": 93
+  "version": 1897
 }
