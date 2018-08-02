@@ -64,16 +64,181 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1532690352570,
+  "iteration": 1533210245988,
   "links": [],
   "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 86,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "topk(1, node_boot_time_seconds{cluster_name=~\".+\"})",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{cluster_name}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Environment",
+      "type": "singlestat",
+      "valueFontSize": "100%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "dateTimeFromNow",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 0,
+        "y": 3
+      },
+      "id": 87,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "kube_deployment_labels{deployment=\"prometheus-server\"}",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "N/A",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Chart Name",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
     {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 0
+        "y": 5
       },
       "id": 10,
       "panels": [],
@@ -102,7 +267,7 @@
         "h": 2,
         "w": 2,
         "x": 0,
-        "y": 1
+        "y": 6
       },
       "id": 16,
       "interval": null,
@@ -159,7 +324,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -183,7 +348,7 @@
         "h": 2,
         "w": 2,
         "x": 2,
-        "y": 1
+        "y": 6
       },
       "id": 22,
       "interval": null,
@@ -264,7 +429,7 @@
         "h": 2,
         "w": 2,
         "x": 4,
-        "y": 1
+        "y": 6
       },
       "id": 17,
       "interval": null,
@@ -346,7 +511,7 @@
         "h": 2,
         "w": 3,
         "x": 6,
-        "y": 1
+        "y": 6
       },
       "id": 19,
       "interval": null,
@@ -402,21 +567,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
-    },
-    {
-      "content": "<center><h1>N/A<h1></center>",
-      "gridPos": {
-        "h": 2,
-        "w": 2,
-        "x": 9,
-        "y": 1
-      },
-      "id": 25,
-      "links": [],
-      "mode": "html",
-      "title": "Deployment version",
-      "type": "text"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -440,7 +591,7 @@
         "h": 2,
         "w": 2,
         "x": 11,
-        "y": 1
+        "y": 6
       },
       "id": 20,
       "interval": null,
@@ -496,7 +647,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -520,7 +671,7 @@
         "h": 2,
         "w": 3,
         "x": 13,
-        "y": 1
+        "y": 6
       },
       "id": 23,
       "interval": null,
@@ -577,7 +728,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -601,7 +752,7 @@
         "h": 2,
         "w": 3,
         "x": 16,
-        "y": 1
+        "y": 6
       },
       "id": 21,
       "interval": null,
@@ -658,7 +809,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "columns": [],
@@ -668,7 +819,7 @@
         "h": 3,
         "w": 5,
         "x": 19,
-        "y": 1
+        "y": 6
       },
       "id": 33,
       "links": [],
@@ -783,7 +934,7 @@
         "h": 6,
         "w": 4,
         "x": 0,
-        "y": 3
+        "y": 8
       },
       "id": 12,
       "interval": null,
@@ -864,7 +1015,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 3
+        "y": 8
       },
       "id": 27,
       "interval": null,
@@ -934,7 +1085,7 @@
         "h": 6,
         "w": 13,
         "x": 6,
-        "y": 3
+        "y": 8
       },
       "id": 14,
       "legend": {
@@ -1039,7 +1190,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 6
+        "y": 11
       },
       "id": 28,
       "interval": null,
@@ -1121,7 +1272,7 @@
         "h": 6,
         "w": 4,
         "x": 0,
-        "y": 9
+        "y": 14
       },
       "id": 26,
       "interval": null,
@@ -1203,7 +1354,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 9
+        "y": 14
       },
       "id": 29,
       "interval": null,
@@ -1273,7 +1424,7 @@
         "h": 6,
         "w": 13,
         "x": 6,
-        "y": 9
+        "y": 14
       },
       "id": 31,
       "legend": {
@@ -1378,7 +1529,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 12
+        "y": 17
       },
       "id": 30,
       "interval": null,
@@ -1443,7 +1594,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 15
+        "y": 20
       },
       "id": 8,
       "panels": [],
@@ -1472,7 +1623,7 @@
         "h": 2,
         "w": 2,
         "x": 0,
-        "y": 16
+        "y": 21
       },
       "id": 34,
       "interval": null,
@@ -1529,7 +1680,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -1553,7 +1704,7 @@
         "h": 2,
         "w": 2,
         "x": 2,
-        "y": 16
+        "y": 21
       },
       "id": 60,
       "interval": null,
@@ -1610,7 +1761,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -1634,7 +1785,7 @@
         "h": 2,
         "w": 2,
         "x": 4,
-        "y": 16
+        "y": 21
       },
       "id": 36,
       "interval": null,
@@ -1692,7 +1843,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -1716,7 +1867,7 @@
         "h": 2,
         "w": 3,
         "x": 6,
-        "y": 16
+        "y": 21
       },
       "id": 37,
       "interval": null,
@@ -1781,7 +1932,7 @@
         "h": 2,
         "w": 2,
         "x": 9,
-        "y": 16
+        "y": 21
       },
       "id": 38,
       "links": [],
@@ -1811,7 +1962,7 @@
         "h": 2,
         "w": 2,
         "x": 11,
-        "y": 16
+        "y": 21
       },
       "id": 39,
       "interval": null,
@@ -1868,7 +2019,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -1892,7 +2043,7 @@
         "h": 2,
         "w": 3,
         "x": 13,
-        "y": 16
+        "y": 21
       },
       "id": 40,
       "interval": null,
@@ -1949,7 +2100,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -1973,7 +2124,7 @@
         "h": 2,
         "w": 3,
         "x": 16,
-        "y": 16
+        "y": 21
       },
       "id": 41,
       "interval": null,
@@ -2031,7 +2182,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "columns": [],
@@ -2041,7 +2192,7 @@
         "h": 3,
         "w": 5,
         "x": 19,
-        "y": 16
+        "y": 21
       },
       "id": 42,
       "links": [],
@@ -2157,7 +2308,7 @@
         "h": 6,
         "w": 4,
         "x": 0,
-        "y": 18
+        "y": 23
       },
       "id": 43,
       "interval": null,
@@ -2238,7 +2389,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 18
+        "y": 23
       },
       "id": 45,
       "interval": null,
@@ -2308,7 +2459,7 @@
         "h": 6,
         "w": 13,
         "x": 6,
-        "y": 18
+        "y": 23
       },
       "id": 49,
       "legend": {
@@ -2412,7 +2563,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 21
+        "y": 26
       },
       "id": 46,
       "interval": null,
@@ -2494,7 +2645,7 @@
         "h": 6,
         "w": 4,
         "x": 0,
-        "y": 24
+        "y": 29
       },
       "id": 44,
       "interval": null,
@@ -2576,7 +2727,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 24
+        "y": 29
       },
       "id": 47,
       "interval": null,
@@ -2646,7 +2797,7 @@
         "h": 6,
         "w": 13,
         "x": 6,
-        "y": 24
+        "y": 29
       },
       "id": 50,
       "legend": {
@@ -2751,7 +2902,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 27
+        "y": 32
       },
       "id": 48,
       "interval": null,
@@ -2816,7 +2967,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 30
+        "y": 35
       },
       "id": 6,
       "panels": [],
@@ -2845,7 +2996,7 @@
         "h": 2,
         "w": 2,
         "x": 0,
-        "y": 31
+        "y": 36
       },
       "id": 68,
       "interval": null,
@@ -2902,7 +3053,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -2926,7 +3077,7 @@
         "h": 2,
         "w": 2,
         "x": 2,
-        "y": 31
+        "y": 36
       },
       "id": 69,
       "interval": null,
@@ -2983,7 +3134,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -3007,7 +3158,7 @@
         "h": 2,
         "w": 2,
         "x": 4,
-        "y": 31
+        "y": 36
       },
       "id": 70,
       "interval": null,
@@ -3065,7 +3216,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -3089,7 +3240,7 @@
         "h": 2,
         "w": 3,
         "x": 6,
-        "y": 31
+        "y": 36
       },
       "id": 71,
       "interval": null,
@@ -3146,7 +3297,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "content": "<center><h1>N/A<h1></center>",
@@ -3154,7 +3305,7 @@
         "h": 2,
         "w": 2,
         "x": 9,
-        "y": 31
+        "y": 36
       },
       "id": 72,
       "links": [],
@@ -3184,7 +3335,7 @@
         "h": 2,
         "w": 2,
         "x": 11,
-        "y": 31
+        "y": 36
       },
       "id": 73,
       "interval": null,
@@ -3241,7 +3392,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -3265,7 +3416,7 @@
         "h": 2,
         "w": 3,
         "x": 13,
-        "y": 31
+        "y": 36
       },
       "id": 74,
       "interval": null,
@@ -3322,7 +3473,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -3346,7 +3497,7 @@
         "h": 2,
         "w": 3,
         "x": 16,
-        "y": 31
+        "y": 36
       },
       "id": 75,
       "interval": null,
@@ -3404,7 +3555,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "columns": [],
@@ -3414,7 +3565,7 @@
         "h": 3,
         "w": 5,
         "x": 19,
-        "y": 31
+        "y": 36
       },
       "id": 76,
       "links": [],
@@ -3531,7 +3682,7 @@
         "h": 6,
         "w": 4,
         "x": 0,
-        "y": 33
+        "y": 38
       },
       "id": 77,
       "interval": null,
@@ -3613,7 +3764,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 33
+        "y": 38
       },
       "id": 79,
       "interval": null,
@@ -3683,7 +3834,7 @@
         "h": 6,
         "w": 13,
         "x": 6,
-        "y": 33
+        "y": 38
       },
       "id": 83,
       "legend": {
@@ -3787,7 +3938,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 36
+        "y": 41
       },
       "id": 80,
       "interval": null,
@@ -3870,7 +4021,7 @@
         "h": 6,
         "w": 4,
         "x": 0,
-        "y": 39
+        "y": 44
       },
       "id": 78,
       "interval": null,
@@ -3952,7 +4103,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 39
+        "y": 44
       },
       "id": 81,
       "interval": null,
@@ -4023,7 +4174,7 @@
         "h": 6,
         "w": 13,
         "x": 6,
-        "y": 39
+        "y": 44
       },
       "id": 84,
       "legend": {
@@ -4128,7 +4279,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 42
+        "y": 47
       },
       "id": 82,
       "interval": null,
@@ -4193,7 +4344,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 45
+        "y": 50
       },
       "id": 4,
       "panels": [],
@@ -4222,7 +4373,7 @@
         "h": 2,
         "w": 2,
         "x": 0,
-        "y": 46
+        "y": 51
       },
       "id": 59,
       "interval": null,
@@ -4279,7 +4430,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -4303,7 +4454,7 @@
         "h": 2,
         "w": 2,
         "x": 2,
-        "y": 46
+        "y": 51
       },
       "id": 35,
       "interval": null,
@@ -4360,7 +4511,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -4384,7 +4535,7 @@
         "h": 2,
         "w": 2,
         "x": 4,
-        "y": 46
+        "y": 51
       },
       "id": 61,
       "interval": null,
@@ -4442,7 +4593,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -4466,7 +4617,7 @@
         "h": 2,
         "w": 3,
         "x": 6,
-        "y": 46
+        "y": 51
       },
       "id": 62,
       "interval": null,
@@ -4531,7 +4682,7 @@
         "h": 2,
         "w": 2,
         "x": 9,
-        "y": 46
+        "y": 51
       },
       "id": 63,
       "links": [],
@@ -4561,7 +4712,7 @@
         "h": 2,
         "w": 2,
         "x": 11,
-        "y": 46
+        "y": 51
       },
       "id": 64,
       "interval": null,
@@ -4618,7 +4769,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -4642,7 +4793,7 @@
         "h": 2,
         "w": 3,
         "x": 13,
-        "y": 46
+        "y": 51
       },
       "id": 65,
       "interval": null,
@@ -4699,7 +4850,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -4723,7 +4874,7 @@
         "h": 2,
         "w": 3,
         "x": 16,
-        "y": 46
+        "y": 51
       },
       "id": 66,
       "interval": null,
@@ -4781,7 +4932,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "columns": [],
@@ -4791,7 +4942,7 @@
         "h": 3,
         "w": 5,
         "x": 19,
-        "y": 46
+        "y": 51
       },
       "id": 67,
       "links": [],
@@ -4907,7 +5058,7 @@
         "h": 6,
         "w": 4,
         "x": 0,
-        "y": 48
+        "y": 53
       },
       "id": 51,
       "interval": null,
@@ -4988,7 +5139,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 48
+        "y": 53
       },
       "id": 53,
       "interval": null,
@@ -5035,7 +5186,7 @@
         }
       ],
       "thresholds": "",
-      "title": "Use",
+      "title": "Used",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -5058,7 +5209,7 @@
         "h": 6,
         "w": 13,
         "x": 6,
-        "y": 48
+        "y": 53
       },
       "id": 57,
       "legend": {
@@ -5162,7 +5313,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 51
+        "y": 56
       },
       "id": 54,
       "interval": null,
@@ -5244,7 +5395,7 @@
         "h": 6,
         "w": 4,
         "x": 0,
-        "y": 54
+        "y": 59
       },
       "id": 52,
       "interval": null,
@@ -5326,7 +5477,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 54
+        "y": 59
       },
       "id": 55,
       "interval": null,
@@ -5373,7 +5524,7 @@
         }
       ],
       "thresholds": "",
-      "title": "Use",
+      "title": "Used",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -5396,7 +5547,7 @@
         "h": 6,
         "w": 13,
         "x": 6,
-        "y": 54
+        "y": 59
       },
       "id": 58,
       "legend": {
@@ -5501,7 +5652,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 57
+        "y": 62
       },
       "id": 56,
       "interval": null,
@@ -5559,19 +5710,6 @@
         }
       ],
       "valueName": "current"
-    },
-    {
-      "collapsed": true,
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 60
-      },
-      "id": 2,
-      "panels": [],
-      "title": "Grafana",
-      "type": "row"
     }
   ],
   "refresh": "30s",
@@ -5677,5 +5815,5 @@
   "timezone": "",
   "title": "Kubernetes Monitoring Setup",
   "uid": "O9jO_qdiz",
-  "version": 465
+  "version": 1626
 }

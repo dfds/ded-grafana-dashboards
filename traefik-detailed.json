@@ -17,7 +17,7 @@
   "editable": true,
   "gnetId": 4475,
   "graphTooltip": 0,
-  "iteration": 1533200292713,
+  "iteration": 1533202678170,
   "links": [],
   "panels": [
     {
@@ -537,7 +537,7 @@
       "fill": 1,
       "gridPos": {
         "h": 6,
-        "w": 19,
+        "w": 15,
         "x": 5,
         "y": 4
       },
@@ -614,6 +614,106 @@
         "align": false,
         "alignLevel": null
       }
+    },
+    {
+      "columns": [],
+      "datasource": "Prometheus",
+      "fontSize": "80%",
+      "gridPos": {
+        "h": 18,
+        "w": 4,
+        "x": 20,
+        "y": 4
+      },
+      "id": 107,
+      "links": [],
+      "pageSize": null,
+      "scroll": true,
+      "showHeader": true,
+      "sort": {
+        "col": 0,
+        "desc": true
+      },
+      "styles": [
+        {
+          "$$hashKey": "object:1303",
+          "alias": "Time",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "pattern": "Time",
+          "type": "hidden"
+        },
+        {
+          "$$hashKey": "object:2100",
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "$$hashKey": "object:2312",
+          "alias": "Endpoints",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "https://${__cell}",
+          "linkUrl": "https://${__cell:raw}",
+          "mappingType": 1,
+          "pattern": "service",
+          "preserveFormat": false,
+          "sanitize": true,
+          "thresholds": [],
+          "type": "string",
+          "unit": "short",
+          "valueMaps": []
+        },
+        {
+          "$$hashKey": "object:1304",
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "decimals": 2,
+          "pattern": "/.*/",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        }
+      ],
+      "targets": [
+        {
+          "$$hashKey": "object:953",
+          "expr": "sum(traefik_requests_total{service!=\"httpn\",service!=\"http\"}) by (service)",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": "10s",
+      "title": "Current active endpoints",
+      "transform": "table",
+      "type": "table"
     },
     {
       "cacheTimeout": null,
@@ -710,7 +810,7 @@
       "fill": 1,
       "gridPos": {
         "h": 6,
-        "w": 19,
+        "w": 15,
         "x": 5,
         "y": 10
       },
@@ -884,7 +984,7 @@
       "fill": 1,
       "gridPos": {
         "h": 6,
-        "w": 19,
+        "w": 15,
         "x": 5,
         "y": 16
       },
@@ -983,7 +1083,7 @@
             "h": 7,
             "w": 9,
             "x": 0,
-            "y": 23
+            "y": 32
           },
           "id": 80,
           "legend": {
@@ -1094,7 +1194,7 @@
             "h": 7,
             "w": 9,
             "x": 9,
-            "y": 23
+            "y": 32
           },
           "id": 78,
           "legend": {
@@ -1197,7 +1297,7 @@
             "h": 7,
             "w": 6,
             "x": 18,
-            "y": 23
+            "y": 32
           },
           "id": 20,
           "legend": {
@@ -1309,7 +1409,7 @@
             "h": 9,
             "w": 24,
             "x": 0,
-            "y": 24
+            "y": 33
           },
           "id": 50,
           "legend": {
@@ -1405,7 +1505,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 33
+            "y": 42
           },
           "id": 58,
           "legend": {
@@ -1498,7 +1598,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 40
+            "y": 49
           },
           "id": 60,
           "legend": {
@@ -1602,7 +1702,7 @@
             "h": 9,
             "w": 24,
             "x": 0,
-            "y": 20
+            "y": 34
           },
           "id": 68,
           "legend": {
@@ -1704,7 +1804,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 4
+            "y": 35
           },
           "id": 5,
           "legend": {
@@ -1791,7 +1891,7 @@
             "h": 7,
             "w": 12,
             "x": 12,
-            "y": 4
+            "y": 35
           },
           "id": 6,
           "legend": {
@@ -1878,7 +1978,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 11
+            "y": 42
           },
           "id": 48,
           "legend": {
@@ -1967,7 +2067,7 @@
             "h": 7,
             "w": 12,
             "x": 12,
-            "y": 11
+            "y": 42
           },
           "id": 72,
           "legend": {
@@ -2055,7 +2155,7 @@
             "h": 9,
             "w": 12,
             "x": 0,
-            "y": 18
+            "y": 49
           },
           "id": 38,
           "legend": {
@@ -2144,7 +2244,7 @@
             "h": 9,
             "w": 12,
             "x": 12,
-            "y": 18
+            "y": 49
           },
           "id": 40,
           "legend": {
@@ -2155,6 +2255,8 @@
             "min": true,
             "rightSide": true,
             "show": true,
+            "sort": "current",
+            "sortDesc": true,
             "total": false,
             "values": true
           },
@@ -2247,7 +2349,7 @@
             "h": 9,
             "w": 12,
             "x": 0,
-            "y": 5
+            "y": 36
           },
           "id": 32,
           "legend": {
@@ -2337,7 +2439,7 @@
             "h": 9,
             "w": 12,
             "x": 12,
-            "y": 5
+            "y": 36
           },
           "id": 74,
           "legend": {
@@ -2433,7 +2535,6 @@
       {
         "allValue": null,
         "current": {
-          "tags": [],
           "text": "All",
           "value": "$__all"
         },
@@ -2514,5 +2615,5 @@
   "timezone": "",
   "title": "Traefik",
   "uid": "tBFn9knmk",
-  "version": 277
+  "version": 280
 }

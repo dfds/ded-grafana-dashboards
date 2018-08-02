@@ -64,16 +64,99 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1532327633360,
+  "iteration": 1533210936041,
   "links": [],
   "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 52,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "topk(1, node_boot_time_seconds{cluster_name=~\".+\"})",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{cluster_name}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Environment",
+      "type": "singlestat",
+      "valueFontSize": "100%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
     {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 0
+        "y": 3
       },
       "id": 10,
       "panels": [],
@@ -102,7 +185,7 @@
         "h": 2,
         "w": 2,
         "x": 0,
-        "y": 1
+        "y": 4
       },
       "id": 12,
       "interval": null,
@@ -159,7 +242,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -183,7 +266,7 @@
         "h": 2,
         "w": 2,
         "x": 2,
-        "y": 1
+        "y": 4
       },
       "id": 14,
       "interval": null,
@@ -240,7 +323,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -264,7 +347,7 @@
         "h": 2,
         "w": 3,
         "x": 4,
-        "y": 1
+        "y": 4
       },
       "id": 16,
       "interval": null,
@@ -321,7 +404,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "content": "<center><h1>N/A<h1></center>",
@@ -329,7 +412,7 @@
         "h": 2,
         "w": 2,
         "x": 7,
-        "y": 1
+        "y": 4
       },
       "id": 18,
       "links": [],
@@ -359,7 +442,7 @@
         "h": 2,
         "w": 2,
         "x": 9,
-        "y": 1
+        "y": 4
       },
       "id": 20,
       "interval": null,
@@ -416,7 +499,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -440,7 +523,7 @@
         "h": 2,
         "w": 3,
         "x": 11,
-        "y": 1
+        "y": 4
       },
       "id": 22,
       "interval": null,
@@ -497,7 +580,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "columns": [],
@@ -507,7 +590,7 @@
         "h": 3,
         "w": 6,
         "x": 14,
-        "y": 1
+        "y": 4
       },
       "id": 24,
       "links": [],
@@ -607,11 +690,11 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 4
+        "y": 7
       },
       "id": 8,
       "panels": [],
-      "title": "Memory Usage",
+      "title": "Resource Consumption",
       "type": "row"
     },
     {
@@ -636,7 +719,7 @@
         "h": 6,
         "w": 4,
         "x": 0,
-        "y": 5
+        "y": 8
       },
       "id": 26,
       "interval": null,
@@ -718,7 +801,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 5
+        "y": 8
       },
       "id": 28,
       "interval": null,
@@ -790,7 +873,7 @@
         "h": 6,
         "w": 18,
         "x": 6,
-        "y": 5
+        "y": 8
       },
       "id": 32,
       "legend": {
@@ -889,7 +972,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 8
+        "y": 11
       },
       "id": 30,
       "interval": null,
@@ -950,19 +1033,6 @@
       "valueName": "current"
     },
     {
-      "collapsed": false,
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 11
-      },
-      "id": 6,
-      "panels": [],
-      "title": "CPU Usage",
-      "type": "row"
-    },
-    {
       "cacheTimeout": null,
       "colorBackground": false,
       "colorValue": true,
@@ -985,7 +1055,7 @@
         "h": 6,
         "w": 4,
         "x": 0,
-        "y": 12
+        "y": 14
       },
       "id": 34,
       "interval": null,
@@ -1068,7 +1138,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 12
+        "y": 14
       },
       "id": 36,
       "interval": null,
@@ -1140,7 +1210,7 @@
         "h": 6,
         "w": 18,
         "x": 6,
-        "y": 12
+        "y": 14
       },
       "id": 40,
       "legend": {
@@ -1240,7 +1310,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 15
+        "y": 17
       },
       "id": 38,
       "interval": null,
@@ -1304,7 +1374,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 18
+        "y": 20
       },
       "id": 4,
       "title": "Network Traffic",
@@ -1333,7 +1403,7 @@
         "h": 3,
         "w": 3,
         "x": 0,
-        "y": 19
+        "y": 21
       },
       "id": 42,
       "interval": null,
@@ -1415,7 +1485,7 @@
         "h": 3,
         "w": 3,
         "x": 3,
-        "y": 19
+        "y": 21
       },
       "id": 44,
       "interval": null,
@@ -1485,7 +1555,7 @@
         "h": 6,
         "w": 18,
         "x": 6,
-        "y": 19
+        "y": 21
       },
       "id": 50,
       "legend": {
@@ -1592,7 +1662,7 @@
         "h": 3,
         "w": 3,
         "x": 0,
-        "y": 22
+        "y": 24
       },
       "id": 46,
       "interval": null,
@@ -1674,7 +1744,7 @@
         "h": 3,
         "w": 3,
         "x": 3,
-        "y": 22
+        "y": 24
       },
       "id": 48,
       "interval": null,
@@ -1732,17 +1802,6 @@
         }
       ],
       "valueName": "current"
-    },
-    {
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 25
-      },
-      "id": 2,
-      "title": "Row title",
-      "type": "row"
     }
   ],
   "refresh": "30s",
@@ -1807,5 +1866,5 @@
   "timezone": "",
   "title": "Kubernetes Tiller",
   "uid": "2DfG17Kmk",
-  "version": 30
+  "version": 1560
 }
