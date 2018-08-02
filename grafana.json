@@ -227,7 +227,7 @@
       "thresholds": "",
       "title": "Grafana Version",
       "type": "singlestat",
-      "valueFontSize": "80%",
+      "valueFontSize": "70%",
       "valueMaps": [
         {
           "op": "=",
@@ -309,7 +309,7 @@
       "thresholds": "",
       "title": "Grafana Version",
       "type": "singlestat",
-      "valueFontSize": "80%",
+      "valueFontSize": "70%",
       "valueMaps": [
         {
           "op": "=",
@@ -390,7 +390,7 @@
       "thresholds": "",
       "title": "Deployment Created",
       "type": "singlestat",
-      "valueFontSize": "80%",
+      "valueFontSize": "70%",
       "valueMaps": [
         {
           "op": "=",
