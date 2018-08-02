@@ -16,9 +16,92 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1533206373197,
+  "iteration": 1533211210839,
   "links": [],
   "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 32,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "$$hashKey": "object:2004",
+          "expr": "topk(1, node_boot_time_seconds{cluster_name=~\".+\"})",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "{{cluster_name}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Environment",
+      "type": "singlestat",
+      "valueFontSize": "150%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
     {
       "cacheTimeout": null,
       "colorBackground": false,
@@ -42,7 +125,7 @@
         "h": 5,
         "w": 4,
         "x": 0,
-        "y": 0
+        "y": 3
       },
       "id": 28,
       "interval": null,
@@ -135,7 +218,7 @@
         "h": 5,
         "w": 4,
         "x": 4,
-        "y": 0
+        "y": 3
       },
       "id": 26,
       "interval": null,
@@ -233,7 +316,7 @@
         "h": 5,
         "w": 4,
         "x": 8,
-        "y": 0
+        "y": 3
       },
       "id": 30,
       "interval": null,
@@ -326,7 +409,7 @@
         "h": 5,
         "w": 4,
         "x": 12,
-        "y": 0
+        "y": 3
       },
       "id": 22,
       "interval": null,
@@ -418,7 +501,7 @@
         "h": 5,
         "w": 4,
         "x": 16,
-        "y": 0
+        "y": 3
       },
       "id": 23,
       "interval": null,
@@ -515,7 +598,7 @@
         "h": 5,
         "w": 4,
         "x": 20,
-        "y": 0
+        "y": 3
       },
       "id": 24,
       "interval": null,
@@ -601,7 +684,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 5
+        "y": 8
       },
       "id": 12,
       "legend": {
@@ -696,7 +779,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 5
+        "y": 8
       },
       "id": 14,
       "legend": {
@@ -827,7 +910,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 14
+        "y": 17
       },
       "id": 2,
       "legend": {
@@ -923,7 +1006,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 14
+        "y": 17
       },
       "id": 8,
       "legend": {
@@ -1048,7 +1131,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 23
+        "y": 26
       },
       "id": 4,
       "legend": {
@@ -1155,7 +1238,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 23
+        "y": 26
       },
       "id": 10,
       "legend": {
@@ -1280,7 +1363,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 32
+        "y": 35
       },
       "id": 20,
       "legend": {
@@ -1411,7 +1494,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 32
+        "y": 35
       },
       "id": 16,
       "legend": {
@@ -1517,7 +1600,10 @@
   "refresh": false,
   "schemaVersion": 16,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "aws",
+    "elasticsearch"
+  ],
   "templating": {
     "list": [
       {
@@ -1600,5 +1686,5 @@
   "timezone": "",
   "title": "AWS Elasticsearch",
   "uid": "JxF_0jKmk",
-  "version": 22
+  "version": 27
 }
