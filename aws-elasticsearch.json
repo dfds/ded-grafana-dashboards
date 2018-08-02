@@ -16,8 +16,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 21,
-  "iteration": 1533200043236,
+  "iteration": 1533206373197,
   "links": [],
   "panels": [
     {
@@ -119,9 +118,9 @@
       "colorBackground": false,
       "colorValue": false,
       "colors": [
-        "#299c46",
+        "#d44a3a",
         "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
+        "#299c46"
       ],
       "datasource": "Cloudwatch",
       "format": "decmbytes",
@@ -198,7 +197,7 @@
           ]
         }
       ],
-      "thresholds": "40000,20000,10000",
+      "thresholds": "10000,20000,40000",
       "title": "Free storage",
       "type": "singlestat",
       "valueFontSize": "80%",
@@ -1601,5 +1600,5 @@
   "timezone": "",
   "title": "AWS Elasticsearch",
   "uid": "JxF_0jKmk",
-  "version": 17
+  "version": 22
 }
