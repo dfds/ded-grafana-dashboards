@@ -39,12 +39,6 @@
       "id": "table",
       "name": "Table",
       "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "text",
-      "name": "Text",
-      "version": "5.0.0"
     }
   ],
   "annotations": {
@@ -67,12 +61,95 @@
   "links": [],
   "panels": [
     {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 54,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "topk(1, node_boot_time_seconds{cluster_name=~\".+\"})",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{cluster_name}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Environment",
+      "type": "singlestat",
+      "valueFontSize": "100%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
+    {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 0
+        "y": 3
       },
       "id": 12,
       "panels": [],
@@ -101,7 +178,7 @@
         "h": 2,
         "w": 2,
         "x": 0,
-        "y": 1
+        "y": 4
       },
       "id": 14,
       "interval": null,
@@ -183,7 +260,7 @@
         "h": 2,
         "w": 2,
         "x": 2,
-        "y": 1
+        "y": 4
       },
       "id": 16,
       "interval": null,
@@ -241,7 +318,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -266,7 +343,7 @@
         "h": 2,
         "w": 2,
         "x": 4,
-        "y": 1
+        "y": 4
       },
       "id": 18,
       "interval": null,
@@ -342,7 +419,7 @@
         "h": 2,
         "w": 3,
         "x": 6,
-        "y": 1
+        "y": 4
       },
       "id": 20,
       "interval": null,
@@ -400,7 +477,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -424,7 +501,7 @@
         "h": 2,
         "w": 3,
         "x": 9,
-        "y": 1
+        "y": 4
       },
       "id": 22,
       "interval": null,
@@ -485,18 +562,86 @@
       "valueName": "avg"
     },
     {
-      "content": "<center><h1>$podversion<h1></center>",
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "dateTimeFromNow",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
       "gridPos": {
         "h": 2,
-        "w": 2,
+        "w": 3,
         "x": 12,
-        "y": 1
+        "y": 4
       },
-      "id": 24,
+      "id": 55,
+      "interval": null,
       "links": [],
-      "mode": "html",
-      "title": "Pod version",
-      "type": "text"
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "__name__",
+      "targets": [
+        {
+          "expr": "kube_daemonset_labels{daemonset=\"kube2iam\"}",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{label_chart}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Daemonset Chart Name",
+      "type": "singlestat",
+      "valueFontSize": "70%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
     },
     {
       "collapsed": false,
@@ -504,11 +649,11 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 3
+        "y": 6
       },
       "id": 10,
       "panels": [],
-      "title": "Memory Usage",
+      "title": "Resource Consumption",
       "type": "row"
     },
     {
@@ -533,7 +678,7 @@
         "h": 6,
         "w": 4,
         "x": 0,
-        "y": 4
+        "y": 7
       },
       "id": 26,
       "interval": null,
@@ -615,7 +760,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 4
+        "y": 7
       },
       "id": 28,
       "interval": null,
@@ -687,7 +832,7 @@
         "h": 6,
         "w": 18,
         "x": 6,
-        "y": 4
+        "y": 7
       },
       "id": 32,
       "legend": {
@@ -786,7 +931,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 7
+        "y": 10
       },
       "id": 30,
       "interval": null,
@@ -843,20 +988,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
-    },
-    {
-      "collapsed": false,
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 10
-      },
-      "id": 8,
-      "panels": [],
-      "title": "CPU Usage",
-      "type": "row"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -881,7 +1013,7 @@
         "h": 6,
         "w": 4,
         "x": 0,
-        "y": 11
+        "y": 13
       },
       "id": 34,
       "interval": null,
@@ -964,7 +1096,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 11
+        "y": 13
       },
       "id": 36,
       "interval": null,
@@ -1036,7 +1168,7 @@
         "h": 6,
         "w": 18,
         "x": 6,
-        "y": 11
+        "y": 13
       },
       "id": 40,
       "legend": {
@@ -1138,7 +1270,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 14
+        "y": 16
       },
       "id": 38,
       "interval": null,
@@ -1195,14 +1327,14 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 17
+        "y": 19
       },
       "id": 6,
       "title": "Network Traffic",
@@ -1231,7 +1363,7 @@
         "h": 4,
         "w": 3,
         "x": 0,
-        "y": 18
+        "y": 20
       },
       "id": 44,
       "interval": null,
@@ -1314,7 +1446,7 @@
         "h": 4,
         "w": 3,
         "x": 3,
-        "y": 18
+        "y": 20
       },
       "id": 46,
       "interval": null,
@@ -1383,7 +1515,7 @@
         "h": 7,
         "w": 18,
         "x": 6,
-        "y": 18
+        "y": 20
       },
       "id": 52,
       "legend": {
@@ -1490,7 +1622,7 @@
         "h": 3,
         "w": 3,
         "x": 0,
-        "y": 22
+        "y": 24
       },
       "id": 48,
       "interval": null,
@@ -1572,7 +1704,7 @@
         "h": 3,
         "w": 3,
         "x": 3,
-        "y": 22
+        "y": 24
       },
       "id": 50,
       "interval": null,
@@ -1637,7 +1769,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 25
+        "y": 27
       },
       "id": 4,
       "title": "Row title",
@@ -1651,7 +1783,7 @@
         "h": 5,
         "w": 5,
         "x": 13,
-        "y": 26
+        "y": 28
       },
       "id": 42,
       "links": [],
@@ -1750,7 +1882,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 31
+        "y": 33
       },
       "id": 2,
       "title": "Row title",
@@ -1798,5 +1930,5 @@
   "timezone": "",
   "title": "Kubernetes Kube2Iam",
   "uid": "WZ4407Fmk",
-  "version": 29
+  "version": 1563
 }

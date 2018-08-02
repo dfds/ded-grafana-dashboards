@@ -963,7 +963,7 @@
       }
     },
     {
-      "collapsed": false,
+      "collapsed": true,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -971,321 +971,322 @@
         "y": 22
       },
       "id": 10,
-      "panels": [],
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "Prometheus",
+          "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 9,
+            "x": 0,
+            "y": 23
+          },
+          "id": 80,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "$$hashKey": "object:1579",
+              "expr": "max(rate(container_cpu_usage_seconds_total{container_name=\"traefik\"}[5m]))",
+              "format": "time_series",
+              "intervalFactor": 1,
+              "legendFormat": "Max CPU Used",
+              "refId": "A"
+            },
+            {
+              "$$hashKey": "object:1580",
+              "expr": "avg(kube_pod_container_resource_requests_cpu_cores{container=\"traefik\"})",
+              "format": "time_series",
+              "hide": false,
+              "intervalFactor": 1,
+              "legendFormat": "Requested CPU",
+              "refId": "B"
+            },
+            {
+              "$$hashKey": "object:1581",
+              "expr": "avg(kube_pod_container_resource_limits_cpu_cores{container=\"traefik\"})",
+              "format": "time_series",
+              "intervalFactor": 1,
+              "legendFormat": "Limit CPU",
+              "refId": "C"
+            },
+            {
+              "$$hashKey": "object:1582",
+              "expr": "",
+              "format": "time_series",
+              "intervalFactor": 1,
+              "refId": "D"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Max CPU usage",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "Prometheus",
+          "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 9,
+            "x": 9,
+            "y": 23
+          },
+          "id": 78,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "$$hashKey": "object:1633",
+              "expr": "max(container_memory_usage_bytes{container_name=\"traefik\"})",
+              "format": "time_series",
+              "intervalFactor": 1,
+              "legendFormat": "Max memory used",
+              "refId": "A"
+            },
+            {
+              "$$hashKey": "object:1634",
+              "expr": "avg(kube_pod_container_resource_requests_memory_bytes{container=\"traefik\"})",
+              "format": "time_series",
+              "intervalFactor": 1,
+              "legendFormat": "Requested memory usage",
+              "refId": "B"
+            },
+            {
+              "$$hashKey": "object:1635",
+              "expr": "avg(kube_pod_container_resource_limits_memory_bytes{container=\"traefik\"})",
+              "format": "time_series",
+              "intervalFactor": 1,
+              "legendFormat": "Limit memory usage",
+              "refId": "C"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Traefik max memory usage",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "bytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": false
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "Prometheus",
+          "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 6,
+            "x": 18,
+            "y": 23
+          },
+          "id": 20,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "$$hashKey": "object:1440",
+              "expr": "sum(traefik_requests_total{service=\"http\"})",
+              "format": "time_series",
+              "interval": "",
+              "intervalFactor": 2,
+              "legendFormat": "{{http}}",
+              "metric": "",
+              "refId": "A",
+              "step": 20
+            },
+            {
+              "$$hashKey": "object:1441",
+              "expr": "sum(traefik_requests_total{service=\"https\"})",
+              "format": "time_series",
+              "interval": "",
+              "intervalFactor": 2,
+              "legendFormat": "{{https}}",
+              "refId": "B",
+              "step": 20
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Total requests",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": "Count",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": false
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        }
+      ],
       "title": "Traefik Health",
       "type": "row"
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "fill": 1,
-      "gridPos": {
-        "h": 7,
-        "w": 9,
-        "x": 0,
-        "y": 23
-      },
-      "id": 80,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "max": true,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "$$hashKey": "object:1579",
-          "expr": "max(rate(container_cpu_usage_seconds_total{container_name=\"traefik\"}[5m]))",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "legendFormat": "Max CPU Used",
-          "refId": "A"
-        },
-        {
-          "$$hashKey": "object:1580",
-          "expr": "avg(kube_pod_container_resource_requests_cpu_cores{container=\"traefik\"})",
-          "format": "time_series",
-          "hide": false,
-          "intervalFactor": 1,
-          "legendFormat": "Requested CPU",
-          "refId": "B"
-        },
-        {
-          "$$hashKey": "object:1581",
-          "expr": "avg(kube_pod_container_resource_limits_cpu_cores{container=\"traefik\"})",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "legendFormat": "Limit CPU",
-          "refId": "C"
-        },
-        {
-          "$$hashKey": "object:1582",
-          "expr": "",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "refId": "D"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Max CPU usage",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "fill": 1,
-      "gridPos": {
-        "h": 7,
-        "w": 9,
-        "x": 9,
-        "y": 23
-      },
-      "id": 78,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "max": true,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "$$hashKey": "object:1633",
-          "expr": "max(container_memory_usage_bytes{container_name=\"traefik\"})",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "legendFormat": "Max memory used",
-          "refId": "A"
-        },
-        {
-          "$$hashKey": "object:1634",
-          "expr": "avg(kube_pod_container_resource_requests_memory_bytes{container=\"traefik\"})",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "legendFormat": "Requested memory usage",
-          "refId": "B"
-        },
-        {
-          "$$hashKey": "object:1635",
-          "expr": "avg(kube_pod_container_resource_limits_memory_bytes{container=\"traefik\"})",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "legendFormat": "Limit memory usage",
-          "refId": "C"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Traefik max memory usage",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "bytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "fill": 1,
-      "gridPos": {
-        "h": 7,
-        "w": 6,
-        "x": 18,
-        "y": 23
-      },
-      "id": 20,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "$$hashKey": "object:1440",
-          "expr": "sum(traefik_requests_total{service=\"http\"})",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "{{http}}",
-          "metric": "",
-          "refId": "A",
-          "step": 20
-        },
-        {
-          "$$hashKey": "object:1441",
-          "expr": "sum(traefik_requests_total{service=\"https\"})",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "{{https}}",
-          "refId": "B",
-          "step": 20
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Total requests",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": "Count",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
     },
     {
       "collapsed": true,
@@ -1293,7 +1294,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 30
+        "y": 23
       },
       "id": 87,
       "panels": [
@@ -1308,7 +1309,7 @@
             "h": 9,
             "w": 24,
             "x": 0,
-            "y": 2
+            "y": 24
           },
           "id": 50,
           "legend": {
@@ -1319,6 +1320,8 @@
             "min": true,
             "rightSide": true,
             "show": true,
+            "sort": "avg",
+            "sortDesc": true,
             "total": false,
             "values": true
           },
@@ -1337,10 +1340,10 @@
           "targets": [
             {
               "$$hashKey": "object:992",
-              "expr": "sum(traefik_request_duration_seconds_sum) by (code) / sum(traefik_request_duration_seconds_count) by (code)",
+              "expr": "sum(traefik_request_duration_seconds_sum) by (service) / sum(traefik_request_duration_seconds_count) by (service)",
               "format": "time_series",
               "intervalFactor": 2,
-              "legendFormat": "{{code}}",
+              "legendFormat": "{{service}}",
               "refId": "A",
               "step": 10
             }
@@ -1364,6 +1367,7 @@
           },
           "yaxes": [
             {
+              "$$hashKey": "object:4194",
               "decimals": null,
               "format": "s",
               "label": null,
@@ -1373,6 +1377,7 @@
               "show": true
             },
             {
+              "$$hashKey": "object:4195",
               "format": "short",
               "label": null,
               "logBase": 1,
@@ -1400,7 +1405,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 11
+            "y": 33
           },
           "id": 58,
           "legend": {
@@ -1493,7 +1498,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 18
+            "y": 40
           },
           "id": 60,
           "legend": {
@@ -1581,7 +1586,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 31
+        "y": 24
       },
       "id": 89,
       "panels": [
@@ -1684,7 +1689,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 32
+        "y": 25
       },
       "id": 82,
       "panels": [
@@ -2227,7 +2232,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 33
+        "y": 26
       },
       "id": 84,
       "panels": [

@@ -53,12 +53,6 @@
       "id": "table",
       "name": "Table",
       "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "text",
-      "name": "Text",
-      "version": "5.0.0"
     }
   ],
   "annotations": {
@@ -79,7 +73,6 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1533194493017,
   "links": [],
   "panels": [
     {
@@ -338,7 +331,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -496,7 +489,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -577,21 +570,89 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
-      "content": "<center><h1>$podversion<h1></center>",
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "dateTimeFromNow",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
       "gridPos": {
         "h": 2,
-        "w": 2,
+        "w": 3,
         "x": 12,
         "y": 4
       },
-      "id": 54,
+      "id": 69,
+      "interval": null,
       "links": [],
-      "mode": "html",
-      "title": "Pod version",
-      "type": "text"
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "__name__",
+      "targets": [
+        {
+          "expr": "kube_daemonset_labels{daemonset=~\"fluentd-.*\"}",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{label_version}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Daemonset Version",
+      "type": "singlestat",
+      "valueFontSize": "70%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
     },
     {
       "collapsed": false,
@@ -603,7 +664,7 @@
       },
       "id": 44,
       "panels": [],
-      "title": "Memory Usage",
+      "title": "Resource Consumption",
       "type": "row"
     },
     {
@@ -1100,7 +1161,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -1181,20 +1242,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
-    },
-    {
-      "collapsed": false,
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 13
-      },
-      "id": 42,
-      "panels": [],
-      "title": "CPU Usage",
-      "type": "row"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -1219,7 +1267,7 @@
         "h": 6,
         "w": 4,
         "x": 0,
-        "y": 14
+        "y": 13
       },
       "id": 15,
       "interval": null,
@@ -1302,7 +1350,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 14
+        "y": 13
       },
       "id": 11,
       "interval": null,
@@ -1384,7 +1432,7 @@
         "h": 6,
         "w": 4,
         "x": 6,
-        "y": 14
+        "y": 13
       },
       "id": 18,
       "interval": null,
@@ -1467,7 +1515,7 @@
         "h": 3,
         "w": 2,
         "x": 10,
-        "y": 14
+        "y": 13
       },
       "id": 20,
       "interval": null,
@@ -1539,7 +1587,7 @@
         "h": 6,
         "w": 12,
         "x": 12,
-        "y": 14
+        "y": 13
       },
       "id": 2,
       "legend": {
@@ -1639,7 +1687,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 17
+        "y": 16
       },
       "id": 17,
       "interval": null,
@@ -1696,7 +1744,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -1721,7 +1769,7 @@
         "h": 3,
         "w": 2,
         "x": 10,
-        "y": 17
+        "y": 16
       },
       "id": 19,
       "interval": null,
@@ -1778,7 +1826,7 @@
           "value": "null"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "collapsed": false,
@@ -1786,7 +1834,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 20
+        "y": 19
       },
       "id": 40,
       "panels": [],
@@ -1816,7 +1864,7 @@
         "h": 4,
         "w": 3,
         "x": 0,
-        "y": 21
+        "y": 20
       },
       "id": 27,
       "interval": null,
@@ -1897,7 +1945,7 @@
         "h": 4,
         "w": 3,
         "x": 3,
-        "y": 21
+        "y": 20
       },
       "id": 29,
       "interval": null,
@@ -1978,7 +2026,7 @@
         "h": 4,
         "w": 3,
         "x": 6,
-        "y": 21
+        "y": 20
       },
       "id": 28,
       "interval": null,
@@ -2059,7 +2107,7 @@
         "h": 4,
         "w": 3,
         "x": 9,
-        "y": 21
+        "y": 20
       },
       "id": 30,
       "interval": null,
@@ -2128,7 +2176,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 21
+        "y": 20
       },
       "id": 6,
       "legend": {
@@ -2235,7 +2283,7 @@
         "h": 3,
         "w": 3,
         "x": 0,
-        "y": 25
+        "y": 24
       },
       "id": 24,
       "interval": null,
@@ -2317,7 +2365,7 @@
         "h": 3,
         "w": 3,
         "x": 3,
-        "y": 25
+        "y": 24
       },
       "id": 22,
       "interval": null,
@@ -2399,7 +2447,7 @@
         "h": 3,
         "w": 3,
         "x": 6,
-        "y": 25
+        "y": 24
       },
       "id": 23,
       "interval": null,
@@ -2481,7 +2529,7 @@
         "h": 3,
         "w": 3,
         "x": 9,
-        "y": 25
+        "y": 24
       },
       "id": 25,
       "interval": null,
@@ -2546,7 +2594,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 28
+        "y": 27
       },
       "id": 38,
       "panels": [],
@@ -2570,7 +2618,7 @@
         "h": 6,
         "w": 10,
         "x": 0,
-        "y": 29
+        "y": 28
       },
       "id": 66,
       "links": [],
@@ -2638,7 +2686,7 @@
         "h": 7,
         "w": 5,
         "x": 10,
-        "y": 29
+        "y": 28
       },
       "id": 61,
       "links": [],
@@ -2740,28 +2788,7 @@
     "FluentD"
   ],
   "templating": {
-    "list": [
-      {
-        "allValue": null,
-        "current": {},
-        "datasource": "Prometheus",
-        "hide": 2,
-        "includeAll": false,
-        "label": null,
-        "multi": true,
-        "name": "podversion",
-        "options": [],
-        "query": "label_values(kube_pod_labels{pod=~\"fluentd-.*\"}, label_version)",
-        "refresh": 1,
-        "regex": "",
-        "sort": 0,
-        "tagValuesQuery": "",
-        "tags": [],
-        "tagsQuery": "",
-        "type": "query",
-        "useTags": false
-      }
-    ]
+    "list": []
   },
   "time": {
     "from": "now-3h",
@@ -2795,5 +2822,5 @@
   "timezone": "",
   "title": "Kubernetes FluentD Pods",
   "uid": "y5ByREOmk",
-  "version": 1810
+  "version": 1826
 }
