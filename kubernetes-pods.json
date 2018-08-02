@@ -17,9 +17,93 @@
   "editable": true,
   "gnetId": 747,
   "graphTooltip": 0,
-  "iteration": 1531742111812,
+  "id": 3,
+  "iteration": 1533213256895,
   "links": [],
   "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 41,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "$$hashKey": "object:29296",
+          "expr": "topk(1, node_boot_time_seconds{cluster_name=~\".+\"})",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "{{cluster_name}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Environment",
+      "type": "singlestat",
+      "valueFontSize": "100%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
     {
       "cacheTimeout": null,
       "colorBackground": false,
@@ -44,7 +128,7 @@
         "h": 5,
         "w": 12,
         "x": 0,
-        "y": 0
+        "y": 3
       },
       "height": "180px",
       "id": 4,
@@ -133,7 +217,7 @@
         "h": 5,
         "w": 12,
         "x": 12,
-        "y": 0
+        "y": 3
       },
       "height": "180px",
       "id": 6,
@@ -220,7 +304,7 @@
         "h": 3,
         "w": 6,
         "x": 0,
-        "y": 5
+        "y": 8
       },
       "height": "100px",
       "id": 36,
@@ -306,7 +390,7 @@
         "h": 3,
         "w": 6,
         "x": 6,
-        "y": 5
+        "y": 8
       },
       "height": "100px",
       "id": 37,
@@ -392,7 +476,7 @@
         "h": 3,
         "w": 6,
         "x": 12,
-        "y": 5
+        "y": 8
       },
       "height": "100px",
       "id": 38,
@@ -478,7 +562,7 @@
         "h": 3,
         "w": 6,
         "x": 18,
-        "y": 5
+        "y": 8
       },
       "height": "100px",
       "id": 39,
@@ -565,7 +649,7 @@
         "h": 3,
         "w": 24,
         "x": 0,
-        "y": 8
+        "y": 11
       },
       "height": "1px",
       "id": 9,
@@ -643,7 +727,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 11
+        "y": 14
       },
       "height": "",
       "id": 17,
@@ -743,7 +827,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 18
+        "y": 21
       },
       "id": 25,
       "isNew": true,
@@ -842,7 +926,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 25
+        "y": 28
       },
       "id": 16,
       "isNew": true,
@@ -950,7 +1034,6 @@
       {
         "allValue": ".*",
         "current": {
-          "selected": true,
           "text": "All",
           "value": "$__all"
         },
@@ -974,8 +1057,6 @@
       {
         "allValue": ".*",
         "current": {
-          "selected": false,
-          "tags": [],
           "text": "All",
           "value": "$__all"
         },
@@ -1030,5 +1111,5 @@
   "timezone": "browser",
   "title": "Kubernetes Pods",
   "uid": "njRxEFVmk",
-  "version": 3380
+  "version": 1900
 }
