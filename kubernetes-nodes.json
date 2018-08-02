@@ -17,16 +17,100 @@
   "editable": true,
   "gnetId": 3131,
   "graphTooltip": 0,
-  "iteration": 1528959167254,
+  "id": 9,
+  "iteration": 1533212823450,
   "links": [],
   "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 132,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "$$hashKey": "object:29296",
+          "expr": "topk(1, node_boot_time_seconds{cluster_name=~\".+\"})",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "{{cluster_name}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Environment",
+      "type": "singlestat",
+      "valueFontSize": "100%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
     {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 0
+        "y": 3
       },
       "id": 42,
       "panels": [],
@@ -58,7 +142,7 @@
         "h": 3,
         "w": 24,
         "x": 0,
-        "y": 1
+        "y": 4
       },
       "height": "",
       "id": 24,
@@ -138,7 +222,7 @@
         "h": 4,
         "w": 4,
         "x": 0,
-        "y": 4
+        "y": 7
       },
       "id": 50,
       "interval": null,
@@ -225,7 +309,7 @@
         "h": 4,
         "w": 4,
         "x": 4,
-        "y": 4
+        "y": 7
       },
       "hideTimeOverride": false,
       "id": 52,
@@ -308,7 +392,7 @@
         "h": 4,
         "w": 4,
         "x": 8,
-        "y": 4
+        "y": 7
       },
       "id": 7,
       "interval": null,
@@ -394,7 +478,7 @@
         "h": 4,
         "w": 4,
         "x": 12,
-        "y": 4
+        "y": 7
       },
       "id": 56,
       "interval": null,
@@ -481,7 +565,7 @@
         "h": 4,
         "w": 4,
         "x": 16,
-        "y": 4
+        "y": 7
       },
       "id": 58,
       "interval": null,
@@ -568,7 +652,7 @@
         "h": 4,
         "w": 4,
         "x": 20,
-        "y": 4
+        "y": 7
       },
       "id": 127,
       "interval": null,
@@ -656,7 +740,7 @@
         "h": 4,
         "w": 4,
         "x": 0,
-        "y": 8
+        "y": 11
       },
       "id": 28,
       "interval": null,
@@ -743,7 +827,7 @@
         "h": 4,
         "w": 4,
         "x": 4,
-        "y": 8
+        "y": 11
       },
       "id": 32,
       "interval": null,
@@ -830,7 +914,7 @@
         "h": 4,
         "w": 4,
         "x": 8,
-        "y": 8
+        "y": 11
       },
       "id": 34,
       "interval": null,
@@ -916,7 +1000,7 @@
         "h": 4,
         "w": 4,
         "x": 12,
-        "y": 8
+        "y": 11
       },
       "id": 54,
       "interval": null,
@@ -1003,7 +1087,7 @@
         "h": 4,
         "w": 4,
         "x": 16,
-        "y": 8
+        "y": 11
       },
       "id": 36,
       "interval": null,
@@ -1089,7 +1173,7 @@
         "h": 4,
         "w": 4,
         "x": 20,
-        "y": 8
+        "y": 11
       },
       "hideTimeOverride": false,
       "id": 22,
@@ -1161,7 +1245,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 12
+        "y": 15
       },
       "hideTimeOverride": false,
       "id": 130,
@@ -1290,7 +1374,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 21
+        "y": 24
       },
       "id": 12,
       "panels": [],
@@ -1308,7 +1392,7 @@
         "h": 15,
         "w": 12,
         "x": 0,
-        "y": 22
+        "y": 25
       },
       "id": 62,
       "legend": {
@@ -1421,7 +1505,7 @@
         "h": 15,
         "w": 12,
         "x": 12,
-        "y": 22
+        "y": 25
       },
       "id": 78,
       "legend": {
@@ -1577,7 +1661,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 37
+        "y": 40
       },
       "id": 14,
       "panels": [],
@@ -1617,7 +1701,7 @@
         "h": 12,
         "w": 24,
         "x": 0,
-        "y": 38
+        "y": 41
       },
       "id": 80,
       "legend": {
@@ -1763,7 +1847,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 50
+        "y": 53
       },
       "id": 16,
       "panels": [],
@@ -1785,7 +1869,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 51
+        "y": 54
       },
       "id": 6,
       "legend": {
@@ -1924,7 +2008,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 51
+        "y": 54
       },
       "height": "410",
       "id": 48,
@@ -2043,7 +2127,7 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 58
+        "y": 61
       },
       "id": 98,
       "legend": {
@@ -2222,7 +2306,7 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 58
+        "y": 61
       },
       "id": 128,
       "legend": {
@@ -2412,7 +2496,7 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 69
+        "y": 72
       },
       "height": "410",
       "id": 46,
@@ -2507,7 +2591,7 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 69
+        "y": 72
       },
       "id": 102,
       "legend": {
@@ -2685,7 +2769,7 @@
         "h": 9,
         "w": 24,
         "x": 0,
-        "y": 80
+        "y": 83
       },
       "id": 94,
       "legend": {
@@ -2772,7 +2856,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 89
+        "y": 92
       },
       "id": 18,
       "panels": [],
@@ -2795,7 +2879,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 90
+        "y": 93
       },
       "id": 10,
       "legend": {
@@ -2894,7 +2978,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 90
+        "y": 93
       },
       "id": 8,
       "legend": {
@@ -2990,7 +3074,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 97
+        "y": 100
       },
       "id": 120,
       "legend": {
@@ -3125,7 +3209,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 97
+        "y": 100
       },
       "id": 122,
       "legend": {
@@ -3329,5 +3413,5 @@
   "timezone": "browser",
   "title": "Kubernetes Nodes",
   "uid": "zw6IEF4mz",
-  "version": 79
+  "version": 1900
 }
