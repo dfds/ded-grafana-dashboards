@@ -17,7 +17,7 @@
   "editable": true,
   "gnetId": 4475,
   "graphTooltip": 0,
-  "iteration": 1533202678170,
+  "iteration": 1533280389348,
   "links": [],
   "panels": [
     {
@@ -1070,6 +1070,118 @@
         "x": 0,
         "y": 22
       },
+      "id": 109,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": true,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "fill": 1,
+          "gridPos": {
+            "h": 9,
+            "w": 12,
+            "x": 0,
+            "y": 5
+          },
+          "id": 111,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "$$hashKey": "object:503",
+              "expr": "sum(rate(traefik_requests_total{code=~\"5..\"}[5m])) by (service)* 1000",
+              "format": "time_series",
+              "intervalFactor": 1,
+              "legendFormat": "{{service}} 5xx",
+              "refId": "A"
+            },
+            {
+              "$$hashKey": "object:567",
+              "expr": "sum(rate(traefik_requests_total{code=~\"4..\"}[5m])) by (service)* 1000",
+              "format": "time_series",
+              "intervalFactor": 1,
+              "legendFormat": "{{service}} 4xx",
+              "refId": "B"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "5xx and 4xx pr service",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "$$hashKey": "object:595",
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "$$hashKey": "object:596",
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        }
+      ],
+      "title": "Error count pr service",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 23
+      },
       "id": 10,
       "panels": [
         {
@@ -1394,7 +1506,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 23
+        "y": 24
       },
       "id": 87,
       "panels": [
@@ -1686,7 +1798,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 24
+        "y": 25
       },
       "id": 89,
       "panels": [
@@ -1702,7 +1814,7 @@
             "h": 9,
             "w": 24,
             "x": 0,
-            "y": 34
+            "y": 25
           },
           "id": 68,
           "legend": {
@@ -1789,7 +1901,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 25
+        "y": 26
       },
       "id": 82,
       "panels": [
@@ -2334,7 +2446,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 26
+        "y": 27
       },
       "id": 84,
       "panels": [
@@ -2615,5 +2727,5 @@
   "timezone": "",
   "title": "Traefik",
   "uid": "tBFn9knmk",
-  "version": 280
+  "version": 366
 }
