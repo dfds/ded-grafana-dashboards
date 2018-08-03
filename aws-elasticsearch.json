@@ -16,7 +16,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1533211210839,
+  "iteration": 1533286479955,
   "links": [],
   "panels": [
     {
@@ -388,66 +388,161 @@
       "valueName": "avg"
     },
     {
-      "cacheTimeout": null,
-      "colorBackground": true,
-      "colorValue": false,
-      "colors": [
-        "#d44a3a",
-        "rgba(237, 129, 40, 0.89)",
-        "#299c46"
-      ],
-      "datasource": "Cloudwatch",
-      "format": "none",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
+      "colorMode": "Panel",
+      "colors": {
+        "crit": "rgba(245, 54, 54, 0.9)",
+        "disable": "rgba(128, 128, 128, 0.9)",
+        "ok": "rgba(50, 128, 45, 0.9)",
+        "warn": "rgba(237, 129, 40, 0.9)"
       },
+      "cornerRadius": 0,
+      "datasource": "Cloudwatch",
+      "displayName": "",
+      "flipCard": false,
+      "flipTime": 5,
+      "fontFormat": "Regular",
       "gridPos": {
         "h": 5,
-        "w": 4,
+        "w": 5,
         "x": 12,
         "y": 3
       },
-      "id": 22,
-      "interval": null,
+      "id": 40,
+      "isAutoScrollOnOverflow": false,
+      "isGrayOnNoData": false,
+      "isHideAlertsOnDisable": false,
+      "isIgnoreOKColors": false,
       "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false
-      },
-      "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:2813",
+          "aggregation": "Last",
+          "alias": "green",
+          "decimals": 2,
+          "dimensions": {
+            "ClientId": "$ClientId",
+            "DomainName": "$DomainName"
+          },
+          "displayAliasType": "Warning / Critical",
+          "displayType": "Regular",
+          "displayValueWithAlias": "When Alias Displayed",
+          "expr": "",
+          "format": "time_series",
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "ClusterStatus.green",
+          "namespace": "AWS/ES",
+          "period": "",
+          "refId": "A",
+          "region": "default",
+          "statistics": [
+            "Maximum"
+          ],
+          "units": "none",
+          "valueHandler": "Number Threshold",
+          "warn": 0
+        },
+        {
+          "$$hashKey": "object:2900",
+          "aggregation": "Last",
+          "alias": "yellow",
+          "decimals": 2,
+          "dimensions": {
+            "ClientId": "$ClientId",
+            "DomainName": "$DomainName"
+          },
+          "displayAliasType": "Warning / Critical",
+          "displayType": "Regular",
+          "displayValueWithAlias": "When Alias Displayed",
+          "expr": "",
+          "format": "time_series",
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "ClusterStatus.yellow",
+          "namespace": "AWS/ES",
+          "period": "",
+          "refId": "B",
+          "region": "default",
+          "statistics": [
+            "Maximum"
+          ],
+          "units": "none",
+          "valueHandler": "Number Threshold",
+          "warn": 1
+        },
+        {
+          "$$hashKey": "object:3304",
+          "aggregation": "Last",
+          "alias": "red",
+          "crit": 1,
+          "decimals": 2,
+          "dimensions": {
+            "ClientId": "$ClientId",
+            "DomainName": "$DomainName"
+          },
+          "displayAliasType": "Warning / Critical",
+          "displayType": "Regular",
+          "displayValueWithAlias": "When Alias Displayed",
+          "expr": "",
+          "format": "time_series",
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "ClusterStatus.red",
+          "namespace": "AWS/ES",
+          "period": "",
+          "refId": "C",
+          "region": "default",
+          "statistics": [
+            "Maximum"
+          ],
+          "units": "none",
+          "valueHandler": "Number Threshold"
+        }
+      ],
+      "title": "ClusterStatus",
+      "type": "vonage-status-panel"
+    },
+    {
+      "aliasColors": {
+        "Red": "#890f02"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Cloudwatch",
+      "fill": 1,
+      "gridPos": {
+        "h": 5,
+        "w": 7,
+        "x": 17,
+        "y": 3
+      },
+      "id": 34,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "$$hashKey": "object:629",
+          "alias": "Green",
           "dimensions": {
             "ClientId": "$ClientId",
             "DomainName": "$DomainName"
@@ -464,82 +559,10 @@
           "statistics": [
             "Maximum"
           ]
-        }
-      ],
-      "thresholds": "0,1",
-      "title": "ClusterStatus Green",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "Ok",
-          "value": "1"
-        }
-      ],
-      "valueName": "avg"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": true,
-      "colorValue": false,
-      "colors": [
-        "#299c46",
-        "#299c46",
-        "#d44a3a"
-      ],
-      "datasource": "Cloudwatch",
-      "format": "none",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 5,
-        "w": 4,
-        "x": 16,
-        "y": 3
-      },
-      "id": 23,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
         },
         {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false
-      },
-      "tableColumn": "",
-      "targets": [
-        {
+          "$$hashKey": "object:1896",
+          "alias": "Yellow",
           "dimensions": {
             "ClientId": "$ClientId",
             "DomainName": "$DomainName"
@@ -551,92 +574,15 @@
           "metricName": "ClusterStatus.yellow",
           "namespace": "AWS/ES",
           "period": "",
-          "refId": "A",
+          "refId": "B",
           "region": "default",
           "statistics": [
             "Maximum"
           ]
-        }
-      ],
-      "thresholds": "0,1",
-      "title": "ClusterStatus Yellow",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "Warning",
-          "value": "1"
         },
         {
-          "op": "=",
-          "text": "Ok",
-          "value": "0"
-        }
-      ],
-      "valueName": "avg"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": true,
-      "colorValue": false,
-      "colors": [
-        "#299c46",
-        "#299c46",
-        "#d44a3a"
-      ],
-      "datasource": "Cloudwatch",
-      "format": "none",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 5,
-        "w": 4,
-        "x": 20,
-        "y": 3
-      },
-      "id": 24,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false
-      },
-      "tableColumn": "",
-      "targets": [
-        {
+          "$$hashKey": "object:1943",
+          "alias": "Red",
           "dimensions": {
             "ClientId": "$ClientId",
             "DomainName": "$DomainName"
@@ -648,30 +594,54 @@
           "metricName": "ClusterStatus.red",
           "namespace": "AWS/ES",
           "period": "",
-          "refId": "A",
+          "refId": "C",
           "region": "default",
           "statistics": [
             "Maximum"
           ]
         }
       ],
-      "thresholds": "0,1",
-      "title": "ClusterStatus Red",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "ClusterStatus",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
         {
-          "op": "=",
-          "text": "Error",
-          "value": "1"
+          "$$hashKey": "object:679",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
         },
         {
-          "op": "=",
-          "text": "Ok",
-          "value": "0"
+          "$$hashKey": "object:680",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
         }
       ],
-      "valueName": "avg"
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "aliasColors": {},
@@ -1609,8 +1579,8 @@
       {
         "allValue": null,
         "current": {
-          "text": "528563840976",
-          "value": "528563840976"
+          "text": "591879361107",
+          "value": "591879361107"
         },
         "datasource": "Cloudwatch",
         "hide": 2,
@@ -1632,8 +1602,8 @@
       {
         "allValue": null,
         "current": {
-          "text": "dfds-playground",
-          "value": "dfds-playground"
+          "text": "dfds-nonprod",
+          "value": "dfds-nonprod"
         },
         "datasource": "Cloudwatch",
         "hide": 0,
@@ -1655,8 +1625,8 @@
     ]
   },
   "time": {
-    "from": "now-2d",
-    "to": "now"
+    "from": "2018-03-28T09:06:48.403Z",
+    "to": "2018-08-03T09:06:48.403Z"
   },
   "timepicker": {
     "refresh_intervals": [
@@ -1686,5 +1656,5 @@
   "timezone": "",
   "title": "AWS Elasticsearch",
   "uid": "JxF_0jKmk",
-  "version": 27
+  "version": 94
 }
