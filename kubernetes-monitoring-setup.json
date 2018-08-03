@@ -64,7 +64,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1533210245988,
+  "iteration": 1533285911770,
   "links": [],
   "panels": [
     {
@@ -170,7 +170,7 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 3,
+        "w": 4,
         "x": 0,
         "y": 3
       },
@@ -215,14 +215,14 @@
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
-          "legendFormat": "N/A",
+          "legendFormat": "{{label_chart}}",
           "refId": "A"
         }
       ],
       "thresholds": "",
       "title": "Chart Name",
       "type": "singlestat",
-      "valueFontSize": "80%",
+      "valueFontSize": "70%",
       "valueMaps": [
         {
           "op": "=",
@@ -568,6 +568,88 @@
         }
       ],
       "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 9,
+        "y": 6
+      },
+      "id": 88,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "prometheus_build_info",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "v{{version}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Version",
+      "type": "singlestat",
+      "valueFontSize": "70%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
     },
     {
       "cacheTimeout": null,
@@ -1927,18 +2009,86 @@
       "valueName": "avg"
     },
     {
-      "content": "<center><h1>N/A<h1></center>",
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
       "gridPos": {
         "h": 2,
         "w": 2,
         "x": 9,
         "y": 21
       },
-      "id": 38,
+      "id": 90,
+      "interval": null,
       "links": [],
-      "mode": "html",
-      "title": "Deployment version",
-      "type": "text"
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Version",
+      "type": "singlestat",
+      "valueFontSize": "70%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
     },
     {
       "cacheTimeout": null,
@@ -3300,18 +3450,86 @@
       "valueName": "current"
     },
     {
-      "content": "<center><h1>N/A<h1></center>",
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
       "gridPos": {
         "h": 2,
         "w": 2,
         "x": 9,
         "y": 36
       },
-      "id": 72,
+      "id": 89,
+      "interval": null,
       "links": [],
-      "mode": "html",
-      "title": "Daemonset version",
-      "type": "text"
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "topk(1, node_exporter_build_info)",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "v{{version}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Version",
+      "type": "singlestat",
+      "valueFontSize": "70%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
     },
     {
       "cacheTimeout": null,
@@ -5784,7 +6002,7 @@
     ]
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {
@@ -5815,5 +6033,5 @@
   "timezone": "",
   "title": "Kubernetes Monitoring Setup",
   "uid": "O9jO_qdiz",
-  "version": 1626
+  "version": 1710
 }
