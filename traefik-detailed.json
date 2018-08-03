@@ -17,7 +17,8 @@
   "editable": true,
   "gnetId": 4475,
   "graphTooltip": 0,
-  "iteration": 1533285623957,
+  "id": 11,
+  "iteration": 1533289142371,
   "links": [],
   "panels": [
     {
@@ -123,7 +124,7 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 4,
+        "w": 3,
         "x": 4,
         "y": 0
       },
@@ -204,8 +205,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 4,
-        "x": 8,
+        "w": 3,
+        "x": 7,
         "y": 0
       },
       "id": 85,
@@ -285,8 +286,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 4,
-        "x": 12,
+        "w": 3,
+        "x": 10,
         "y": 0
       },
       "id": 18,
@@ -348,6 +349,89 @@
         }
       ],
       "valueName": "max"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "dateTimeFromNow",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 13,
+        "y": 0
+      },
+      "id": 113,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "$$hashKey": "object:12046",
+          "expr": "kube_deployment_labels{deployment=\"traefik\"}",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{label_chart}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Chart Name",
+      "type": "singlestat",
+      "valueFontSize": "70%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
     },
     {
       "cacheTimeout": null,
@@ -2727,5 +2811,5 @@
   "timezone": "",
   "title": "Traefik",
   "uid": "tBFn9knmk",
-  "version": 372
+  "version": 1988
 }
