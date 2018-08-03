@@ -17,7 +17,7 @@
   "editable": true,
   "gnetId": 4475,
   "graphTooltip": 0,
-  "iteration": 1533280389348,
+  "iteration": 1533285623957,
   "links": [],
   "panels": [
     {
@@ -960,7 +960,7 @@
         }
       ],
       "thresholds": "500,1000",
-      "title": "Duration",
+      "title": "Duration in ms - Max value",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -1083,7 +1083,7 @@
             "h": 9,
             "w": 12,
             "x": 0,
-            "y": 5
+            "y": 23
           },
           "id": 111,
           "legend": {
@@ -1171,7 +1171,7 @@
           }
         }
       ],
-      "title": "Error count pr service",
+      "title": "Error count per service",
       "type": "row"
     },
     {
@@ -2727,5 +2727,5 @@
   "timezone": "",
   "title": "Traefik",
   "uid": "tBFn9knmk",
-  "version": 366
+  "version": 372
 }
