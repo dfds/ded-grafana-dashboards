@@ -581,7 +581,7 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 3,
+        "w": 4,
         "x": 12,
         "y": 4
       },
@@ -1930,5 +1930,5 @@
   "timezone": "",
   "title": "Kubernetes Kube2Iam",
   "uid": "WZ4407Fmk",
-  "version": 1563
+  "version": 1654
 }
