@@ -1,7 +1,7 @@
 {
   "__inputs": [
     {
-      "name": "PROMETHEUS",
+      "name": "DS_PROMETHEUS",
       "label": "Prometheus",
       "description": "",
       "type": "datasource",
@@ -52,7 +52,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1533309622273,
+  "iteration": 1533490812477,
   "links": [],
   "panels": [
     {
@@ -77,7 +77,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${PROMETHEUS}",
+      "datasource": "${DS_PROMETHEUS}",
       "description": "Uptime of the longest running WikiJS pod",
       "format": "dtdurations",
       "gauge": {
@@ -158,7 +158,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${PROMETHEUS}",
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": null,
       "description": "Uptime of the longest running MongoDB pod",
       "format": "dtdurations",
@@ -240,7 +240,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${PROMETHEUS}",
+      "datasource": "${DS_PROMETHEUS}",
       "description": "The amount of times that pods have restarted in the wikijs namespace",
       "format": "none",
       "gauge": {
@@ -321,7 +321,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${PROMETHEUS}",
+      "datasource": "${DS_PROMETHEUS}",
       "description": "How many replicas that should be running are unavailable",
       "format": "none",
       "gauge": {
@@ -402,7 +402,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${PROMETHEUS}",
+      "datasource": "${DS_PROMETHEUS}",
       "description": "The environment in which this dashboard is running",
       "format": "none",
       "gauge": {
@@ -499,7 +499,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
-      "datasource": "${PROMETHEUS}",
+      "datasource": "${DS_PROMETHEUS}",
       "description": "Shows the average rate of requests per second over a 5 minute period within the selected time frame",
       "format": "none",
       "gauge": {
@@ -576,7 +576,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${PROMETHEUS}",
+      "datasource": "${DS_PROMETHEUS}",
       "description": "The number of requests per second to WikiJS via Traefik",
       "fill": 1,
       "gridPos": {
@@ -668,7 +668,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${PROMETHEUS}",
+      "datasource": "${DS_PROMETHEUS}",
       "description": "Shows the maximum amount of 5xx errors in a 5 minute period over the selected time frame",
       "format": "none",
       "gauge": {
@@ -745,7 +745,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${PROMETHEUS}",
+      "datasource": "${DS_PROMETHEUS}",
       "description": "The number of failed requests per second to WikiJS via Traefik",
       "fill": 1,
       "gridPos": {
@@ -837,7 +837,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${PROMETHEUS}",
+      "datasource": "${DS_PROMETHEUS}",
       "description": "Shows the average http request duration over a 5 minute period for the selected time frame",
       "format": "dtdurations",
       "gauge": {
@@ -914,7 +914,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${PROMETHEUS}",
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": null,
       "description": "The length of time a request takes in milliseconds",
       "fill": 1,
@@ -3966,7 +3966,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${PROMETHEUS}",
+        "datasource": "${DS_PROMETHEUS}",
         "hide": 2,
         "includeAll": false,
         "label": null,
@@ -3986,7 +3986,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${PROMETHEUS}",
+        "datasource": "${DS_PROMETHEUS}",
         "hide": 2,
         "includeAll": false,
         "label": null,
@@ -4036,6 +4036,6 @@
   },
   "timezone": "",
   "title": "Wikijs",
-  "uid": "-c2DfnKik",
-  "version": 761
+  "uid": "w13GMicmk",
+  "version": 17
 }
