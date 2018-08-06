@@ -1156,8 +1156,8 @@
   "schemaVersion": 16,
   "style": "dark",
   "tags": [
-    "monitoringartist",
-    "cloudwatch"
+    "cloudwatch",
+    "s3"
   ],
   "templating": {
     "list": [
