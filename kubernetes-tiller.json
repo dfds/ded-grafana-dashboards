@@ -39,12 +39,6 @@
       "id": "table",
       "name": "Table",
       "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "text",
-      "name": "Text",
-      "version": "5.0.0"
     }
   ],
   "annotations": {
@@ -64,7 +58,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1533210936041,
+  "iteration": 1533552174300,
   "links": [],
   "panels": [
     {
@@ -407,18 +401,86 @@
       "valueName": "current"
     },
     {
-      "content": "<center><h1>N/A<h1></center>",
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
       "gridPos": {
         "h": 2,
         "w": 2,
         "x": 7,
         "y": 4
       },
-      "id": 18,
+      "id": 53,
+      "interval": null,
       "links": [],
-      "mode": "html",
-      "title": "Deployment version",
-      "type": "text"
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "label_replace(kube_pod_container_info{pod=~\"tiller-deploy-.*\"}, \"version\",\"$1\", \"image\", \".*(v.*)\")",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{version}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Tiller version",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
     },
     {
       "cacheTimeout": null,
@@ -521,7 +583,7 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 3,
+        "w": 2,
         "x": 11,
         "y": 4
       },
@@ -589,7 +651,7 @@
       "gridPos": {
         "h": 3,
         "w": 6,
-        "x": 14,
+        "x": 13,
         "y": 4
       },
       "id": 24,
@@ -1866,5 +1928,5 @@
   "timezone": "",
   "title": "Kubernetes Tiller",
   "uid": "2DfG17Kmk",
-  "version": 1560
+  "version": 1939
 }
