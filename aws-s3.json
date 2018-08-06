@@ -18,7 +18,7 @@
   "gnetId": 575,
   "graphTooltip": 0,
   "id": 24,
-  "iteration": 1533337520879,
+  "iteration": 1533563656779,
   "links": [],
   "panels": [
     {
@@ -124,10 +124,13 @@
       "isNew": true,
       "legend": {
         "alignAsTable": true,
-        "avg": true,
+        "avg": false,
         "current": true,
+        "hideEmpty": true,
+        "hideZero": false,
         "max": true,
         "min": true,
+        "rightSide": true,
         "show": true,
         "sort": "current",
         "sortDesc": true,
@@ -148,7 +151,8 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "",
+          "$$hashKey": "object:3457",
+          "alias": "{{BucketName}}",
           "application": {
             "filter": ""
           },
@@ -160,6 +164,7 @@
           "group": {
             "filter": ""
           },
+          "highResolution": false,
           "host": {
             "filter": ""
           },
@@ -241,10 +246,11 @@
       "isNew": true,
       "legend": {
         "alignAsTable": true,
-        "avg": true,
+        "avg": false,
         "current": true,
         "max": true,
         "min": true,
+        "rightSide": true,
         "show": true,
         "sort": "current",
         "sortDesc": true,
@@ -265,7 +271,8 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "",
+          "$$hashKey": "object:4067",
+          "alias": "{{BucketName}}",
           "application": {
             "filter": ""
           },
@@ -277,6 +284,7 @@
           "group": {
             "filter": ""
           },
+          "highResolution": false,
           "host": {
             "filter": ""
           },
@@ -1164,7 +1172,6 @@
       {
         "allValue": null,
         "current": {
-          "tags": [],
           "text": "eu-central-1",
           "value": "eu-central-1"
         },
@@ -1188,12 +1195,13 @@
       {
         "allValue": null,
         "current": {
-          "text": "dfds-sandbox-states",
-          "value": "dfds-sandbox-states"
+          "tags": [],
+          "text": "All",
+          "value": "$__all"
         },
         "datasource": "Cloudwatch",
         "hide": 0,
-        "includeAll": false,
+        "includeAll": true,
         "label": "Bucket",
         "multi": false,
         "name": "bucket",
@@ -1266,5 +1274,5 @@
   "timezone": "browser",
   "title": "AWS S3",
   "uid": "9n9v_icik",
-  "version": 2
+  "version": 252
 }
