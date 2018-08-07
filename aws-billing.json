@@ -17,7 +17,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 1,
-  "iteration": 1533644048475,
+  "iteration": 1533644048527,
   "links": [],
   "panels": [
     {
@@ -42,7 +42,7 @@
       },
       "gridPos": {
         "h": 5,
-        "w": 6,
+        "w": 8,
         "x": 0,
         "y": 0
       },
@@ -76,9 +76,9 @@
       ],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": true,
+        "full": false,
         "lineColor": "rgb(31, 120, 193)",
-        "show": true
+        "show": false
       },
       "tableColumn": "",
       "targets": [
@@ -137,11 +137,11 @@
       },
       "gridPos": {
         "h": 5,
-        "w": 6,
-        "x": 6,
+        "w": 7,
+        "x": 8,
         "y": 0
       },
-      "id": 9,
+      "id": 12,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -171,13 +171,14 @@
       ],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": true,
+        "full": false,
         "lineColor": "rgb(31, 120, 193)",
-        "show": true
+        "show": false
       },
       "tableColumn": "",
       "targets": [
         {
+          "$$hashKey": "object:679",
           "alias": "",
           "dimensions": {
             "Currency": "USD"
@@ -230,8 +231,8 @@
       },
       "gridPos": {
         "h": 5,
-        "w": 12,
-        "x": 12,
+        "w": 9,
+        "x": 15,
         "y": 0
       },
       "id": 2,
@@ -307,6 +308,127 @@
         "x": 0,
         "y": 5
       },
+      "id": 11,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "$$hashKey": "object:823",
+          "alias": "{{LinkedAccount}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "B",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:5713",
+          "alias": "Combined",
+          "dimensions": {
+            "Currency": "USD"
+          },
+          "highResolution": false,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "A",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Cost Per Account",
+      "tooltip": {
+        "shared": false,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:2895",
+          "format": "currencyUSD",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:2896",
+          "format": "short",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "CW-Master",
+      "description": "This shows the costs in graph format, by default over the current month",
+      "fill": 4,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 5
+      },
       "id": 8,
       "legend": {
         "alignAsTable": true,
@@ -336,7 +458,7 @@
       "targets": [
         {
           "$$hashKey": "object:822",
-          "alias": "Overall",
+          "alias": "Combined",
           "dimensions": {
             "Currency": "USD"
           },
@@ -378,9 +500,9 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Cost History (All Accounts)",
+      "title": "Cost Per Service",
       "tooltip": {
-        "shared": true,
+        "shared": false,
         "sort": 0,
         "value_type": "individual"
       },
@@ -394,6 +516,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:3850",
           "format": "currencyUSD",
           "label": "",
           "logBase": 1,
@@ -402,128 +525,7 @@
           "show": true
         },
         {
-          "format": "short",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Cloudwatch",
-      "description": "This shows the costs in graph format, by default over the current month",
-      "fill": 4,
-      "gridPos": {
-        "h": 9,
-        "w": 12,
-        "x": 12,
-        "y": 5
-      },
-      "id": 10,
-      "legend": {
-        "alignAsTable": true,
-        "avg": false,
-        "current": true,
-        "hideEmpty": true,
-        "hideZero": true,
-        "max": false,
-        "min": false,
-        "rightSide": true,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 2,
-      "links": [],
-      "nullPointMode": "connected",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "$$hashKey": "object:822",
-          "alias": "Overall",
-          "dimensions": {
-            "Currency": "USD"
-          },
-          "expr": "",
-          "format": "time_series",
-          "highResolution": false,
-          "intervalFactor": 1,
-          "metricName": "EstimatedCharges",
-          "namespace": "AWS/Billing",
-          "period": "",
-          "refId": "A",
-          "region": "us-east-1",
-          "statistics": [
-            "Maximum"
-          ]
-        },
-        {
-          "$$hashKey": "object:823",
-          "alias": "{{ServiceName}}",
-          "dimensions": {
-            "Currency": "USD",
-            "ServiceName": "$aws_services"
-          },
-          "expr": "",
-          "format": "time_series",
-          "hide": false,
-          "highResolution": false,
-          "intervalFactor": 1,
-          "metricName": "EstimatedCharges",
-          "namespace": "AWS/Billing",
-          "period": "",
-          "refId": "B",
-          "region": "us-east-1",
-          "statistics": [
-            "Maximum"
-          ]
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Cost History (This Account)",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "currencyUSD",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
+          "$$hashKey": "object:3851",
           "format": "short",
           "label": "",
           "logBase": 1,
@@ -574,11 +576,12 @@
       {
         "allValue": null,
         "current": {
+          "tags": [],
           "text": "All",
           "value": "$__all"
         },
         "datasource": "Cloudwatch",
-        "hide": 0,
+        "hide": 2,
         "includeAll": true,
         "label": "AWS Services",
         "multi": false,
@@ -593,11 +596,204 @@
         "tagsQuery": "",
         "type": "query",
         "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "tags": [],
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": "CW-Master",
+        "hide": 0,
+        "includeAll": true,
+        "label": "Accounts",
+        "multi": false,
+        "name": "aws_account",
+        "options": [
+          {
+            "$$hashKey": "object:2589",
+            "selected": true,
+            "text": "All",
+            "value": "$__all"
+          },
+          {
+            "$$hashKey": "object:2590",
+            "selected": false,
+            "text": "001557134234",
+            "value": "001557134234"
+          },
+          {
+            "$$hashKey": "object:2591",
+            "selected": false,
+            "text": "020072185320",
+            "value": "020072185320"
+          },
+          {
+            "$$hashKey": "object:2592",
+            "selected": false,
+            "text": "059784321379",
+            "value": "059784321379"
+          },
+          {
+            "$$hashKey": "object:2593",
+            "selected": false,
+            "text": "069711225475",
+            "value": "069711225475"
+          },
+          {
+            "$$hashKey": "object:2594",
+            "selected": false,
+            "text": "085434780851",
+            "value": "085434780851"
+          },
+          {
+            "$$hashKey": "object:2595",
+            "selected": false,
+            "text": "109317894517",
+            "value": "109317894517"
+          },
+          {
+            "$$hashKey": "object:2596",
+            "selected": false,
+            "text": "187333873963",
+            "value": "187333873963"
+          },
+          {
+            "$$hashKey": "object:2597",
+            "selected": false,
+            "text": "303269352904",
+            "value": "303269352904"
+          },
+          {
+            "$$hashKey": "object:2598",
+            "selected": false,
+            "text": "361028736563",
+            "value": "361028736563"
+          },
+          {
+            "$$hashKey": "object:2599",
+            "selected": false,
+            "text": "412344205103",
+            "value": "412344205103"
+          },
+          {
+            "$$hashKey": "object:2600",
+            "selected": false,
+            "text": "424662773520",
+            "value": "424662773520"
+          },
+          {
+            "$$hashKey": "object:2601",
+            "selected": false,
+            "text": "437013116398",
+            "value": "437013116398"
+          },
+          {
+            "$$hashKey": "object:2602",
+            "selected": false,
+            "text": "454234050858",
+            "value": "454234050858"
+          },
+          {
+            "$$hashKey": "object:2603",
+            "selected": false,
+            "text": "499349583757",
+            "value": "499349583757"
+          },
+          {
+            "$$hashKey": "object:2604",
+            "selected": false,
+            "text": "506800558511",
+            "value": "506800558511"
+          },
+          {
+            "$$hashKey": "object:2605",
+            "selected": false,
+            "text": "507821558983",
+            "value": "507821558983"
+          },
+          {
+            "$$hashKey": "object:2606",
+            "selected": false,
+            "text": "528563840976",
+            "value": "528563840976"
+          },
+          {
+            "$$hashKey": "object:2607",
+            "selected": false,
+            "text": "535402645224",
+            "value": "535402645224"
+          },
+          {
+            "$$hashKey": "object:2608",
+            "selected": false,
+            "text": "579478677147",
+            "value": "579478677147"
+          },
+          {
+            "$$hashKey": "object:2630",
+            "selected": false,
+            "text": "585490351997",
+            "value": "585490351997"
+          },
+          {
+            "$$hashKey": "object:2631",
+            "selected": false,
+            "text": "591879361107",
+            "value": "591879361107"
+          },
+          {
+            "$$hashKey": "object:2632",
+            "selected": false,
+            "text": "653461734964",
+            "value": "653461734964"
+          },
+          {
+            "$$hashKey": "object:2633",
+            "selected": false,
+            "text": "722758927968",
+            "value": "722758927968"
+          },
+          {
+            "$$hashKey": "object:2634",
+            "selected": false,
+            "text": "730015576751",
+            "value": "730015576751"
+          },
+          {
+            "$$hashKey": "object:2635",
+            "selected": false,
+            "text": "772409198273",
+            "value": "772409198273"
+          },
+          {
+            "$$hashKey": "object:2636",
+            "selected": false,
+            "text": "944250853760",
+            "value": "944250853760"
+          },
+          {
+            "$$hashKey": "object:2637",
+            "selected": false,
+            "text": "995967610181",
+            "value": "995967610181"
+          }
+        ],
+        "query": "dimension_values(us-east-1, AWS/Billing, EstimatedCharges, LinkedAccount)",
+        "refresh": 0,
+        "regex": "",
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
       }
     ]
   },
   "time": {
-    "from": "now/M",
+    "from": "now-30d",
     "to": "now"
   },
   "timepicker": {
