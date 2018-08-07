@@ -17,9 +17,23 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 1,
-  "iteration": 1533644048527,
+  "iteration": 1533652113102,
   "links": [],
   "panels": [
+    {
+      "content": "dfds (454234050858)  \ndfds-apienablement-sandbox (528563840976)  \ndfds-audit (772409198273)  \ndfds-innolabs-sandbox (361028736563)  \ndfds-msw-nonprod (535402645224)  \ndfds-msw-prod (424662773520)  \ndfds-passengerbooking-nonprod (722758927968)  \ndfds-passengerbooking-prod (585490351997)  \ndfds-phoenix-prod (059784321379)  \ndfds-phoenix-sandbox (506800558511)  \ndfds-shared-nonprod (591879361107)  \ndfds-shared-prod (579478677147)  \ndfds-teamkraken-nonprod (020072185320)  \ndfds-teamplatform-nonprod (412344205103)  \ndfds-teamsmartdata-nonprod (109317894517)  \ndfds-teamtorpedo-prod (437013116398)  \ndfds-teamtorpedo-sandbox (499349583757)  \ndfds-unified-dev (085434780851)  \ndfds-unified-prod (187333873963)  \ndfds-unified-test (995967610181)  \ndfds-unified-uat (730015576751)  ",
+      "gridPos": {
+        "h": 16,
+        "w": 5,
+        "x": 0,
+        "y": 0
+      },
+      "id": 14,
+      "links": [],
+      "mode": "markdown",
+      "title": "AWS Account Names",
+      "type": "text"
+    },
     {
       "cacheTimeout": null,
       "colorBackground": false,
@@ -41,9 +55,9 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 5,
-        "w": 8,
-        "x": 0,
+        "h": 3,
+        "w": 4,
+        "x": 5,
         "y": 0
       },
       "id": 4,
@@ -136,9 +150,9 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 5,
-        "w": 7,
-        "x": 8,
+        "h": 3,
+        "w": 4,
+        "x": 9,
         "y": 0
       },
       "id": 12,
@@ -230,9 +244,9 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 5,
-        "w": 9,
-        "x": 15,
+        "h": 3,
+        "w": 11,
+        "x": 13,
         "y": 0
       },
       "id": 2,
@@ -303,10 +317,10 @@
       "description": "This shows the costs in graph format, by default over the current month",
       "fill": 4,
       "gridPos": {
-        "h": 9,
-        "w": 12,
-        "x": 0,
-        "y": 5
+        "h": 13,
+        "w": 10,
+        "x": 5,
+        "y": 3
       },
       "id": 11,
       "legend": {
@@ -424,10 +438,10 @@
       "description": "This shows the costs in graph format, by default over the current month",
       "fill": 4,
       "gridPos": {
-        "h": 9,
-        "w": 12,
-        "x": 12,
-        "y": 5
+        "h": 13,
+        "w": 9,
+        "x": 15,
+        "y": 3
       },
       "id": 8,
       "legend": {
@@ -576,7 +590,6 @@
       {
         "allValue": null,
         "current": {
-          "tags": [],
           "text": "All",
           "value": "$__all"
         },
@@ -824,5 +837,5 @@
   "timezone": "",
   "title": "AWS Billing",
   "uid": "M4Fxmd5mk",
-  "version": 3
+  "version": 12
 }
