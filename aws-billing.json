@@ -16,10 +16,105 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 27,
-  "iteration": 1533556083371,
+  "id": 1,
+  "iteration": 1533644048475,
   "links": [],
   "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "CW-Master",
+      "decimals": null,
+      "description": "This is the current estimated spend in the current month",
+      "format": "currencyUSD",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 0
+      },
+      "id": 4,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "$$hashKey": "object:679",
+          "alias": "",
+          "dimensions": {
+            "Currency": "USD"
+          },
+          "expr": "",
+          "format": "time_series",
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "A",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        }
+      ],
+      "thresholds": "0,0",
+      "title": "Month-to-Date Cost (All Accounts)",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
     {
       "cacheTimeout": null,
       "colorBackground": false,
@@ -42,11 +137,11 @@
       },
       "gridPos": {
         "h": 5,
-        "w": 4,
-        "x": 0,
+        "w": 6,
+        "x": 6,
         "y": 0
       },
-      "id": 4,
+      "id": 9,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -102,104 +197,7 @@
         }
       ],
       "thresholds": "0,0",
-      "title": "Month-to-Date Cost",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorValue": true,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
-      "datasource": "Cloudwatch",
-      "description": "Current Monthly cost of the service selected",
-      "format": "currencyUSD",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 5,
-        "w": 4,
-        "x": 4,
-        "y": 0
-      },
-      "id": 6,
-      "interval": null,
-      "links": [],
-      "mappingType": 2,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "minSpan": null,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "repeat": null,
-      "repeatDirection": "v",
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": true,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": true
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "dimensions": {
-            "Currency": "USD",
-            "ServiceName": "$aws_services"
-          },
-          "expr": "",
-          "format": "time_series",
-          "highResolution": false,
-          "intervalFactor": 1,
-          "metricName": "EstimatedCharges",
-          "namespace": "AWS/Billing",
-          "period": "",
-          "refId": "A",
-          "region": "us-east-1",
-          "statistics": [
-            "Average"
-          ]
-        }
-      ],
-      "thresholds": "0,0",
-      "title": "Selected Service Cost",
-      "transparent": false,
+      "title": "Month-to-Date Cost (This Account)",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -232,8 +230,8 @@
       },
       "gridPos": {
         "h": 5,
-        "w": 4,
-        "x": 8,
+        "w": 12,
+        "x": 12,
         "y": 0
       },
       "id": 2,
@@ -300,12 +298,12 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Cloudwatch",
+      "datasource": "CW-Master",
       "description": "This shows the costs in graph format, by default over the current month",
       "fill": 4,
       "gridPos": {
-        "h": 10,
-        "w": 24,
+        "h": 9,
+        "w": 12,
         "x": 0,
         "y": 5
       },
@@ -337,6 +335,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:822",
           "alias": "Overall",
           "dimensions": {
             "Currency": "USD"
@@ -355,6 +354,7 @@
           ]
         },
         {
+          "$$hashKey": "object:823",
           "alias": "{{ServiceName}}",
           "dimensions": {
             "Currency": "USD",
@@ -378,7 +378,129 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Cost History",
+      "title": "Cost History (All Accounts)",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "currencyUSD",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Cloudwatch",
+      "description": "This shows the costs in graph format, by default over the current month",
+      "fill": 4,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 5
+      },
+      "id": 10,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "$$hashKey": "object:822",
+          "alias": "Overall",
+          "dimensions": {
+            "Currency": "USD"
+          },
+          "expr": "",
+          "format": "time_series",
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "A",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:823",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "ServiceName": "$aws_services"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "B",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Cost History (This Account)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -506,5 +628,5 @@
   "timezone": "",
   "title": "AWS Billing",
   "uid": "M4Fxmd5mk",
-  "version": 12
+  "version": 3
 }
