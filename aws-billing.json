@@ -618,7 +618,7 @@
           "value": "$__all"
         },
         "datasource": "CW-Master",
-        "hide": 0,
+        "hide": 2,
         "includeAll": true,
         "label": "Accounts",
         "multi": false,
