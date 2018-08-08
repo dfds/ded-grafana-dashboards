@@ -1625,8 +1625,8 @@
     ]
   },
   "time": {
-    "from": "2018-03-28T09:06:48.403Z",
-    "to": "2018-08-03T09:06:48.403Z"
+    "from": "now-3h",
+    "to": "now"
   },
   "timepicker": {
     "refresh_intervals": [
