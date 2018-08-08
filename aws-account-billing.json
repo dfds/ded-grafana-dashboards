@@ -17,7 +17,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 22,
-  "iteration": 1533716464724,
+  "iteration": 1533719315686,
   "links": [],
   "panels": [
     {
@@ -60,6 +60,8 @@
         "min": false,
         "rightSide": true,
         "show": true,
+        "sort": "current",
+        "sortDesc": true,
         "total": false,
         "values": true
       },
@@ -763,8 +765,8 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "506800558511",
-          "value": "506800558511"
+          "text": "591879361107",
+          "value": "591879361107"
         },
         "datasource": "CW-Master",
         "hide": 0,
@@ -786,7 +788,7 @@
     ]
   },
   "time": {
-    "from": "now-30d",
+    "from": "now-90d",
     "to": "now"
   },
   "timepicker": {
@@ -817,5 +819,5 @@
   "timezone": "",
   "title": "AWS Account Billing",
   "uid": "ShowVtciz",
-  "version": 7
+  "version": 10
 }
