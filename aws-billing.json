@@ -17,13 +17,13 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 1,
-  "iteration": 1533652113102,
+  "iteration": 1533713654908,
   "links": [],
   "panels": [
     {
-      "content": "dfds (454234050858)  \ndfds-apienablement-sandbox (528563840976)  \ndfds-audit (772409198273)  \ndfds-innolabs-sandbox (361028736563)  \ndfds-msw-nonprod (535402645224)  \ndfds-msw-prod (424662773520)  \ndfds-passengerbooking-nonprod (722758927968)  \ndfds-passengerbooking-prod (585490351997)  \ndfds-phoenix-prod (059784321379)  \ndfds-phoenix-sandbox (506800558511)  \ndfds-shared-nonprod (591879361107)  \ndfds-shared-prod (579478677147)  \ndfds-teamkraken-nonprod (020072185320)  \ndfds-teamplatform-nonprod (412344205103)  \ndfds-teamsmartdata-nonprod (109317894517)  \ndfds-teamtorpedo-prod (437013116398)  \ndfds-teamtorpedo-sandbox (499349583757)  \ndfds-unified-dev (085434780851)  \ndfds-unified-prod (187333873963)  \ndfds-unified-test (995967610181)  \ndfds-unified-uat (730015576751)  ",
+      "content": "020072185320 - [dfds-teamkraken-nonprod](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)  \r\n059784321379 - [dfds-phoenix-prod](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)  \r\n085434780851 - [dfds-unified-dev](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)  \r\n109317894517 - [dfds-teamsmartdata-nonprod](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)  \r\n187333873963 - [dfds-unified-prod](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)  \r\n361028736563 - [dfds-innolabs-sandbox](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)   \r\n412344205103 - [dfds-teamplatform-nonprod](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)  \r\n424662773520 - [dfds-msw-prod](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)  \r\n437013116398 - [dfds-teamtorpedo-prod](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)  \r\n454234050858 - [dfds](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)  \r\n499349583757 - [dfds-teamtorpedo-sandbox](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)   \r\n506800558511 - [dfds-phoenix-sandbox](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)  \r\n528563840976 - [dfds-apienablement-sandbox](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)  \r\n535402645224 - [dfds-msw-nonprod](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)  \r\n579478677147 - [dfds-shared-prod](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)   \r\n585490351997 - [dfds-passengerbooking-prod](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)  \r\n591879361107 - [dfds-shared-nonprod](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)  \r\n722758927968 - [dfds-passengerbooking-nonprod](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)  \r\n730015576751 - [dfds-unified-uat](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)  \r\n772409198273 - [dfds-audit](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)  \r\n995967610181 - [dfds-unified-test](/d/ShowVtciz/aws-account-billing?orgId=1&var-aws_account=528563840976)  \r\n",
       "gridPos": {
-        "h": 16,
+        "h": 19,
         "w": 5,
         "x": 0,
         "y": 0
@@ -56,7 +56,7 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 4,
+        "w": 5,
         "x": 5,
         "y": 0
       },
@@ -132,6 +132,90 @@
     {
       "cacheTimeout": null,
       "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "description": "This is the Kubernetes environment name",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 9,
+        "x": 10,
+        "y": 0
+      },
+      "id": 2,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "topk(1, node_boot_time_seconds{cluster_name=~\".+\"})",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{cluster_name}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Environment",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
       "colorValue": true,
       "colors": [
         "#299c46",
@@ -151,8 +235,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 4,
-        "x": 9,
+        "w": 5,
+        "x": 19,
         "y": 0
       },
       "id": 12,
@@ -225,90 +309,6 @@
       "valueName": "current"
     },
     {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorValue": false,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
-      "datasource": null,
-      "description": "This is the Kubernetes environment name",
-      "format": "none",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 11,
-        "x": 13,
-        "y": 0
-      },
-      "id": 2,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "expr": "topk(1, node_boot_time_seconds{cluster_name=~\".+\"})",
-          "format": "time_series",
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "{{cluster_name}}",
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "title": "Environment",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "name"
-    },
-    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
@@ -317,7 +317,7 @@
       "description": "This shows the costs in graph format, by default over the current month",
       "fill": 4,
       "gridPos": {
-        "h": 13,
+        "h": 16,
         "w": 10,
         "x": 5,
         "y": 3
@@ -372,7 +372,7 @@
         },
         {
           "$$hashKey": "object:5713",
-          "alias": "Combined",
+          "alias": "All Accounts",
           "dimensions": {
             "Currency": "USD"
           },
@@ -438,7 +438,7 @@
       "description": "This shows the costs in graph format, by default over the current month",
       "fill": 4,
       "gridPos": {
-        "h": 13,
+        "h": 16,
         "w": 9,
         "x": 15,
         "y": 3
@@ -472,7 +472,7 @@
       "targets": [
         {
           "$$hashKey": "object:822",
-          "alias": "Combined",
+          "alias": "All Services",
           "dimensions": {
             "Currency": "USD"
           },
@@ -837,5 +837,5 @@
   "timezone": "",
   "title": "AWS Billing",
   "uid": "M4Fxmd5mk",
-  "version": 12
+  "version": 80
 }
