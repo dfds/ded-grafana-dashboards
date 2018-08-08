@@ -17,7 +17,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 1,
-  "iteration": 1533715561682,
+  "iteration": 1533717994340,
   "links": [],
   "panels": [
     {
@@ -333,6 +333,8 @@
         "min": false,
         "rightSide": true,
         "show": true,
+        "sort": "current",
+        "sortDesc": true,
         "total": false,
         "values": true
       },
@@ -454,6 +456,8 @@
         "min": false,
         "rightSide": true,
         "show": true,
+        "sort": "current",
+        "sortDesc": true,
         "total": false,
         "values": true
       },
@@ -837,5 +841,5 @@
   "timezone": "",
   "title": "AWS Billing",
   "uid": "M4Fxmd5mk",
-  "version": 83
+  "version": 85
 }
