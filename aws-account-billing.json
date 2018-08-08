@@ -17,27 +17,45 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 22,
-  "iteration": 1533714712211,
+  "iteration": 1533716464724,
   "links": [],
   "panels": [
+    {
+      "content": "[Back to Billing Overview](/d/M4Fxmd5mk/aws-billing)",
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 0,
+        "y": 0
+      },
+      "id": 4,
+      "links": [],
+      "mode": "markdown",
+      "title": "Links",
+      "transparent": true,
+      "type": "text"
+    },
     {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
       "datasource": "CW-Master",
+      "decimals": 2,
       "fill": 4,
       "gridPos": {
         "h": 9,
         "w": 24,
         "x": 0,
-        "y": 0
+        "y": 2
       },
       "id": 2,
       "legend": {
         "alignAsTable": true,
         "avg": false,
         "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
         "max": true,
         "min": false,
         "rightSide": true,
@@ -82,7 +100,7 @@
           "dimensions": {
             "Currency": "USD",
             "LinkedAccount": "$aws_account",
-            "ServiceName": "$aws_services"
+            "ServiceName": "AWSBudgets"
           },
           "expr": "",
           "format": "time_series",
@@ -93,6 +111,576 @@
           "namespace": "AWS/Billing",
           "period": "",
           "refId": "C",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:429",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AWSCertificateManager"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "A",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:480",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AWSCloudTrail"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "D",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:531",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AWSDataTransfer"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "E",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:582",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AWSGlue"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "F",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:633",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AWSLambda"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "G",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:684",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AWSMarketplace"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "H",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:735",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AWSQueueService"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "I",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:786",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AWSSecretsManager"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "J",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:837",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AWSXRay"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "K",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:888",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AmazonApiGateway"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "L",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:939",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AmazonAthena"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "M",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:990",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AmazonCloudFront"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "N",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:1041",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AmazonCloudSearch"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "O",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:1092",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AmazonCloudWatch"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "P",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:1143",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AmazonDynamoDB"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "Q",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:1194",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AmazonEC2"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "R",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:1245",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AmazonECR"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "S",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:1296",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AmazonEKS"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "T",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:1347",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AmazonES"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "U",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:1398",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AmazonRDS"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "V",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:1449",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AmazonRoute53"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "W",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:1500",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AmazonS3"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "X",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:1551",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AmazonSES"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "Y",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:1602",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AmazonSNS"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "refId": "Z",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:1653",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "AmazonVPC"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
+          "region": "us-east-1",
+          "statistics": [
+            "Maximum"
+          ]
+        },
+        {
+          "$$hashKey": "object:1704",
+          "alias": "{{ServiceName}}",
+          "dimensions": {
+            "Currency": "USD",
+            "LinkedAccount": "$aws_account",
+            "ServiceName": "awskms"
+          },
+          "expr": "",
+          "format": "time_series",
+          "hide": false,
+          "highResolution": false,
+          "intervalFactor": 1,
+          "metricName": "EstimatedCharges",
+          "namespace": "AWS/Billing",
+          "period": "",
           "region": "us-east-1",
           "statistics": [
             "Maximum"
@@ -155,7 +743,7 @@
           "value": "AmazonEC2"
         },
         "datasource": "CW-Master",
-        "hide": 0,
+        "hide": 2,
         "includeAll": false,
         "label": "AWS Service",
         "multi": false,
@@ -174,8 +762,9 @@
       {
         "allValue": null,
         "current": {
-          "text": "528563840976",
-          "value": "528563840976"
+          "selected": false,
+          "text": "506800558511",
+          "value": "506800558511"
         },
         "datasource": "CW-Master",
         "hide": 0,
@@ -228,5 +817,5 @@
   "timezone": "",
   "title": "AWS Account Billing",
   "uid": "ShowVtciz",
-  "version": 5
+  "version": 7
 }
