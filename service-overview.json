@@ -52,7 +52,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1533817258422,
+  "iteration": 1533817258425,
   "links": [],
   "panels": [
     {
@@ -486,7 +486,11 @@
   "refresh": "10s",
   "schemaVersion": 16,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "kubernetes",
+    "red",
+    "traefik"
+  ],
   "templating": {
     "list": [
       {
@@ -563,5 +567,5 @@
   "timezone": "",
   "title": "Service overview",
   "uid": "tzOeu15ik",
-  "version": 18
+  "version": 19
 }
