@@ -495,7 +495,7 @@
         "options": [],
         "query": "label_values(service)",
         "refresh": 1,
-        "regex": "(grafana|wiki\\..*)",
+        "regex": "(blaster|grafana|dashboard\\..*\\.cloud/|wiki\\..*/)",
         "sort": 0,
         "tagValuesQuery": "",
         "tags": [],
