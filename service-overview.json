@@ -55,7 +55,7 @@
       },
       "id": 42,
       "panels": [],
-      "title": "Number of crashlooping pods by namespace (>5 restarts in 1 hour)",
+      "title": "Number of crash-looping pods by namespace (>5 restarts in 1 hour)",
       "type": "row"
     },
     {
@@ -555,7 +555,7 @@
     ]
   },
   "timezone": "",
-  "title": "Service overview",
+  "title": "Services Overview",
   "uid": "nC9W7xcmz",
   "version": 1
 }
