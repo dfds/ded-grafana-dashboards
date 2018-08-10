@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1533911104823,
+  "iteration": 1533911855213,
   "links": [],
   "panels": [
     {
@@ -848,8 +848,8 @@
       {
         "allValue": null,
         "current": {
-          "text": "dfds-prod",
-          "value": "dfds-prod"
+          "text": "dfds-nonprod",
+          "value": "dfds-nonprod"
         },
         "datasource": "Cloudwatch",
         "hide": 2,
@@ -871,8 +871,8 @@
       {
         "allValue": null,
         "current": {
-          "text": "579478677147",
-          "value": "579478677147"
+          "text": "591879361107",
+          "value": "591879361107"
         },
         "datasource": "Cloudwatch",
         "hide": 2,
@@ -971,5 +971,5 @@
   "timezone": "",
   "title": "service overview dashboard",
   "uid": "ETPRDfcmk",
-  "version": 1
+  "version": 26
 }
