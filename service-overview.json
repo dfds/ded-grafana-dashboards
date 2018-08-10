@@ -205,7 +205,7 @@
         "#299c46"
       ],
       "datasource": "Prometheus",
-      "decimals": null,
+      "decimals": 2,
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -301,7 +301,7 @@
         "#d44a3a"
       ],
       "datasource": "Prometheus",
-      "decimals": 0,
+      "decimals": 2,
       "format": "none",
       "gauge": {
         "maxValue": 100,
