@@ -67,7 +67,7 @@
   "gnetId": 593,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1534158020227,
+  "iteration": 1534158020230,
   "links": [],
   "panels": [
     {
@@ -484,23 +484,24 @@
       },
       {
         "allValue": null,
-        "current": {},
-        "datasource": "Cloudwatch",
-        "hide": 0,
+        "current": {
+          "text": "eu-central-1",
+          "value": "eu-central-1"
+        },
+        "hide": 2,
         "includeAll": false,
         "label": "Region",
         "multi": false,
         "name": "region",
-        "options": [],
-        "query": "regions()",
-        "refresh": 1,
-        "regex": "",
-        "sort": 1,
-        "tagValuesQuery": "",
-        "tags": [],
-        "tagsQuery": "",
-        "type": "query",
-        "useTags": false
+        "options": [
+          {
+            "selected": true,
+            "text": "eu-central-1",
+            "value": "eu-central-1"
+          }
+        ],
+        "query": "eu-central-1",
+        "type": "custom"
       },
       {
         "allValue": null,
