@@ -931,7 +931,7 @@
         "allValue": null,
         "current": {},
         "datasource": "Prometheus",
-        "hide": 2,
+        "hide": 0,
         "includeAll": true,
         "label": "Service",
         "multi": false,
