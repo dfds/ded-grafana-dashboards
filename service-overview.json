@@ -66,7 +66,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1534244206128,
+  "iteration": 1534253632386,
   "links": [],
   "panels": [
     {
@@ -92,7 +92,7 @@
       "extendLastValue": true,
       "gridPos": {
         "h": 10,
-        "w": 8,
+        "w": 6,
         "x": 0,
         "y": 0
       },
@@ -130,7 +130,7 @@
           "expr": "sum(increase(kube_pod_container_status_restarts_total[1h])> bool 5)",
           "format": "time_series",
           "intervalFactor": 1,
-          "legendFormat": "Crashlooping pods",
+          "legendFormat": "Crash-looping pods",
           "refId": "B"
         },
         {
@@ -158,7 +158,7 @@
           "expr": "sum(kube_node_spec_unschedulable)",
           "format": "time_series",
           "intervalFactor": 1,
-          "legendFormat": "unschedulable nodes",
+          "legendFormat": "Unschedulable nodes",
           "refId": "F"
         },
         {
@@ -192,7 +192,7 @@
       "textSize": 12,
       "textSizeTime": 12,
       "timeTextColor": "#d8d9da",
-      "title": "Kubernetes Cluster Health Overview",
+      "title": "Kubernetes cluster health overview",
       "type": "natel-discrete-panel",
       "units": "short",
       "valueMaps": [
@@ -222,8 +222,8 @@
       "extendLastValue": true,
       "gridPos": {
         "h": 10,
-        "w": 8,
-        "x": 8,
+        "w": 12,
+        "x": 6,
         "y": 0
       },
       "highlightOnMouseover": true,
@@ -288,8 +288,8 @@
       "fontFormat": "Regular",
       "gridPos": {
         "h": 2,
-        "w": 3,
-        "x": 16,
+        "w": 2,
+        "x": 18,
         "y": 0
       },
       "id": 60,
@@ -404,8 +404,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 5,
-        "x": 19,
+        "w": 4,
+        "x": 20,
         "y": 0
       },
       "id": 84,
@@ -475,8 +475,8 @@
       "fill": 4,
       "gridPos": {
         "h": 8,
-        "w": 8,
-        "x": 16,
+        "w": 6,
+        "x": 18,
         "y": 2
       },
       "id": 80,
@@ -509,7 +509,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "All Services",
+          "alias": "All services",
           "dimensions": {
             "Currency": "USD"
           },
@@ -550,7 +550,7 @@
       "thresholds": [],
       "timeFrom": "31d",
       "timeShift": null,
-      "title": "Cost Per Service (rolling month)",
+      "title": "Cost per Service (rolling month)",
       "tooltip": {
         "shared": false,
         "sort": 0,
@@ -1061,5 +1061,5 @@
   "timezone": "",
   "title": "Services Overview",
   "uid": "nC9W7xcmz",
-  "version": 466
+  "version": 478
 }
