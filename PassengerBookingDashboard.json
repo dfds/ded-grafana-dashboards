@@ -16,8 +16,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 35,
-  "iteration": 1534334876116,
+  "id": 36,
+  "iteration": 1534338356914,
   "links": [],
   "panels": [
     {
@@ -218,7 +218,6 @@
       {
         "allValue": ".*",
         "current": {
-          "tags": [],
           "text": "All",
           "value": "$__all"
         },
@@ -228,35 +227,9 @@
         "label": "Environment",
         "multi": false,
         "name": "env",
-        "options": [
-          {
-            "selected": true,
-            "text": "All",
-            "value": "$__all"
-          },
-          {
-            "selected": false,
-            "text": "uat",
-            "value": "uat"
-          },
-          {
-            "selected": false,
-            "text": "dev",
-            "value": "dev"
-          },
-          {
-            "selected": false,
-            "text": "test",
-            "value": "test"
-          },
-          {
-            "selected": false,
-            "text": "edu",
-            "value": "edu"
-          }
-        ],
+        "options": [],
         "query": "label_values(kube_service_info{namespace=\"passengerbooking\"}, service)",
-        "refresh": 0,
+        "refresh": 1,
         "regex": ".*-(.*)",
         "sort": 0,
         "tagValuesQuery": "",
@@ -322,5 +295,5 @@
   "timezone": "",
   "title": "PassengerBookingServices",
   "uid": "u2sa3D5ik",
-  "version": 5
+  "version": 2
 }
