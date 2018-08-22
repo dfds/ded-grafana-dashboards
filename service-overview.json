@@ -903,7 +903,7 @@
           "refId": "A"
         }
       ],
-      "thresholds": "5,1000",
+      "thresholds": "3,10",
       "title": "",
       "type": "singlestat",
       "valueFontSize": "80%",
