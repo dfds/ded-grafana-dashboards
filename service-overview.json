@@ -603,7 +603,7 @@
       "type": "row"
     },
     {
-      "content": "<center><h1>$service</h1></center>",
+      "content": "<center><h5>$service</h5></center>",
       "gridPos": {
         "h": 2,
         "w": 12,
@@ -716,7 +716,7 @@
       "thresholds": "0.001,0.01",
       "title": "",
       "type": "singlestat",
-      "valueFontSize": "80%",
+      "valueFontSize": "70%",
       "valueMaps": [
         {
           "op": "=",
@@ -812,7 +812,7 @@
       "thresholds": "0.1,1",
       "title": "",
       "type": "singlestat",
-      "valueFontSize": "80%",
+      "valueFontSize": "70%",
       "valueMaps": [
         {
           "op": "=",
@@ -908,7 +908,7 @@
       "thresholds": "3,10",
       "title": "",
       "type": "singlestat",
-      "valueFontSize": "80%",
+      "valueFontSize": "70%",
       "valueMaps": [
         {
           "op": "=",
