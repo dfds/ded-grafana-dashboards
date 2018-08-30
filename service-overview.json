@@ -941,7 +941,7 @@
         "options": [],
         "query": "label_values(service)",
         "refresh": 1,
-        "regex": "(blaster|dashboard\\..*\\.cloud/|wiki\\..*/)",
+        "regex": "(blaster|dashboard\\..*\\.cloud/|wiki\\..*/|api.dfds.cloud/prod/.*)",
         "sort": 0,
         "tagValuesQuery": "",
         "tags": [],
