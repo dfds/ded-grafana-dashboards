@@ -713,7 +713,7 @@
           "refId": "A"
         }
       ],
-      "thresholds": "0.001,0.01",
+      "thresholds": "0.00,0.01",
       "title": "",
       "type": "singlestat",
       "valueFontSize": "70%",
