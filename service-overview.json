@@ -485,10 +485,10 @@
       "legend": {
         "alignAsTable": true,
         "avg": false,
-        "current": true,
+        "current": false,
         "hideEmpty": true,
         "hideZero": true,
-        "max": false,
+        "max": true,
         "min": false,
         "rightSide": true,
         "show": true,
