@@ -229,7 +229,7 @@
       },
       "highlightOnMouseover": true,
       "id": 82,
-      "legendSortBy": "-ms",
+      "legendSortBy": "count",
       "lineColor": "rgba(0,0,0,0.1)",
       "links": [],
       "metricNameColor": "#000000",
