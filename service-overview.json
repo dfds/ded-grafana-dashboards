@@ -603,7 +603,7 @@
       "type": "row"
     },
     {
-      "content": "<center><h5>$service</h5></center>",
+      "content": "<center><h6>$service</h6></center>",
       "gridPos": {
         "h": 2,
         "w": 12,
@@ -844,7 +844,7 @@
       ],
       "datasource": "Prometheus",
       "decimals": 0,
-      "format": "dtdurations",
+      "format": "s",
       "gauge": {
         "maxValue": 100,
         "minValue": 0,
