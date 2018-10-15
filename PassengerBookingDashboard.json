@@ -141,7 +141,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(rate(traefik_request_duration_seconds_sum{service=~\".*$env/$pods\"}[5m])) by (service)  / sum(rate(traefik_request_duration_seconds_count{service=~\".*$env/$pods\"}[5m])) by (service) *1000",
+          "expr": "sum(rate(traefik_backend_request_duration_seconds_sum{service=~\".*$env/$pods\"}[5m])) by (service)  / sum(rate(traefik_backend_request_duration_seconds_count{service=~\".*$env/$pods\"}[5m])) by (service) *1000",
           "format": "time_series",
           "instant": false,
           "intervalFactor": 1,

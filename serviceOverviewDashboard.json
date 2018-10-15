@@ -725,7 +725,7 @@
       "showTimeAxis": true,
       "targets": [
         {
-          "expr": "rate(traefik_requests_total{code=~\"5..\",service=~\"$service\"}[5m])",
+          "expr": "rate(traefik_backend_requests_total{code=~\"5..\",service=~\"$service\"}[5m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "{{$service}}",

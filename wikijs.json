@@ -516,7 +516,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(rate(traefik_requests_total{service=~\"wiki.*\"}[5m]))",
+          "expr": "sum(rate(traefik_backend_requests_total{service=~\"wiki.*\"}[5m]))",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -575,7 +575,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(rate(traefik_requests_total{service=~\"wiki.*\"}[5m]))",
+          "expr": "sum(rate(traefik_backend_requests_total{service=~\"wiki.*\"}[5m]))",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -685,7 +685,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(rate(traefik_requests_total{code=~\"5..\",service=~\"wiki.*\"}[5m]))",
+          "expr": "sum(rate(traefik_backend_requests_total{code=~\"5..\",service=~\"wiki.*\"}[5m]))",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -744,7 +744,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(rate(traefik_requests_total{code=~\"5..\",service=~\"wiki.*\"}[5m]))",
+          "expr": "sum(rate(traefik_backend_requests_total{code=~\"5..\",service=~\"wiki.*\"}[5m]))",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -854,7 +854,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(rate(traefik_request_duration_seconds_sum{service=~\"wiki.*\"}[5m]))/sum(rate(traefik_request_duration_seconds_count{service=~\"wiki.*\"}[5m]))",
+          "expr": "sum(rate(traefik_backend_request_duration_seconds_sum{service=~\"wiki.*\"}[5m]))/sum(rate(traefik_backend_request_duration_seconds_count{service=~\"wiki.*\"}[5m]))",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -917,7 +917,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(rate(traefik_request_duration_seconds_sum{service=~\"wiki.*\"}[5m]))/sum(rate(traefik_request_duration_seconds_count{service=~\"wiki.*\"}[5m]))",
+          "expr": "sum(rate(traefik_backend_request_duration_seconds_sum{service=~\"wiki.*\"}[5m]))/sum(rate(traefik_backend_request_duration_seconds_count{service=~\"wiki.*\"}[5m]))",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1273,7 +1273,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum(rate(traefik_requests_total{service=~\"wiki.*\"}[5m])) by (code)",
+              "expr": "sum(rate(traefik_backend_requests_total{service=~\"wiki.*\"}[5m])) by (code)",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 1,

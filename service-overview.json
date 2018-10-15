@@ -706,7 +706,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(rate(traefik_requests_total{service=~\"$service\"}[5m]))",
+          "expr": "sum(rate(traefik_backend_requests_total{service=~\"$service\"}[5m]))",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "",
@@ -802,7 +802,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(rate(traefik_requests_total{code=~\"5..\",service=~\"$service\"}[5m]))",
+          "expr": "sum(rate(traefik_backend_requests_total{code=~\"5..\",service=~\"$service\"}[5m]))",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "",
@@ -898,7 +898,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(rate(traefik_request_duration_seconds_sum{service=~\"$service\"}[5m]))/sum(rate(traefik_request_duration_seconds_count{service=~\"$service\"}[5m]))",
+          "expr": "sum(rate(traefik_backend_request_duration_seconds_sum{service=~\"$service\"}[5m]))/sum(rate(traefik_backend_request_duration_seconds_count{service=~\"$service\"}[5m]))",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "",

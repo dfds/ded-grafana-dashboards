@@ -328,11 +328,11 @@
       "targets": [
         {
           "$$hashKey": "object:1388",
-          "expr": "sum(rate(traefik_requests_total{code=~\"5..\"}[5m])) * 1000",
+          "expr": "sum(rate(traefik_backend_requests_total{code=~\"5..\"}[5m])) * 1000",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "",
-          "metric": "traefik_requests_total",
+          "metric": "traefik_backend_requests_total",
           "refId": "A",
           "step": 60
         }
@@ -591,7 +591,7 @@
       "targets": [
         {
           "$$hashKey": "object:3290",
-          "expr": "sum(rate(traefik_requests_total{service=~\"$service\"}[5m]))",
+          "expr": "sum(rate(traefik_backend_requests_total{service=~\"$service\"}[5m]))",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -652,7 +652,7 @@
       "targets": [
         {
           "$$hashKey": "object:138",
-          "expr": "sum(rate(traefik_requests_total{service=~\"$service\"}[5m]))",
+          "expr": "sum(rate(traefik_backend_requests_total{service=~\"$service\"}[5m]))",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Requests per second",
@@ -786,7 +786,7 @@
       "targets": [
         {
           "$$hashKey": "object:953",
-          "expr": "sum(traefik_requests_total{service!=\"httpn\",service!=\"http\"}) by (service)",
+          "expr": "sum(traefik_backend_requests_total{service!=\"httpn\",service!=\"http\"}) by (service)",
           "format": "table",
           "instant": false,
           "interval": "",
@@ -863,7 +863,7 @@
       "targets": [
         {
           "$$hashKey": "object:3290",
-          "expr": "sum(rate(traefik_requests_total{code=~\"5..\",service=~\"$service\"}[5m]))",
+          "expr": "sum(rate(traefik_backend_requests_total{code=~\"5..\",service=~\"$service\"}[5m]))",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -925,7 +925,7 @@
       "targets": [
         {
           "$$hashKey": "object:190",
-          "expr": "sum(rate(traefik_requests_total{code=~\"5..\",service=~\"$service\"}[5m]))",
+          "expr": "sum(rate(traefik_backend_requests_total{code=~\"5..\",service=~\"$service\"}[5m]))",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Failed Request Per Second",
@@ -1037,7 +1037,7 @@
       "targets": [
         {
           "$$hashKey": "object:3290",
-          "expr": "sum(rate(traefik_request_duration_seconds_sum{service=~\"$service\"}[5m]))/sum(rate(traefik_request_duration_seconds_count{service=~\"$service\"}[5m]))*1000",
+          "expr": "sum(rate(traefik_backend_request_duration_seconds_sum{service=~\"$service\"}[5m]))/sum(rate(traefik_backend_request_duration_seconds_count{service=~\"$service\"}[5m]))*1000",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -1099,7 +1099,7 @@
       "targets": [
         {
           "$$hashKey": "object:242",
-          "expr": "sum(rate(traefik_request_duration_seconds_sum{service=~\"$service\"}[5m]))/sum(rate(traefik_request_duration_seconds_count{service=~\"$service\"}[5m]))*1000",
+          "expr": "sum(rate(traefik_backend_request_duration_seconds_sum{service=~\"$service\"}[5m]))/sum(rate(traefik_backend_request_duration_seconds_count{service=~\"$service\"}[5m]))*1000",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Request duration",
@@ -1197,7 +1197,7 @@
           "targets": [
             {
               "$$hashKey": "object:503",
-              "expr": "sum(rate(traefik_requests_total{code=~\"5..\"}[5m])) by (service)* 1000",
+              "expr": "sum(rate(traefik_backend_requests_total{code=~\"5..\"}[5m])) by (service)* 1000",
               "format": "time_series",
               "intervalFactor": 1,
               "legendFormat": "{{service}} 5xx",
@@ -1205,7 +1205,7 @@
             },
             {
               "$$hashKey": "object:567",
-              "expr": "sum(rate(traefik_requests_total{code=~\"4..\"}[5m])) by (service)* 1000",
+              "expr": "sum(rate(traefik_backend_requests_total{code=~\"4..\"}[5m])) by (service)* 1000",
               "format": "time_series",
               "intervalFactor": 1,
               "legendFormat": "{{service}} 4xx",
@@ -1520,7 +1520,7 @@
           "targets": [
             {
               "$$hashKey": "object:1440",
-              "expr": "sum(traefik_requests_total{service=\"http\"})",
+              "expr": "sum(traefik_backend_requests_total{service=\"http\"})",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -1531,7 +1531,7 @@
             },
             {
               "$$hashKey": "object:1441",
-              "expr": "sum(traefik_requests_total{service=\"https\"})",
+              "expr": "sum(traefik_backend_requests_total{service=\"https\"})",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -1636,7 +1636,7 @@
           "targets": [
             {
               "$$hashKey": "object:992",
-              "expr": "sum(traefik_request_duration_seconds_sum) by (service) / sum(traefik_request_duration_seconds_count) by (service)",
+              "expr": "sum(traefik_backend_request_duration_seconds_sum) by (service) / sum(traefik_backend_request_duration_seconds_count) by (service)",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{service}}",
@@ -1735,7 +1735,7 @@
           "targets": [
             {
               "$$hashKey": "object:1064",
-              "expr": "histogram_quantile(0.$percentiles, sum(rate(traefik_request_duration_seconds_bucket[5m])) by (le))",
+              "expr": "histogram_quantile(0.$percentiles, sum(rate(traefik_backend_request_duration_seconds_bucket[5m])) by (le))",
               "format": "time_series",
               "hide": false,
               "intervalFactor": 1,
@@ -1825,7 +1825,7 @@
           "targets": [
             {
               "$$hashKey": "object:1116",
-              "expr": "histogram_quantile(0.$percentiles, (sum(rate(traefik_request_duration_seconds_bucket[5m])) by (instance, le)) * on() group_left(node) (kube_pod_labels{label_app=\"traefik\"} * on(pod) group_left(node) kube_pod_info))",
+              "expr": "histogram_quantile(0.$percentiles, (sum(rate(traefik_backend_request_duration_seconds_bucket[5m])) by (instance, le)) * on() group_left(node) (kube_pod_labels{label_app=\"traefik\"} * on(pod) group_left(node) kube_pod_info))",
               "format": "time_series",
               "intervalFactor": 1,
               "legendFormat": "{{node}}",
@@ -1927,7 +1927,7 @@
           "targets": [
             {
               "$$hashKey": "object:916",
-              "expr": "(sum(rate(traefik_request_duration_seconds_bucket{code!~\"5..\",le=\"0.3\"}[5m])) + sum(rate(traefik_request_duration_seconds_bucket{code!~\"5..\",le=\"1.2\"}[5m])))/2/sum(rate(traefik_request_duration_seconds_count[5m]))",
+              "expr": "(sum(rate(traefik_backend_request_duration_seconds_bucket{code!~\"5..\",le=\"0.3\"}[5m])) + sum(rate(traefik_backend_request_duration_seconds_bucket{code!~\"5..\",le=\"1.2\"}[5m])))/2/sum(rate(traefik_backend_request_duration_seconds_count[5m]))",
               "format": "time_series",
               "instant": false,
               "intervalFactor": 1,
@@ -2029,7 +2029,7 @@
           "targets": [
             {
               "$$hashKey": "object:448",
-              "expr": "sum(rate(traefik_requests_total{code=~\"2..\"}[5m])) by (method, code)",
+              "expr": "sum(rate(traefik_backend_requests_total{code=~\"2..\"}[5m])) by (method, code)",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{method}} : {{code}}",
@@ -2116,7 +2116,7 @@
           "targets": [
             {
               "$$hashKey": "object:500",
-              "expr": "sum(rate(traefik_requests_total{code!~\"2..|5..\"}[5m])) by (method, code)",
+              "expr": "sum(rate(traefik_backend_requests_total{code!~\"2..|5..\"}[5m])) by (method, code)",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{ method }} : {{code}}",
@@ -2203,7 +2203,7 @@
           "targets": [
             {
               "$$hashKey": "object:552",
-              "expr": "sum(traefik_requests_total) by (code)",
+              "expr": "sum(traefik_backend_requests_total) by (code)",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -2292,7 +2292,7 @@
           "targets": [
             {
               "$$hashKey": "object:604",
-              "expr": "sum(rate(traefik_requests_total{code=~\"5..\"}[5m])) by (method, code)",
+              "expr": "sum(rate(traefik_backend_requests_total{code=~\"5..\"}[5m])) by (method, code)",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{method}} : {{code}}",
@@ -2380,7 +2380,7 @@
           "targets": [
             {
               "$$hashKey": "object:720",
-              "expr": "sum(rate(traefik_requests_total{code=~\"2..\"}[5m])) by (service,method)",
+              "expr": "sum(rate(traefik_backend_requests_total{code=~\"2..\"}[5m])) by (service,method)",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{service}} {{method}}",
@@ -2471,7 +2471,7 @@
           "targets": [
             {
               "$$hashKey": "object:772",
-              "expr": "sum(rate(traefik_requests_total{code!~\"2..\"}[5m])) by (service,method,code)",
+              "expr": "sum(rate(traefik_backend_requests_total{code!~\"2..\"}[5m])) by (service,method,code)",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -2574,7 +2574,7 @@
           "targets": [
             {
               "$$hashKey": "object:276",
-              "expr": "sum(traefik_requests_total) by (service)",
+              "expr": "sum(traefik_backend_requests_total) by (service)",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -2666,7 +2666,7 @@
           "targets": [
             {
               "$$hashKey": "object:372",
-              "expr": "sum(rate(traefik_requests_total[5m])) by (service)",
+              "expr": "sum(rate(traefik_backend_requests_total[5m])) by (service)",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{service}}",
