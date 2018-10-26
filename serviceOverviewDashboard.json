@@ -835,7 +835,7 @@
         "multi": false,
         "name": "service",
         "options": [],
-        "query": "label_values(service)",
+        "query": "label_values(backend)",
         "refresh": 1,
         "regex": "(app.dfds.cloud/.*|dashboard\\..*\\.cloud/|wiki\\..*/)",
         "sort": 0,

@@ -409,7 +409,7 @@
         "multi": false,
         "name": "service",
         "options": [],
-        "query": "label_values(traefik_backend_requests_total{service!=\"/\",service!=\"traefik\",service!=\"httpn\"}, service)",
+        "query": "label_values(traefik_backend_requests_total{backend!=\"/\",backend!=\"traefik\",backend!=\"httpn\"}, backend)",
         "refresh": 1,
         "regex": "",
         "sort": 1,

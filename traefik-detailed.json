@@ -786,7 +786,7 @@
       "targets": [
         {
           "$$hashKey": "object:953",
-          "expr": "sum(traefik_backend_requests_total{service!=\"httpn\",service!=\"http\"}) by (service)",
+          "expr": "sum(traefik_backend_requests_total{backend!=\"httpn\",backend!=\"http\"}) by (backend)",
           "format": "table",
           "instant": false,
           "interval": "",
@@ -1197,18 +1197,18 @@
           "targets": [
             {
               "$$hashKey": "object:503",
-              "expr": "sum(rate(traefik_backend_requests_total{code=~\"5..\"}[5m])) by (service)* 1000",
+              "expr": "sum(rate(traefik_backend_requests_total{code=~\"5..\"}[5m])) by (backend)* 1000",
               "format": "time_series",
               "intervalFactor": 1,
-              "legendFormat": "{{service}} 5xx",
+              "legendFormat": "{{backend}} 5xx",
               "refId": "A"
             },
             {
               "$$hashKey": "object:567",
-              "expr": "sum(rate(traefik_backend_requests_total{code=~\"4..\"}[5m])) by (service)* 1000",
+              "expr": "sum(rate(traefik_backend_requests_total{code=~\"4..\"}[5m])) by (backend)* 1000",
               "format": "time_series",
               "intervalFactor": 1,
-              "legendFormat": "{{service}} 4xx",
+              "legendFormat": "{{backend}} 4xx",
               "refId": "B"
             }
           ],
@@ -1636,10 +1636,10 @@
           "targets": [
             {
               "$$hashKey": "object:992",
-              "expr": "sum(traefik_backend_request_duration_seconds_sum) by (service) / sum(traefik_backend_request_duration_seconds_count) by (service)",
+              "expr": "sum(traefik_backend_request_duration_seconds_sum) by (backend) / sum(traefik_backend_request_duration_seconds_count) by (backend)",
               "format": "time_series",
               "intervalFactor": 2,
-              "legendFormat": "{{service}}",
+              "legendFormat": "{{backend}}",
               "refId": "A",
               "step": 10
             }
@@ -2380,10 +2380,10 @@
           "targets": [
             {
               "$$hashKey": "object:720",
-              "expr": "sum(rate(traefik_backend_requests_total{code=~\"2..\"}[5m])) by (service,method)",
+              "expr": "sum(rate(traefik_backend_requests_total{code=~\"2..\"}[5m])) by (backend,method)",
               "format": "time_series",
               "intervalFactor": 2,
-              "legendFormat": "{{service}} {{method}}",
+              "legendFormat": "{{backend}} {{method}}",
               "refId": "A",
               "step": 240
             }
@@ -2471,11 +2471,11 @@
           "targets": [
             {
               "$$hashKey": "object:772",
-              "expr": "sum(rate(traefik_backend_requests_total{code!~\"2..\"}[5m])) by (service,method,code)",
+              "expr": "sum(rate(traefik_backend_requests_total{code!~\"2..\"}[5m])) by (backend,method,code)",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "{{service}} {{method}} {{code}}",
+              "legendFormat": "{{backend}} {{method}} {{code}}",
               "refId": "A",
               "step": 240
             }
@@ -2574,11 +2574,11 @@
           "targets": [
             {
               "$$hashKey": "object:276",
-              "expr": "sum(traefik_backend_requests_total) by (service)",
+              "expr": "sum(traefik_backend_requests_total) by (backend)",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "{{service}}",
+              "legendFormat": "{{backend}}",
               "metric": "",
               "refId": "A",
               "step": 240
@@ -2666,10 +2666,10 @@
           "targets": [
             {
               "$$hashKey": "object:372",
-              "expr": "sum(rate(traefik_backend_requests_total[5m])) by (service)",
+              "expr": "sum(rate(traefik_backend_requests_total[5m])) by (backend)",
               "format": "time_series",
               "intervalFactor": 2,
-              "legendFormat": "{{service}}",
+              "legendFormat": "{{backend}}",
               "refId": "A"
             }
           ],
@@ -2741,7 +2741,7 @@
         "multi": false,
         "name": "service",
         "options": [],
-        "query": "label_values(service)",
+        "query": "label_values(backend)",
         "refresh": 1,
         "regex": "",
         "sort": 0,
