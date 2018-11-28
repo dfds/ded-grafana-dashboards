@@ -17,8 +17,7 @@
   "editable": true,
   "gnetId": 3131,
   "graphTooltip": 0,
-  "id": 9,
-  "iteration": 1533212823450,
+  "iteration": 1543393989902,
   "links": [],
   "panels": [
     {
@@ -1242,8 +1241,8 @@
       "datasource": "Prometheus",
       "fontSize": "100%",
       "gridPos": {
-        "h": 9,
-        "w": 12,
+        "h": 7,
+        "w": 24,
         "x": 0,
         "y": 15
       },
@@ -1369,12 +1368,123 @@
       "type": "table"
     },
     {
+      "aliasColors": {
+        "Idle - Waiting for something to happen": "#052B51",
+        "guest": "#9AC48A",
+        "idle": "#052B51",
+        "iowait": "#EAB839",
+        "irq": "#BF1B00",
+        "nice": "#C15C17",
+        "softirq": "#E24D42",
+        "steal": "#FCE2DE",
+        "system": "#508642",
+        "user": "#5195CE"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Prometheus",
+      "decimals": 2,
+      "description": "",
+      "fill": 2,
+      "gridPos": {
+        "h": 12,
+        "w": 24,
+        "x": 0,
+        "y": 22
+      },
+      "id": 78,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sideWidth": 250,
+        "sort": null,
+        "sortDesc": null,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "minSpan": 4,
+      "nullPointMode": "null",
+      "percentage": true,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeat": null,
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "$$hashKey": "object:248",
+          "expr": "(sum(rate(container_cpu_usage_seconds_total{id=\"/\", kubernetes_io_role=~\"$role\"}[5m])) by (instance)  / sum(machine_cpu_cores {kubernetes_io_role=~\"$role\"}) by (instance) * 100)",
+          "format": "time_series",
+          "instant": false,
+          "interval": "10s",
+          "intervalFactor": 1,
+          "legendFormat": "{{instance}}",
+          "refId": "A",
+          "step": 20
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "CPU usage by node (Average)",
+      "tooltip": {
+        "shared": false,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": false,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:427",
+          "format": "short",
+          "label": "Percentage",
+          "logBase": 1,
+          "max": "100",
+          "min": "0",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:428",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 24
+        "y": 34
       },
       "id": 12,
       "panels": [],
@@ -1392,7 +1502,7 @@
         "h": 15,
         "w": 12,
         "x": 0,
-        "y": 25
+        "y": 35
       },
       "id": 62,
       "legend": {
@@ -1505,9 +1615,9 @@
         "h": 15,
         "w": 12,
         "x": 12,
-        "y": 25
+        "y": 35
       },
-      "id": 78,
+      "id": 133,
       "legend": {
         "alignAsTable": true,
         "avg": true,
@@ -1531,7 +1641,6 @@
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
-      "repeat": null,
       "seriesOverrides": [],
       "spaceLength": 10,
       "stack": true,
@@ -1661,7 +1770,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 40
+        "y": 50
       },
       "id": 14,
       "panels": [],
@@ -1701,7 +1810,7 @@
         "h": 12,
         "w": 24,
         "x": 0,
-        "y": 41
+        "y": 51
       },
       "id": 80,
       "legend": {
@@ -1847,7 +1956,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 53
+        "y": 63
       },
       "id": 16,
       "panels": [],
@@ -1869,7 +1978,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 54
+        "y": 64
       },
       "id": 6,
       "legend": {
@@ -2008,7 +2117,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 54
+        "y": 64
       },
       "height": "410",
       "id": 48,
@@ -2127,7 +2236,7 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 61
+        "y": 71
       },
       "id": 98,
       "legend": {
@@ -2306,7 +2415,7 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 61
+        "y": 71
       },
       "id": 128,
       "legend": {
@@ -2496,7 +2605,7 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 72
+        "y": 82
       },
       "height": "410",
       "id": 46,
@@ -2591,7 +2700,7 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 72
+        "y": 82
       },
       "id": 102,
       "legend": {
@@ -2769,7 +2878,7 @@
         "h": 9,
         "w": 24,
         "x": 0,
-        "y": 83
+        "y": 93
       },
       "id": 94,
       "legend": {
@@ -2856,7 +2965,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 92
+        "y": 102
       },
       "id": 18,
       "panels": [],
@@ -2879,7 +2988,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 93
+        "y": 103
       },
       "id": 10,
       "legend": {
@@ -2978,7 +3087,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 93
+        "y": 103
       },
       "id": 8,
       "legend": {
@@ -3074,7 +3183,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 100
+        "y": 110
       },
       "id": 120,
       "legend": {
@@ -3209,7 +3318,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 100
+        "y": 110
       },
       "id": 122,
       "legend": {
@@ -3348,8 +3457,8 @@
         "current": {
           "selected": true,
           "tags": [],
-          "text": "master",
-          "value": "master"
+          "text": "node",
+          "value": "node"
         },
         "hide": 0,
         "includeAll": true,
@@ -3365,13 +3474,13 @@
           },
           {
             "$$hashKey": "object:2259",
-            "selected": true,
+            "selected": false,
             "text": "master",
             "value": "master"
           },
           {
             "$$hashKey": "object:2260",
-            "selected": false,
+            "selected": true,
             "text": "node",
             "value": "node"
           }
@@ -3413,5 +3522,5 @@
   "timezone": "browser",
   "title": "Kubernetes Nodes",
   "uid": "zw6IEF4mz",
-  "version": 1900
+  "version": 5146
 }
