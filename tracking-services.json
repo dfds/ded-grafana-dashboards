@@ -230,12 +230,10 @@
       "mappingType": 1,
       "mappingTypes": [
         {
-          "$$hashKey": "object:1118",
           "name": "value to text",
           "value": 1
         },
         {
-          "$$hashKey": "object:1119",
           "name": "range to text",
           "value": 2
         }
@@ -263,7 +261,6 @@
       "tableColumn": "",
       "targets": [
         {
-          "$$hashKey": "object:886",
           "expr": "sum(rate(container_cpu_usage_seconds_total{container_name=~\"trackingstream-.*\"}[5m]))\n",
           "format": "time_series",
           "intervalFactor": 1,
@@ -276,7 +273,6 @@
       "valueFontSize": "80%",
       "valueMaps": [
         {
-          "$$hashKey": "object:1121",
           "op": "=",
           "text": "N/A",
           "value": "null"
@@ -345,7 +341,6 @@
       "tableColumn": "",
       "targets": [
         {
-          "$$hashKey": "object:1213",
           "expr": "sum (container_memory_working_set_bytes{container_name!=\"POD\", pod_name=~\"trackingstream-.*\"})",
           "format": "time_series",
           "intervalFactor": 1,
@@ -416,7 +411,6 @@
       "steppedLine": false,
       "targets": [
         {
-          "$$hashKey": "object:1389",
           "expr": "sum (container_memory_working_set_bytes{image!=\"\",name=~\"^k8s_.*\",pod_name=~\"trackingstore-.*\"}) by (pod_name)",
           "format": "time_series",
           "intervalFactor": 1,
@@ -501,7 +495,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "$$hashKey": "object:1527",
+          "$$hashKey": "object:160",
           "expr": "sum (container_cpu_usage_seconds_total{image!=\"\",name=~\"^k8s_.*\",pod_name=~\"trackingstore-.*\"}) by (pod_name)",
           "format": "time_series",
           "intervalFactor": 1,
@@ -510,8 +504,8 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": "1h",
-      "timeShift": "1h",
+      "timeFrom": null,
+      "timeShift": null,
       "title": "Tracking Store CPU usage",
       "tooltip": {
         "shared": true,
@@ -528,7 +522,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:1787",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -537,7 +530,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:1788",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -581,12 +573,10 @@
       "mappingType": 1,
       "mappingTypes": [
         {
-          "$$hashKey": "object:1118",
           "name": "value to text",
           "value": 1
         },
         {
-          "$$hashKey": "object:1119",
           "name": "range to text",
           "value": 2
         }
@@ -614,7 +604,6 @@
       "tableColumn": "",
       "targets": [
         {
-          "$$hashKey": "object:886",
           "expr": "sum(rate(container_cpu_usage_seconds_total{container_name=~\"trackingstore-.*\"}[5m]))\n",
           "format": "time_series",
           "intervalFactor": 1,
@@ -627,7 +616,6 @@
       "valueFontSize": "80%",
       "valueMaps": [
         {
-          "$$hashKey": "object:1121",
           "op": "=",
           "text": "N/A",
           "value": "null"
@@ -696,7 +684,6 @@
       "tableColumn": "",
       "targets": [
         {
-          "$$hashKey": "object:1213",
           "expr": "sum (container_memory_working_set_bytes{container_name!=\"POD\", pod_name=~\"trackingstore-.*\"})",
           "format": "time_series",
           "intervalFactor": 1,
@@ -767,7 +754,6 @@
       "steppedLine": false,
       "targets": [
         {
-          "$$hashKey": "object:1389",
           "expr": "sum (container_memory_working_set_bytes{image!=\"\",name=~\"^k8s_.*\",pod_name=~\"krone-.*\"}) by (pod_name)",
           "format": "time_series",
           "intervalFactor": 1,
@@ -852,7 +838,6 @@
       "steppedLine": false,
       "targets": [
         {
-          "$$hashKey": "object:1527",
           "expr": "sum (container_cpu_usage_seconds_total{image!=\"\",name=~\"^k8s_.*\",pod_name=~\"krone-.*\"}) by (pod_name)",
           "format": "time_series",
           "intervalFactor": 1,
@@ -861,8 +846,8 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": "1h",
-      "timeShift": "1h",
+      "timeFrom": null,
+      "timeShift": null,
       "title": "Krone integrator CPU usage",
       "tooltip": {
         "shared": true,
@@ -879,7 +864,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:1787",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -888,7 +872,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:1788",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -932,12 +915,10 @@
       "mappingType": 1,
       "mappingTypes": [
         {
-          "$$hashKey": "object:1118",
           "name": "value to text",
           "value": 1
         },
         {
-          "$$hashKey": "object:1119",
           "name": "range to text",
           "value": 2
         }
@@ -965,7 +946,6 @@
       "tableColumn": "",
       "targets": [
         {
-          "$$hashKey": "object:886",
           "expr": "sum(rate(container_cpu_usage_seconds_total{container_name=~\"krone-.*\"}[5m]))\n",
           "format": "time_series",
           "intervalFactor": 1,
@@ -978,7 +958,6 @@
       "valueFontSize": "80%",
       "valueMaps": [
         {
-          "$$hashKey": "object:1121",
           "op": "=",
           "text": "N/A",
           "value": "null"
@@ -1047,7 +1026,6 @@
       "tableColumn": "",
       "targets": [
         {
-          "$$hashKey": "object:1213",
           "expr": "sum (container_memory_working_set_bytes{container_name!=\"POD\", pod_name=~\"krone-.*\"})",
           "format": "time_series",
           "intervalFactor": 1,
@@ -1068,7 +1046,7 @@
       "valueName": "current"
     }
   ],
-  "refresh": false,
+  "refresh": "5s",
   "schemaVersion": 16,
   "style": "dark",
   "tags": [],
@@ -1107,5 +1085,5 @@
   "timezone": "",
   "title": "Tracking Services",
   "uid": "PXzalzemz",
-  "version": 30
+  "version": 32
 }
