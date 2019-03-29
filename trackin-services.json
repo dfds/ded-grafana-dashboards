@@ -560,6 +560,7 @@
             "$$hashKey": "object:255",
             "expr": "sum (rate (container_cpu_usage_seconds_total{image!=\"\",container_name=~\"trackingstore.*\"}[5m]) * 1000) by (pod_name)",
             "format": "time_series",
+            "hide": false,
             "intervalFactor": 1,
             "refId": "B"
           },
@@ -1046,7 +1047,7 @@
         "maxDataPoints": 100,
         "nullPointMode": "connected",
         "nullText": null,
-        "postfix": "",
+        "postfix": "%",
         "postfixFontSize": "50%",
         "prefix": "",
         "prefixFontSize": "50%",
@@ -1066,6 +1067,7 @@
         "tableColumn": "",
         "targets": [
           {
+            "$$hashKey": "object:6344",
             "expr": "sum(rate(container_cpu_usage_seconds_total{container_name=~\"krone-.*\"}[5m]))\n",
             "format": "time_series",
             "intervalFactor": 1,
@@ -1427,7 +1429,7 @@
         "maxDataPoints": 100,
         "nullPointMode": "connected",
         "nullText": null,
-        "postfix": "",
+        "postfix": "%",
         "postfixFontSize": "50%",
         "prefix": "",
         "prefixFontSize": "50%",
@@ -1810,7 +1812,7 @@
         "maxDataPoints": 100,
         "nullPointMode": "connected",
         "nullText": null,
-        "postfix": "",
+        "postfix": "%",
         "postfixFontSize": "50%",
         "prefix": "",
         "prefixFontSize": "50%",
