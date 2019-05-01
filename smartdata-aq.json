@@ -15,7 +15,6 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 34,
   "links": [],
   "panels": [
     {
@@ -478,7 +477,7 @@
           {
             "evaluator": {
               "params": [
-                5
+                15
               ],
               "type": "gt"
             },
@@ -552,6 +551,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:415",
           "expr": "4*60*sum(rate(traefik_backend_requests_total{backend=~\".*/smartdata/aq\",code=~\"4..\"}[5m])) by (backend)",
           "format": "time_series",
           "hide": false,
@@ -567,7 +567,7 @@
           "fill": true,
           "line": true,
           "op": "gt",
-          "value": 5
+          "value": 15
         }
       ],
       "timeFrom": null,
@@ -788,5 +788,5 @@
   "timezone": "utc",
   "title": "smartdata-aq",
   "uid": "3KZPlPzZk",
-  "version": 100
+  "version": 168
 }
